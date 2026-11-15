@@ -1,0 +1,95 @@
+{
+  "purpose": "Пульты H8H и CrossRC, две вспомогательные сервы H8H одним кадром и коробка H8H по пяти референсам владельца",
+  "images": [
+    {
+      "vehicle_id": "mjx-h8h",
+      "component_category": "radio",
+      "asset": "./assets/mjx-h8h/radio-studio.webp",
+      "references": [
+        {
+          "filename": "1-Фото-1.jpg",
+          "sha256": "6e8d0452e68a03bc5afe32d71f4bf2b89c179c31e9d82c24989047e55225c047"
+        }
+      ],
+      "master_filename": "exec-2abf7f36-d31b-48a3-9718-6a2757844aa6.png",
+      "delivered_dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 50736,
+      "provenance": "Привязка компонентов указана владельцем. Студийная AI-иллюстрация по его скриншотам; интерфейс магазина и посторонние товары удалены.",
+      "technical_scope": "Иллюстрация внешнего вида; надписи, детали и экран после AI-обработки не служат источником технических характеристик."
+    },
+    {
+      "vehicle_id": "mjx-h8h",
+      "component_category": "aux-servo",
+      "asset": "./assets/mjx-h8h/aux-servos-studio.webp",
+      "references": [
+        {
+          "filename": "2-Фото-2.jpg",
+          "sha256": "77539afc71cd5bf5588c7b33e28e9926fc70e392a863bb4a31acbc470a8c6bb0"
+        },
+        {
+          "filename": "3-Фото-3.jpg",
+          "sha256": "5560ab53807ee681325c56b171c326f072b2fd779dc7fdd0a27ec0544eb0bc44"
+        }
+      ],
+      "master_filename": "exec-23c1ca3b-9bec-4dae-86de-29fb8a8b6f13.png",
+      "delivered_dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 86480,
+      "provenance": "Привязка компонентов указана владельцем. Студийная AI-иллюстрация по его скриншотам; интерфейс магазина и посторонние товары удалены.",
+      "technical_scope": "Иллюстрация внешнего вида; надписи, детали и экран после AI-обработки не служат источником технических характеристик."
+    },
+    {
+      "vehicle_id": "mjx-h8h",
+      "component_category": "transmission",
+      "asset": "./assets/mjx-h8h/transmission-studio.webp",
+      "references": [
+        {
+          "filename": "4-Фото-4.jpg",
+          "sha256": "cac3d95446cd432dd612b4eb0d251f63334b0e1253705ae3fec5627a957bc6e7"
+        }
+      ],
+      "master_filename": "exec-bbce9763-b35a-4446-8210-508b51973e19.png",
+      "delivered_dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 105474,
+      "provenance": "Привязка компонентов указана владельцем. Студийная AI-иллюстрация по его скриншотам; интерфейс магазина и посторонние товары удалены.",
+      "technical_scope": "Иллюстрация внешнего вида; надписи, детали и экран после AI-обработки не служат источником технических характеристик."
+    },
+    {
+      "vehicle_id": "crossrc-x5",
+      "component_category": "radio",
+      "asset": "./assets/crossrc-emo-x5/radio-studio.webp",
+      "references": [
+        {
+          "filename": "5-Фото-5.jpg",
+          "sha256": "de0498a8a115169d98e7fc49228c3da7e3a941c7a97638caaccf722b480e2321"
+        }
+      ],
+      "master_filename": "exec-65a64acb-4bea-4cd8-9d23-e4f65afcf1a4.png",
+      "delivered_dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 89166,
+      "provenance": "Привязка компонентов указана владельцем. Студийная AI-иллюстрация по его скриншотам; интерфейс магазина и посторонние товары удалены.",
+      "technical_scope": "Иллюстрация внешнего вида; надписи, детали и экран после AI-обработки не служат источником технических характеристик."
+    }
+  ],
+  "processing": "AI-обработка по запросу владельца; нейтральная студия, затем WebP. Исходные скриншоты и PNG-мастеры сохранены без изменения. В интерфейсе пометка Демо · AI.",
+  "unknowns": [
+    "Соответствие S1745A и S1745B отдельным механизмам, их момент и напряжение",
+    "Приёмник и настройки экземпляра H8H",
+    "Штатность аппаратуры DUMBORC на CrossRC, настройки и питание комплекта"
+  ],
+  "technical_sources": [
+    "https://www.mjxrc.com/upload/202501/02/202501021009190532.pdf",
+    "Обозначения T80, S1745A, S1745B, P8HSC-H8H, DDF-350 и X10F на скриншотах владельца; AI-изображения не используются как источники характеристик."
+  ]
+}
