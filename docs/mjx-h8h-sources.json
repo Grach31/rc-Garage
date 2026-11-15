@@ -159,6 +159,21 @@
       "asset": "./assets/mjx-h8h/suspension-studio.webp",
       "provenance": "Студийная AI-иллюстрация по референсу владельца",
       "details": "docs/suspension-studio-sources.json"
+    },
+    {
+      "asset": "./assets/mjx-h8h/radio-studio.webp",
+      "provenance": "Студийная AI-иллюстрация по референсу владельца",
+      "details": "docs/radio-transmission-studio-sources.json"
+    },
+    {
+      "asset": "./assets/mjx-h8h/aux-servos-studio.webp",
+      "provenance": "Студийная AI-иллюстрация по референсу владельца",
+      "details": "docs/radio-transmission-studio-sources.json"
+    },
+    {
+      "asset": "./assets/mjx-h8h/transmission-studio.webp",
+      "provenance": "Студийная AI-иллюстрация по референсу владельца",
+      "details": "docs/radio-transmission-studio-sources.json"
     }
   ]
 }

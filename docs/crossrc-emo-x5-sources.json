@@ -182,6 +182,11 @@
       "asset": "./assets/crossrc-emo-x5/suspension-studio.webp",
       "provenance": "Студийная AI-иллюстрация по референсу владельца",
       "details": "docs/suspension-studio-sources.json"
+    },
+    {
+      "asset": "./assets/crossrc-emo-x5/radio-studio.webp",
+      "provenance": "Студийная AI-иллюстрация по референсу владельца",
+      "details": "docs/radio-transmission-studio-sources.json"
     }
   ]
 }
