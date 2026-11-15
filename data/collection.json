@@ -242,19 +242,17 @@
       "model": "H8H",
       "description": "Чёрный · дорестайлинг",
       "scale": "1:8",
-      "image": "./assets/mjx-h8h/body-views.webp",
+      "image": "./assets/mjx-h8h/studio-three-quarter.webp",
       "gallery": [
         {
-          "src": "./assets/mjx-h8h/body-views.webp",
-          "caption": "Заводская модель: спереди, сзади и сбоку",
-          "sourceUrl": "https://www.skymonster-rc.com/products/mjx-1-8-h8h-rc-car-2-4ghz-brushless-4wd-high-speed-3-second-off-road-climbing-vehicle-differential-lock-remote-control-for-ages-8-13-kids-toys-1",
-          "credit": "Каталожное изображение MJX / Skymonster RC"
+          "src": "./assets/mjx-h8h/studio-three-quarter.webp",
+          "caption": "Студийный вид в три четверти · AI-обработка",
+          "credit": "Студийная AI-обработка изображения, предоставленного владельцем"
         },
         {
-          "src": "./assets/mjx-h8h/side-views.webp",
-          "caption": "Заводская модель: виды с двух сторон",
-          "sourceUrl": "https://www.skymonster-rc.com/products/mjx-1-8-h8h-rc-car-2-4ghz-brushless-4wd-high-speed-3-second-off-road-climbing-vehicle-differential-lock-remote-control-for-ages-8-13-kids-toys-1",
-          "credit": "Каталожное изображение MJX / Skymonster RC"
+          "src": "./assets/mjx-h8h/studio-front.webp",
+          "caption": "Студийный вид спереди · AI-обработка",
+          "credit": "Студийная AI-обработка изображения, предоставленного владельцем"
         },
         {
           "src": "./assets/mjx-h8h/motor.webp",
@@ -279,6 +277,18 @@
           "caption": "Заводская схема размеров и аппаратура",
           "sourceUrl": "https://www.technohobbies.com.au/cdn/shop/files/MJX-H8H-G_39b5fcf5-233c-4e38-ac1c-55bad96317d8.png?v=1722060500",
           "credit": "Каталожная схема MJX / Techno Hobbies"
+        },
+        {
+          "src": "./assets/mjx-h8h/body-views.webp",
+          "caption": "Заводская модель: спереди, сзади и сбоку",
+          "sourceUrl": "https://www.skymonster-rc.com/products/mjx-1-8-h8h-rc-car-2-4ghz-brushless-4wd-high-speed-3-second-off-road-climbing-vehicle-differential-lock-remote-control-for-ages-8-13-kids-toys-1",
+          "credit": "Каталожное изображение MJX / Skymonster RC"
+        },
+        {
+          "src": "./assets/mjx-h8h/side-views.webp",
+          "caption": "Заводская модель: виды с двух сторон",
+          "sourceUrl": "https://www.skymonster-rc.com/products/mjx-1-8-h8h-rc-car-2-4ghz-brushless-4wd-high-speed-3-second-off-road-climbing-vehicle-differential-lock-remote-control-for-ages-8-13-kids-toys-1",
+          "credit": "Каталожное изображение MJX / Skymonster RC"
         }
       ],
       "components": [
@@ -407,12 +417,12 @@
       },
       "upgrades": [],
       "service": [],
-      "thumbnail": "./assets/mjx-h8h/thumbnail.webp",
-      "imageCredit": "Каталожное изображение MJX H8H / Skymonster RC",
-      "imageSourceUrl": "https://www.skymonster-rc.com/products/mjx-1-8-h8h-rc-car-2-4ghz-brushless-4wd-high-speed-3-second-off-road-climbing-vehicle-differential-lock-remote-control-for-ages-8-13-kids-toys-1",
+      "thumbnail": "./assets/mjx-h8h/studio-thumbnail.webp",
+      "imageCredit": "Студийная AI-обработка изображения, предоставленного владельцем",
+      "imageSourceUrl": null,
       "referenceConfiguration": true,
       "stockConfirmed": false,
-      "configurationNote": "Заводская комплектация — для справки. На модели установлен тюнинг; перечень замен уточняется. Изображения каталожные, не фотографии экземпляра владельца.",
+      "configurationNote": "Заводская комплектация — для справки. На модели установлен тюнинг; перечень замен уточняется.",
       "tuningNote": "На модели установлен тюнинг. Перечень улучшений и замен владелец добавит позже; фотографии тюнинга будут собственными.",
       "settings": null,
       "sources": [
