@@ -1,0 +1,130 @@
+{
+  "model": "MJX H8H",
+  "scope": "Чёрный дорестайлинг. Заводская справка; текущие компоненты после тюнинга не подтверждены.",
+  "owner_statement": "На модели много тюнинга; перечень будет предоставлен позже. Фотографии тюнинга сделает владелец.",
+  "sources": [
+    {
+      "label": "MJX — заводская инструкция и артикулы деталей",
+      "url": "https://www.mjxrc.com/upload/202501/02/202501021009190532.pdf"
+    },
+    {
+      "label": "Заводская инструкция на английском и немецком",
+      "url": "https://images.rcplanet.com/images/resources/MJX-H8H-BL/Manuals/1-MJX-H8H-BL_All_Rock_H8H_4WD_Brushless_Rock_Crawler_Manual.pdf"
+    },
+    {
+      "label": "Mattfly — каталог раннего H8H, размеры и конструкция",
+      "url": "https://www.mattfly.it/en/macchine/3245/-/"
+    },
+    {
+      "label": "Skymonster RC — каталожные виды кузова",
+      "url": "https://www.skymonster-rc.com/products/mjx-1-8-h8h-rc-car-2-4ghz-brushless-4wd-high-speed-3-second-off-road-climbing-vehicle-differential-lock-remote-control-for-ages-8-13-kids-toys-1"
+    },
+    {
+      "label": "PRO-RC — P8M15S / BL3970, 1500KV и фото",
+      "url": "https://prorc.ca/products/mjx-hyper-go-angry-snail-bl3970-foc-sensored-brushless-motor-1500kv"
+    },
+    {
+      "label": "Serious RC — фото регулятора E80SDMF",
+      "url": "https://www.seriousrc.co.uk/products/mjx-hyper-go-h8h-bluetooth-sensored-esc-part-number-e80sdmf"
+    },
+    {
+      "label": "The Tinkers Inc. — фото и параметры S3590B при 6 В",
+      "url": "https://thetinkersinc.com/products/mjx-35kg-steering-servo"
+    }
+  ],
+  "images": [
+    {
+      "asset": "./assets/mjx-h8h/body-views.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0649/2304/2051/files/1_ebef70e3-fedb-4d1a-8638-9f0c05e78e19.jpg?v=1732011518",
+      "original_dimensions": [
+        1000,
+        1000
+      ],
+      "delivered_dimensions": [
+        1000,
+        1000
+      ],
+      "bytes": 88736
+    },
+    {
+      "asset": "./assets/mjx-h8h/side-views.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0649/2304/2051/files/10_58a820ab-e2cf-450b-8943-e0b406109a22.jpg?v=1732011518",
+      "original_dimensions": [
+        1000,
+        1000
+      ],
+      "delivered_dimensions": [
+        1000,
+        1000
+      ],
+      "bytes": 82560
+    },
+    {
+      "asset": "./assets/mjx-h8h/motor.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0783/0500/1791/files/mjx-p8m15s.jpg?v=1776304750",
+      "original_dimensions": [
+        1200,
+        960
+      ],
+      "delivered_dimensions": [
+        1200,
+        960
+      ],
+      "bytes": 51448
+    },
+    {
+      "asset": "./assets/mjx-h8h/esc.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0651/7918/9462/files/E80SDMF_1.webp?v=1758119366",
+      "original_dimensions": [
+        1200,
+        960
+      ],
+      "delivered_dimensions": [
+        1200,
+        960
+      ],
+      "bytes": 50946
+    },
+    {
+      "asset": "./assets/mjx-h8h/steering-servo.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0593/8082/6156/files/S3590B_1.webp?v=1786216147",
+      "original_dimensions": [
+        800,
+        800
+      ],
+      "delivered_dimensions": [
+        800,
+        800
+      ],
+      "bytes": 21964
+    },
+    {
+      "asset": "./assets/mjx-h8h/dimensions.webp",
+      "original_url": "https://www.technohobbies.com.au/cdn/shop/files/MJX-H8H-G_39b5fcf5-233c-4e38-ac1c-55bad96317d8.png?v=1722060500",
+      "original_dimensions": [
+        1267,
+        888
+      ],
+      "delivered_dimensions": [
+        1267,
+        888
+      ],
+      "bytes": 97894
+    }
+  ],
+  "processing": "Только преобразование в WebP и миниатюра 600 px; без увеличения, обрезки, ретуши и генерации.",
+  "unknowns": [
+    "Список тюнинга и текущие компоненты",
+    "Масса экземпляра",
+    "Аккумулятор",
+    "Настройки и обслуживание",
+    "Точные параметры BEC",
+    "Момент S1745A"
+  ],
+  "excluded_claims": [
+    "Скорость: данные продавцов расходятся",
+    "Количество светодиодов: встречается 120 и 140",
+    "V2.0 в названии инструкции не доказывает ревизию машины",
+    "GPS и лебёдка не считаются установленными"
+  ]
+}
