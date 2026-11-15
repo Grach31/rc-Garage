@@ -83,7 +83,7 @@ function componentCards(car) {
   return `<div class="component-grid">${categories.map(([key,label,symbol]) => {
     const component = car.components.find(c => c.category === key);
     const summary = key === 'tuning' ? (car.upgrades.length ? `${car.upgrades.length} записей` : car.tuningNote ? 'Список уточняется' : car.stockConfirmed ? 'Без изменений' : null) : component?.name || component?.model || car.specifications[key];
-    const media = key === 'tuning' && car.stockConfirmed ? `<div class="media stock-media"><div class="placeholder">${icon('check')}<span>Штатная комплектация</span></div></div>` : photo(component?.image,component?.name || component?.model || label);
+    const media = key === 'tuning' && car.stockConfirmed ? `<div class="media stock-media"><div class="placeholder">${icon('check')}<span>Штатная комплектация</span></div></div>` : photo(component?.image,component?.name || component?.model || label,'',false,component?.imageLabel);
     return `<button class="component-card" data-component="${key}" aria-label="${label}: подробнее">${media}<span class="component-info">${icon(symbol)}<span><span class="component-label">${label}</span><strong>${value(summary)}</strong><span class="component-caption">${escape(component?.summary || component?.manufacturer || (key === 'tuning' ? 'Установленные улучшения' : 'Сведения о компоненте'))}</span></span>${icon('arrow')}</span></button>`;
   }).join('')}</div>`;
 }
@@ -107,7 +107,7 @@ function renderPanel(car, tab) {
   else if (tab === 'tuning') content = tuning(car);
   else if (tab === 'service') content = service(car);
   else if (tab === 'gallery') content = `<div class="section-heading"><h2>Галерея</h2><p>Разные ракурсы и детали крупным планом.</p></div>${gallery(car)}`;
-  else content = `${componentCards(car)}${car.components.some(c => !categories.some(([key]) => key === c.category)) ? `<h2 class="extra-title">Другие компоненты</h2><div class="extra-components">${car.components.map((c,i) => !categories.some(([key]) => key === c.category) ? `<button class="component-card" data-extra="${i}" aria-label="${escape(c.name || c.model || 'Компонент')}: подробнее">${photo(c.image,c.name || c.model)}<span class="component-info"><span><span class="component-label">${value(c.manufacturer)}</span><strong>${value(c.name || c.model)}</strong></span>${icon('arrow')}</span></button>` : '').join('')}</div>` : ''}<div class="gallery-heading"><h2>В деталях</h2><a href="${vehicleUrl(car,'gallery')}">Все фотографии ${icon('arrow')}</a></div>${gallery(car,true)}`;
+  else content = `${componentCards(car)}${car.components.some(c => !categories.some(([key]) => key === c.category)) ? `<h2 class="extra-title">Другие компоненты</h2><div class="extra-components">${car.components.map((c,i) => !categories.some(([key]) => key === c.category) ? `<button class="component-card" data-extra="${i}" aria-label="${escape(c.name || c.model || 'Компонент')}: подробнее">${photo(c.image,c.name || c.model,'',false,c.imageLabel)}<span class="component-info"><span><span class="component-label">${value(c.manufacturer)}</span><strong>${value(c.name || c.model)}</strong></span>${icon('arrow')}</span></button>` : '').join('')}</div>` : ''}<div class="gallery-heading"><h2>В деталях</h2><a href="${vehicleUrl(car,'gallery')}">Все фотографии ${icon('arrow')}</a></div>${gallery(car,true)}`;
   return `<section class="tab-panel" id="panel-${tab}" role="tabpanel" aria-labelledby="tab-${tab}" tabindex="0">${content}</section>`;
 }
 function openDialog(content) {
@@ -115,7 +115,7 @@ function openDialog(content) {
   document.querySelector('#component-dialog').showModal(); bindImageFallbacks();
 }
 function componentDetail(component, label, summary) {
-  openDialog(`<p class="eyebrow">${escape(label)}</p>${photo(component?.image,component?.name || component?.model || label)}${imageAttribution(component)}<h2>${value(component?.name || component?.model || summary)}</h2><dl class="specs"><div><dt>Производитель</dt><dd>${value(component?.manufacturer)}</dd></div><div><dt>Точная модель</dt><dd>${value(component?.model)}</dd></div><div><dt>Характеристики</dt><dd>${value(component?.specifications)}</dd></div><div><dt>Примечания</dt><dd>${value(component?.notes)}</dd></div></dl>${component?.sourceUrl ? `<p class="image-credit">${sourceLink(component.sourceUrl,'Источник характеристик')}</p>` : ''}`);
+  openDialog(`<p class="eyebrow">${escape(label)}</p>${photo(component?.image,component?.name || component?.model || label,'',false,component?.imageLabel)}${imageAttribution(component)}<h2>${value(component?.name || component?.model || summary)}</h2><dl class="specs"><div><dt>Производитель</dt><dd>${value(component?.manufacturer)}</dd></div><div><dt>Точная модель</dt><dd>${value(component?.model)}</dd></div><div><dt>Характеристики</dt><dd>${value(component?.specifications)}</dd></div><div><dt>Примечания</dt><dd>${value(component?.notes)}</dd></div></dl>${component?.sourceUrl ? `<p class="image-credit">${sourceLink(component.sourceUrl,'Источник характеристик')}</p>` : ''}`);
 }
 function openGalleryPhoto(car, index) {
   const item = galleryItem(car.gallery[index]);
