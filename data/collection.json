@@ -416,14 +416,239 @@
       "id": "yikong-tb7",
       "manufacturer": "Yikong",
       "model": "TB7",
-      "description": "Красный",
-      "scale": null,
-      "image": null,
-      "gallery": [],
-      "components": [],
-      "specifications": {},
+      "description": "Красный · Desert Buggy · без мотора и ESC",
+      "scale": "1:7",
+      "image": "./assets/yikong-tb7/studio.webp",
+      "gallery": [
+        {
+          "src": "./assets/yikong-tb7/studio.webp",
+          "caption": "Красный TB7 · студийная иллюстрация кузова первой версии, версия экземпляра не уточнена",
+          "credit": "Демо · студийная AI-обработка каталожного изображения Yikong",
+          "sourceUrl": "https://www.yikongrc.net/products/yikong-yk4073-tb7-1-7-4wd-desert-rc-truck",
+          "label": "Демо · AI"
+        },
+        {
+          "src": "./assets/yikong-tb7/front.webp",
+          "caption": "TB7 YK4073 · каталожный передний ракурс красного кузова",
+          "credit": "Каталожное изображение Yikong / RCOPWORLD",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0601/9291/5550/files/O1CN01W8j4b21la1RQMrBN9__21474834.webp?v=1762483933"
+        },
+        {
+          "src": "./assets/yikong-tb7/rear.webp",
+          "caption": "TB7 YK4073 · каталожный задний ракурс красного кузова",
+          "credit": "Каталожное изображение Yikong / RCOPWORLD",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0601/9291/5550/files/O1CN01WHX2fC1la1RVLGcoD__21474834.webp?v=1762483933"
+        },
+        {
+          "src": "./assets/yikong-tb7/side.webp",
+          "caption": "TB7 YK4073 · каталожный вид сбоку",
+          "credit": "Каталожное изображение Yikong / RCOPWORLD",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0601/9291/5550/files/O1CN019gw1ba1la1RXALTN4__21474834.webp?v=1762483933"
+        },
+        {
+          "src": "./assets/yikong-tb7/servo.webp",
+          "caption": "Серва 71102 · 30 кг по каталогу первой версии; серва экземпляра не уточнена",
+          "credit": "Каталожное фото Yikong / yikongrc.net",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/YIKONG_YK4073_RC_Truck_Parts_30kg_servo_71102.jpg?v=1737363914"
+        },
+        {
+          "src": "./assets/yikong-tb7/suspension.webp",
+          "caption": "Амортизаторы 71198 · каталожная деталь TB7",
+          "credit": "Каталожное фото Yikong / Kopterfly",
+          "sourceUrl": "https://kopterfly.ru/image/cache/catalog/137746/shock_set_complete_front_rear_yikong_4073_tb7_305-800x800.png"
+        },
+        {
+          "src": "./assets/yikong-tb7/wheels.webp",
+          "caption": "Красные колёса 71175 · 146 × 56 мм",
+          "credit": "Каталожное фото Yikong / Kopterfly",
+          "sourceUrl": "https://kopterfly.ru/image/cache/catalog/supplier5/ck_18a_6mlqr2feqmfq7g24jjstz27ak9w6y4bl-800x800.jpg"
+        },
+        {
+          "src": "./assets/yikong-tb7/radio.webp",
+          "caption": "Аппаратура 71103 · каталожный комплект для TB7 первой версии",
+          "credit": "Каталожное фото Yikong / Kopterfly",
+          "sourceUrl": "https://kopterfly.ru/image/cache/catalog/supplier5/ck_1d0_1hsmw7nb89jdxodbzynm0t28i9tal1is-800x800.jpg"
+        },
+        {
+          "src": "./assets/yikong-tb7/transmission.webp",
+          "caption": "Центральный дифференциал 71021 · справочная деталь первой версии",
+          "credit": "Каталожное фото Yikong / yikongrc.net",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/YIKONG_YK4073_RC_Car_Parts_center_gear_diff_71021.jpg?v=1737358793"
+        },
+        {
+          "src": "./assets/yikong-tb7/lighting.webp",
+          "caption": "Световая планка 71074 · каталожная деталь TB7",
+          "credit": "Каталожное фото Yikong / yikongrc.net",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/YIKONG_YK4073_RC_Truck_Parts_LED_strip_white_light_71074.jpg?v=1737363016"
+        }
+      ],
+      "components": [
+        {
+          "category": "motor",
+          "name": "Не установлен",
+          "manufacturer": null,
+          "model": null,
+          "summary": "По сведениям владельца",
+          "specifications": "Двигатель на автомобиле отсутствует — подтверждено владельцем.",
+          "notes": "Фото и характеристики заводского мотора не подставлены. Двигатель для будущей установки: Не указано.",
+          "image": null,
+          "imageCredit": null,
+          "imageSourceUrl": null,
+          "sourceUrl": null
+        },
+        {
+          "category": "esc",
+          "name": "Не установлен",
+          "manufacturer": null,
+          "model": null,
+          "summary": "По сведениям владельца",
+          "specifications": "Регулятор ESC на автомобиле отсутствует — подтверждено владельцем.",
+          "notes": "Фото и характеристики заводского регулятора не подставлены. Регулятор для будущей установки: Не указано.",
+          "image": null,
+          "imageCredit": null,
+          "imageSourceUrl": null,
+          "sourceUrl": null
+        },
+        {
+          "category": "servo",
+          "name": "Рулевая серва · модель уточняется",
+          "manufacturer": "Yikong",
+          "model": null,
+          "summary": "Каталожная справка",
+          "specifications": "Установленная модель, момент и рабочее напряжение: Не указано. Каталог первой версии указывает 30 кг, V2 — 25 кг; напряжение для этих значений не уточнено.",
+          "notes": "На фото каталожная серва Yikong 71102 для первой версии. Её наличие на личном экземпляре не подтверждено; версия TB7 уточняется. Значение 30 кг не перенесено в подтверждённые параметры автомобиля.",
+          "image": "./assets/yikong-tb7/servo.webp",
+          "imageCredit": "Каталожное фото Yikong / yikongrc.net",
+          "imageSourceUrl": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/YIKONG_YK4073_RC_Truck_Parts_30kg_servo_71102.jpg?v=1737363914",
+          "sourceUrl": "https://www.yikongrc.net/products/yikong-yk4073-rc-truck-parts-30kg-servo-71102"
+        },
+        {
+          "category": "suspension",
+          "name": "Передняя независимая · задний мост",
+          "manufacturer": "Yikong",
+          "model": "71198 · каталожные амортизаторы",
+          "summary": "Каталожная справка",
+          "specifications": "Независимая подвеска спереди, неразрезной мост сзади. Для платформы TB7 каталог указывает 8 алюминиевых амортизаторов и прогрессивные пружины.",
+          "notes": "Изображён комплект запасных амортизаторов 71198, а не все восемь на автомобиле. Фактическое масло, пружины и настройки: Не указано. Данные V2 о вязкости масла не назначены экземпляру неизвестной версии.",
+          "image": "./assets/yikong-tb7/suspension.webp",
+          "imageCredit": "Каталожное фото Yikong / Kopterfly",
+          "imageSourceUrl": "https://kopterfly.ru/image/cache/catalog/137746/shock_set_complete_front_rear_yikong_4073_tb7_305-800x800.png",
+          "sourceUrl": "https://kopterfly.ru/shock-set-complete-front-rear-yikong-4073-tb7"
+        },
+        {
+          "category": "wheels",
+          "name": "Колёса · 146 × 56 мм",
+          "manufacturer": "Yikong",
+          "model": "71175 · красные",
+          "summary": "Каталожная справка",
+          "specifications": "Каталожные шины: наружный диаметр 146 мм, ширина 56 мм; шестигранник колеса 17 мм.",
+          "notes": "На фото колёса в сборе для красного TB7. Фактический износ, вставки и изменения колёс личного экземпляра: Не указано.",
+          "image": "./assets/yikong-tb7/wheels.webp",
+          "imageCredit": "Каталожное фото Yikong / Kopterfly",
+          "imageSourceUrl": "https://kopterfly.ru/image/cache/catalog/supplier5/ck_18a_6mlqr2feqmfq7g24jjstz27ak9w6y4bl-800x800.jpg",
+          "sourceUrl": "https://kopterfly.ru/wheel-and-tire-mounted-red-4073-tb7-2sht-"
+        },
+        {
+          "category": "transmission",
+          "name": "Полный привод · дифференциалы",
+          "manufacturer": "Yikong",
+          "model": null,
+          "summary": "Каталожная справка",
+          "specifications": "Полный привод 4×4. Спереди независимая подвеска, сзади мост с дифференциалом. Точное передаточное число экземпляра: Не указано.",
+          "notes": "Первая версия в каталоге имеет передаточное число 1:14,6; для V2 указаны другие значения по пиньонам. На фото центральный дифференциал 71021 первой версии; это справочный компонент, не фотография установленной детали. Мотор и ESC на изображении отсутствуют.",
+          "image": "./assets/yikong-tb7/transmission.webp",
+          "imageCredit": "Каталожное фото Yikong / yikongrc.net",
+          "imageSourceUrl": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/YIKONG_YK4073_RC_Car_Parts_center_gear_diff_71021.jpg?v=1737358793",
+          "sourceUrl": "https://www.yikongrc.net/products/yikong-yk4073-tb7-1-7-4wd-desert-rc-truck"
+        },
+        {
+          "category": "radio",
+          "name": "Аппаратура с гироскопом",
+          "manufacturer": "Yikong",
+          "model": null,
+          "summary": "Каталожная справка",
+          "specifications": "Заводская система TB7: 2,4 ГГц, 5 каналов с управлением чувствительностью гироскопа. Установленный комплект и его настройки: Не указано.",
+          "notes": "На фото комплект 71103 для раннего TB7; для V2 каталог деталей указывает 71196. Конкретный пульт и приёмник личного экземпляра не подтверждены. Система без мотора и ESC не обозначена как готовая к езде.",
+          "image": "./assets/yikong-tb7/radio.webp",
+          "imageCredit": "Каталожное фото Yikong / Kopterfly",
+          "imageSourceUrl": "https://kopterfly.ru/image/cache/catalog/supplier5/ck_1d0_1hsmw7nb89jdxodbzynm0t28i9tal1is-800x800.jpg",
+          "sourceUrl": "https://kopterfly.ru/transmitter---receiver-2-4ghz-gyro-4072-df7---4073-tb7"
+        },
+        {
+          "category": "lighting",
+          "name": "Световая планка",
+          "manufacturer": "Yikong",
+          "model": "71074",
+          "summary": "Каталожная справка",
+          "specifications": "Белая светодиодная планка на каркасе кузова; каталожная запчасть 71074.",
+          "notes": "Показана отдельная каталожная LED-планка. Состояние освещения и схема подключения автомобиля владельца: Не указано.",
+          "image": "./assets/yikong-tb7/lighting.webp",
+          "imageCredit": "Каталожное фото Yikong / yikongrc.net",
+          "imageSourceUrl": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/YIKONG_YK4073_RC_Truck_Parts_LED_strip_white_light_71074.jpg?v=1737363016",
+          "sourceUrl": "https://www.yikongrc.net/products/yikong-yk4073-rc-truck-parts-led-stripwhite-light-71074"
+        }
+      ],
+      "specifications": {
+        "type": "Desert Buggy",
+        "drive": "4×4",
+        "dimensions": "Длина 640 мм, ширина 379 мм — каталог платформы. Высота экземпляра: Не указано (в источниках 265 и 275 мм).",
+        "wheelbase": "425 мм — каталог платформы",
+        "weight": null,
+        "catalogWeight": "5,9 кг для комплектного автомобиля по каталогу; масса экземпляра без мотора и ESC: Не указано.",
+        "motor": "Не установлен — по сведениям владельца.",
+        "esc": "Не установлен — по сведениям владельца.",
+        "servo": "Модель и момент установленной сервы: Не указано. Первая версия: 30 кг по каталогу; V2: 25 кг по каталогу.",
+        "battery": null,
+        "batteryCompatibility": "Не указано. Подбирается после выбора двигателя и ESC; заводские ограничения питания не применены к текущему экземпляру.",
+        "batteryCompartment": null,
+        "suspension": "Независимая спереди, неразрезной мост сзади. Каталог платформы: 8 алюминиевых амортизаторов с прогрессивными пружинами. Настройки: Не указано.",
+        "wheels": "Каталожные: 146 × 56 мм, hex 17 мм. Изменения экземпляра: Не указано.",
+        "transmission": "4×4. Точные передаточные числа экземпляра: Не указано; первая версия и V2 различаются.",
+        "radio": "Заводская система: 2,4 ГГц, 5 каналов, гироскоп. Установленная аппаратура: Не указано.",
+        "lighting": "Каталожная LED-планка. Фактическая схема подключения: Не указано."
+      },
       "upgrades": [],
-      "service": []
+      "service": [],
+      "color": "Красный",
+      "thumbnail": "./assets/yikong-tb7/thumbnail.webp",
+      "imageLabel": "Демо · AI",
+      "imageCredit": "Демо · студийная AI-обработка каталожного изображения Yikong",
+      "imageSourceUrl": "https://www.yikongrc.net/products/yikong-yk4073-tb7-1-7-4wd-desert-rc-truck",
+      "stockConfirmed": false,
+      "referenceConfiguration": true,
+      "configurationNote": "Красный Yikong TB7 YK4073. Мотор и ESC не установлены — подтверждено владельцем. Версия и остальные компоненты личного экземпляра не уточнены; каталожные фото первой версии и заводские сведения приведены для справки. Обложка — студийная AI-иллюстрация с пометкой «Демо».",
+      "tuningNote": "Известно отсутствие двигателя и ESC. Остальные изменения, установленный тюнинг и настройки: Не указано.",
+      "settings": null,
+      "sources": [
+        {
+          "label": "Yikong YK4073 TB7 · каталог первой версии (yikongrc.net)",
+          "url": "https://www.yikongrc.net/products/yikong-yk4073-tb7-1-7-4wd-desert-rc-truck"
+        },
+        {
+          "label": "Инструкция Yikong YK4073 V2 · для сравнения версий (скан ManualsLib)",
+          "url": "https://www.manualslib.com/manual/4670980/Yikong-Yk4073v2.html"
+        },
+        {
+          "label": "Robitronic · параметры V2, отличаются от первой версии",
+          "url": "https://shop.robitronic.com/en/tb7-v2-trail-breaker-1-7-desert-buggy-neon-red-yk4073a"
+        },
+        {
+          "label": "Красный TB7 · каталожные ракурсы RCOPWORLD",
+          "url": "https://www.rcopworld.com/products/yikong-1-7-yk4073-tb7-rc-car-rtr"
+        },
+        {
+          "label": "Yikong 71102 · каталожная рулевая серва первой версии",
+          "url": "https://www.yikongrc.net/products/yikong-yk4073-rc-truck-parts-30kg-servo-71102"
+        },
+        {
+          "label": "Yikong 71175 · колёса",
+          "url": "https://kopterfly.ru/wheel-and-tire-mounted-red-4073-tb7-2sht-"
+        },
+        {
+          "label": "Yikong 71103 · аппаратура раннего TB7",
+          "url": "https://kopterfly.ru/transmitter---receiver-2-4ghz-gyro-4072-df7---4073-tb7"
+        }
+      ]
     },
     {
       "id": "mjx-h8h",
