@@ -163,7 +163,7 @@
     "https://www.crossrc.us/shop/at4-shift-diff-lock-servo/"
   ],
   "owner_confirmation": "Владелец подтвердил заводскую Brushless RTR комплектацию и разрешил добавление выбранных фото и характеристик.",
-  "processing": "WebP, максимум 1800px по длинной стороне; миниатюра 600px. Без ретуши, генерации, обрезки или удаления логотипов.",
+  "processing": "Первоначальные каталожные файлы: WebP, максимум 1800px по длинной стороне; миниатюра 600px. Без ретуши, генерации, обрезки или удаления логотипов. Новая иллюстрация амортизаторов: студийная AI-обработка, см. studio_edits.",
   "published_assets": {
     "front": "greens-2.jpg",
     "side": "greens-3.jpg",
@@ -176,5 +176,12 @@
     "dimensions": "greens-17.jpg",
     "steering-servo": "steering-servo.webp",
     "shift-servo": "shift-servo.jpg"
-  }
+  },
+  "studio_edits": [
+    {
+      "asset": "./assets/crossrc-emo-x5/suspension-studio.webp",
+      "provenance": "Студийная AI-иллюстрация по референсу владельца",
+      "details": "docs/suspension-studio-sources.json"
+    }
+  ]
 }

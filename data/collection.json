@@ -63,6 +63,12 @@
           "caption": "Заводская схема размеров",
           "sourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
           "credit": "Каталожное фото CrossRC / Greens Models"
+        },
+        {
+          "src": "./assets/crossrc-emo-x5/suspension-studio.webp",
+          "caption": "Амортизаторы CrossRC EMO X5 · Демо / AI",
+          "credit": "Демо · студийная AI-иллюстрация по референсу владельца",
+          "label": "Демо · AI"
         }
       ],
       "components": [
@@ -104,15 +110,16 @@
         },
         {
           "category": "suspension",
-          "name": "Штатная подвеска",
+          "name": "Штатные амортизаторы",
           "manufacturer": "CrossRC",
           "model": null,
           "specifications": "Штатные амортизаторы с резьбовым корпусом CNC. Точная модель и настройки: Не указано.",
-          "notes": "На фото общий вид автомобиля с задней подвеской. Отдельный снимок амортизатора пока не добавлен.",
-          "image": "./assets/crossrc-emo-x5/rear.webp",
+          "notes": "Студийная AI-иллюстрация по предоставленному владельцем референсу CrossRC EMO X5. Показаны внешний вид амортизаторов и снятая пружина. Точная модель, размеры и настройки: Не указано.",
+          "image": "./assets/crossrc-emo-x5/suspension-studio.webp",
           "sourceUrl": "https://www.crossrc.us/shop/emo-x5-brushless-rtr/",
-          "imageSourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
-          "imageCredit": "Каталожное фото CrossRC / Greens Models"
+          "imageSourceUrl": null,
+          "imageCredit": "Демо · студийная AI-иллюстрация по референсу владельца",
+          "imageLabel": "Демо · AI"
         },
         {
           "category": "wheels",
@@ -172,7 +179,7 @@
       "thumbnail": "./assets/crossrc-emo-x5/thumbnail.webp",
       "imageCredit": "Каталожное фото CrossRC / Greens Models",
       "imageSourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
-      "configurationNote": "Штатная комплектация подтверждена владельцем. Фотографии — каталожные, не снимки личного экземпляра.",
+      "configurationNote": "Штатная комплектация подтверждена владельцем. Изображения каталожные; амортизаторы показаны студийной AI-иллюстрацией по референсу владельца. Фотографии личного экземпляра пока не добавлены.",
       "stockConfirmed": true,
       "sources": [
         {
@@ -450,6 +457,12 @@
           "caption": "Заводская модель: виды с двух сторон",
           "sourceUrl": "https://www.skymonster-rc.com/products/mjx-1-8-h8h-rc-car-2-4ghz-brushless-4wd-high-speed-3-second-off-road-climbing-vehicle-differential-lock-remote-control-for-ages-8-13-kids-toys-1",
           "credit": "Каталожное изображение MJX / Skymonster RC"
+        },
+        {
+          "src": "./assets/mjx-h8h/suspension-studio.webp",
+          "caption": "Амортизаторы H8H по референсу владельца · Демо / AI",
+          "credit": "Демо · студийная AI-иллюстрация по референсу владельца",
+          "label": "Демо · AI"
         }
       ],
       "components": [
@@ -494,16 +507,17 @@
         },
         {
           "category": "suspension",
-          "name": "Заводская подвеска",
-          "manufacturer": "MJX",
+          "name": "Амортизаторы · синие",
+          "manufacturer": null,
           "model": null,
-          "summary": "Заводская справка",
-          "specifications": "Масляные алюминиевые амортизаторы; рычажная подвеска, механизм Уатта сзади. Точные модели, масло и настройки: Не указано.",
-          "notes": "Заводская комплектация для справки. Установка на экземпляре владельца пока не подтверждена. Отдельное фото амортизаторов не добавлено.",
-          "image": null,
-          "sourceUrl": "https://www.mattfly.it/en/macchine/3245/-/",
+          "summary": "По референсу владельца",
+          "specifications": "Синие корпуса и чёрные пружины; на предоставленном референсе комплект из четырёх амортизаторов. Производитель, точная модель, размеры и настройки: Не указано.",
+          "notes": "Владелец отнёс этот референс к MJX H8H. Студийная AI-иллюстрация показывает внешний вид выбранного комплекта. Штатность или замена амортизаторов не уточнена; по изображению это не определяется.",
+          "image": "./assets/mjx-h8h/suspension-studio.webp",
+          "sourceUrl": null,
           "imageSourceUrl": null,
-          "imageCredit": null
+          "imageCredit": "Демо · студийная AI-иллюстрация по референсу владельца",
+          "imageLabel": "Демо · AI"
         },
         {
           "category": "wheels",
@@ -571,7 +585,7 @@
         "servo": "Заводской: S3590B · 35 кг·см при 6 В. Текущий: Не указано.",
         "battery": null,
         "batteryCompatibility": "Заводская система: 2–3S LiPo (7,4 / 11,1 В), XT60. Аккумулятор владельца не указан.",
-        "suspension": "Заводская: масляные алюминиевые амортизаторы, рычажная подвеска, механизм Уатта сзади. Текущие детали и настройки: Не указано.",
+        "suspension": "Для подвески владелец предоставил референс синих амортизаторов с чёрными пружинами. Производитель, точная модель, размеры и настройки: Не указано. Заводская справка: рычажная подвеска, механизм Уатта сзади.",
         "wheels": "Заводские: диски 2,2″, наружный диаметр шин 132 мм. Текущие колёса: Не указано.",
         "transmission": "Заводская: 4×4, портальные мосты, двухступенчатая КПП, раздельное управление блокировками переднего и заднего дифференциалов. Изменения: Не указано.",
         "radio": "Заводская: T80 / R80, 8 каналов, 2,4 ГГц. Текущая: Не указано."
@@ -583,7 +597,7 @@
       "imageSourceUrl": null,
       "referenceConfiguration": true,
       "stockConfirmed": false,
-      "configurationNote": "Заводская комплектация — для справки. На модели установлен тюнинг; перечень замен уточняется.",
+      "configurationNote": "Заводские сведения — для справки. Амортизаторы показаны по референсу владельца; остальная комплектация и список тюнинга уточняются.",
       "tuningNote": "На модели установлен тюнинг. Перечень улучшений и замен владелец добавит позже; фотографии тюнинга будут собственными.",
       "settings": null,
       "sources": [
