@@ -1,0 +1,159 @@
+{
+  "model": "FSR Model TT",
+  "variant": "Синий, штатный 6S RTR; одна машина",
+  "owner_confirmation": "Владелец исправил первоначальную запись о двух машинах: фактически одна синяя Model TT 6S в штатной комплектации.",
+  "sources": [
+    {
+      "label": "Banz RC — Model TT, комплектация 6S и размеры",
+      "url": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck"
+    },
+    {
+      "label": "FS Racing Parts — штатный мотор Model TT 6S",
+      "url": "https://www.fsracingparts.com/home/1037-fs-racing-17-model-tt-rc-car-parts-brushless-motor-for-6s-version.html"
+    },
+    {
+      "label": "FS Racing Parts — штатная серва Model TT 6S",
+      "url": "https://www.fsracingparts.com/home/1039-fs-racing-17-model-tt-rc-car-parts-servo-assembly-for-6s-version.html"
+    },
+    {
+      "label": "Banz RC — фото сервы с маркировкой 18KG",
+      "url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/20_3016b963-d2a4-434a-91aa-e1f712c0bfe5.jpg?v=1787308910"
+    },
+    {
+      "label": "Banz RC — фото OEM-регулятора 6S",
+      "url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/16_6bb58834-5bca-4871-9bd1-9d371bf3844f.jpg?v=1787308910"
+    },
+    {
+      "label": "RCOPWORLD — каталог Model TT 6S/8S и габариты",
+      "url": "https://www.rcopworld.com/products/fsr-model-tt-6s-8s-brushless-1-7-rc-desert-truck-rtr"
+    }
+  ],
+  "images": [
+    {
+      "asset": "./assets/fsr-tt-blue/studio-front.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/2_c5dd34bb-ad01-457e-a150-c2826757ba18.jpg?v=1787308916",
+      "original_dimensions": [
+        1536,
+        1024
+      ],
+      "delivered_dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 155132,
+      "processing": "Студийная AI-обработка; подпись Демо. Маркировка кузова приведена к подтверждённой владельцем версии 6S. Иллюстрация не служит источником характеристик."
+    },
+    {
+      "asset": "./assets/fsr-tt-blue/front.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/1_9eac9174-aefa-4592-a9b9-e554b3a6a025.jpg?v=1787308916",
+      "original_dimensions": [
+        1600,
+        1600
+      ],
+      "delivered_dimensions": [
+        1600,
+        1600
+      ],
+      "bytes": 249394,
+      "processing": "Только WebP, без ретуши и генерации."
+    },
+    {
+      "asset": "./assets/fsr-tt-blue/motor.webp",
+      "original_url": "https://www.fsracingparts.com/3033-large_default/fs-racing-17-model-tt-rc-car-parts-brushless-motor-for-6s-version.jpg",
+      "original_dimensions": [
+        800,
+        800
+      ],
+      "delivered_dimensions": [
+        800,
+        800
+      ],
+      "bytes": 19344,
+      "processing": "Только WebP, без ретуши и генерации."
+    },
+    {
+      "asset": "./assets/fsr-tt-blue/esc.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/16_6bb58834-5bca-4871-9bd1-9d371bf3844f.jpg?v=1787308910",
+      "original_dimensions": [
+        1200,
+        800
+      ],
+      "delivered_dimensions": [
+        1200,
+        800
+      ],
+      "bytes": 140208,
+      "processing": "Только WebP, без ретуши и генерации."
+    },
+    {
+      "asset": "./assets/fsr-tt-blue/servo.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/20_3016b963-d2a4-434a-91aa-e1f712c0bfe5.jpg?v=1787308910",
+      "original_dimensions": [
+        1200,
+        800
+      ],
+      "delivered_dimensions": [
+        1200,
+        800
+      ],
+      "bytes": 140832,
+      "processing": "Только WebP, без ретуши и генерации."
+    },
+    {
+      "asset": "./assets/fsr-tt-blue/suspension.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/19_4bb725c6-4cfb-4229-8224-bfec36952a1a.jpg?v=1787308907",
+      "original_dimensions": [
+        1200,
+        800
+      ],
+      "delivered_dimensions": [
+        1200,
+        800
+      ],
+      "bytes": 106072,
+      "processing": "Только WebP, без ретуши и генерации."
+    },
+    {
+      "asset": "./assets/fsr-tt-blue/wheels.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/8_28439c2c-ac9d-4f0b-b8a1-b884d11bc9e7.jpg?v=1787308915",
+      "original_dimensions": [
+        1200,
+        800
+      ],
+      "delivered_dimensions": [
+        1200,
+        800
+      ],
+      "bytes": 120514,
+      "processing": "Только WebP, без ретуши и генерации."
+    },
+    {
+      "asset": "./assets/fsr-tt-blue/chassis.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/25_8cf1f4e0-72dd-4986-ac21-af905759e9dd.jpg?v=1787308903",
+      "original_dimensions": [
+        1200,
+        800
+      ],
+      "delivered_dimensions": [
+        1200,
+        800
+      ],
+      "bytes": 76046,
+      "processing": "Только WebP, без ретуши и генерации."
+    }
+  ],
+  "cover_master": "exec-d90bf038-39b2-4657-9df8-ef0787704ade.png",
+  "cover_source_sha256": "e7c2213b9e10f544d38d02f3fa56268cf8cd9f4222a955ec5cb6238b7adcc97f",
+  "cautions": [
+    "Не смешивать с 8S: там 4985/1250KV, ESC160A и серва25кг.",
+    "Обложка — AI-иллюстрация на основе каталожного кузова; исходный кузов имеет маркировку8S, в иллюстрации она приведена к подтверждённой версии6S. Изображение не подтверждает характеристики.",
+    "Не удалять водяной знак поставщика на фото мотора.",
+    "Точная модель сервы, напряжение измерения момента, BEC, аккумулятор и масса экземпляра не указаны.",
+    "В каталогах колёс встречается 140 и142мм; размер конкретного комплекта не измерен.",
+    "Фотография кузова спереди иллюстрирует общую форму серииTT, не внутреннюю электронику."
+  ],
+  "redirects": {
+    "fsr-tt-grey": "fsr-tt-blue",
+    "fsr-tt-chameleon": "fsr-tt-blue"
+  }
+}
