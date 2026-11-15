@@ -1,0 +1,200 @@
+{
+  "model": "FSR Model GT",
+  "vehicles": [
+    "fsr-gt-grey",
+    "fsr-gt-chameleon"
+  ],
+  "owner_confirmation": "Две одинаковые штатные GT, одна хамелеон, вторая серая. Мощностная версия 6S — из исходного списка коллекции владельца.",
+  "revision": null,
+  "sources": [
+    {
+      "label": "Banz RC — GT, комплектация 6S/8S и каталожные фотографии",
+      "url": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle"
+    },
+    {
+      "label": "RCOPWORLD — параметры ранней Model GT, цвета и механический тормоз",
+      "url": "https://www.rcopworld.com/products/fsr-model-gt-4wd-brushless-1-7-rc-car-rtr"
+    },
+    {
+      "label": "Banz RC — двигатель с маркировкой 4274 / 2000KV",
+      "url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT6S_3_92148487-11bd-4ebd-9b57-4d63a8c2fc89.jpg?v=1787308775"
+    },
+    {
+      "label": "Banz RC — ESC с маркировкой 150A, 3–6S, BEC 6V/5A",
+      "url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT6S_6_e5bd2b2d-fe99-46b9-b457-764e8a1ed6f9.jpg?v=1787308774"
+    },
+    {
+      "label": "Banz RC — рулевая серва с маркировкой 18KG",
+      "url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT6S_9_7e1f88b2-f490-4731-b5da-a64b2120f5f9.jpg?v=1787308776"
+    },
+    {
+      "label": "IMEX — GT 2.0, для сверки различий размеров; ревизия экземпляров не подтверждена",
+      "url": "https://www.imexrc.com/products/fs-racing-fsr33718-model-gt-1-7-scale-6s-brushless-4wd-rtr-rc-car"
+    }
+  ],
+  "images": [
+    {
+      "asset": "./assets/fsr-gt/motor.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT6S_3_92148487-11bd-4ebd-9b57-4d63a8c2fc89.jpg?v=1787308775",
+      "original_dimensions": [
+        1200,
+        800
+      ],
+      "delivered_dimensions": [
+        1200,
+        800
+      ],
+      "bytes": 128910,
+      "processing": "Только преобразование в WebP и уменьшение, без ретуши и генерации."
+    },
+    {
+      "asset": "./assets/fsr-gt/esc.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT6S_6_e5bd2b2d-fe99-46b9-b457-764e8a1ed6f9.jpg?v=1787308774",
+      "original_dimensions": [
+        1200,
+        800
+      ],
+      "delivered_dimensions": [
+        1200,
+        800
+      ],
+      "bytes": 117264,
+      "processing": "Только преобразование в WebP и уменьшение, без ретуши и генерации."
+    },
+    {
+      "asset": "./assets/fsr-gt/servo.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT6S_9_7e1f88b2-f490-4731-b5da-a64b2120f5f9.jpg?v=1787308776",
+      "original_dimensions": [
+        1200,
+        800
+      ],
+      "delivered_dimensions": [
+        1200,
+        800
+      ],
+      "bytes": 162604,
+      "processing": "Только преобразование в WebP и уменьшение, без ретуши и генерации."
+    },
+    {
+      "asset": "./assets/fsr-gt/suspension.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT6S_5_2c2d20e7-79c9-40be-aa7d-e399cc67a697.jpg?v=1787308775",
+      "original_dimensions": [
+        1200,
+        800
+      ],
+      "delivered_dimensions": [
+        1200,
+        800
+      ],
+      "bytes": 117112,
+      "processing": "Только преобразование в WebP и уменьшение, без ретуши и генерации."
+    },
+    {
+      "asset": "./assets/fsr-gt/wheels.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT6S_3.jpg?v=1787308734",
+      "original_dimensions": [
+        1200,
+        800
+      ],
+      "delivered_dimensions": [
+        1200,
+        800
+      ],
+      "bytes": 88636,
+      "processing": "Только преобразование в WebP и уменьшение, без ретуши и генерации."
+    },
+    {
+      "asset": "./assets/fsr-gt/handbrake.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT6S_12_d29fd25d-9313-4cff-a95e-5501b8f05d8f.jpg?v=1787308776",
+      "original_dimensions": [
+        1200,
+        800
+      ],
+      "delivered_dimensions": [
+        1200,
+        800
+      ],
+      "bytes": 176692,
+      "processing": "Только преобразование в WebP и уменьшение, без ретуши и генерации."
+    },
+    {
+      "asset": "./assets/fsr-gt/chassis.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT6S_17aa5d97-fa6f-4d07-8d5b-4c7f50ff7c9f.jpg?v=1787308776",
+      "original_dimensions": [
+        1600,
+        1600
+      ],
+      "delivered_dimensions": [
+        1400,
+        1400
+      ],
+      "bytes": 166734,
+      "processing": "Только преобразование в WebP и уменьшение, без ретуши и генерации."
+    },
+    {
+      "asset": "./assets/fsr-gt/grey-rear.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT6S_8.jpg?v=1787308770",
+      "original_dimensions": [
+        1600,
+        1600
+      ],
+      "delivered_dimensions": [
+        1400,
+        1400
+      ],
+      "bytes": 80096,
+      "processing": "Только преобразование в WebP и уменьшение, без ретуши и генерации."
+    },
+    {
+      "asset": "./assets/fsr-gt/chameleon-rear.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT8S_8.jpg?v=1787308773",
+      "original_dimensions": [
+        1600,
+        1600
+      ],
+      "delivered_dimensions": [
+        1400,
+        1400
+      ],
+      "bytes": 81822,
+      "processing": "Только преобразование в WebP и уменьшение, без ретуши и генерации."
+    },
+    {
+      "asset": "./assets/fsr-gt/grey-studio.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT6S.jpg?v=1787308774",
+      "source_sha256": "b712d9891ac2ec36249a727ad156528c5bde4b224f035073b134bc74a404d5d7",
+      "master_filename": "exec-22e5e3ce-c7c1-42c8-8dad-90562acab079.png",
+      "delivered_dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 110180,
+      "processing": "Студийная AI-обработка каталожного изображения с видимой пометкой Демо. На хамелеоне маркировка версии приведена к 6S; изображение не подтверждает внутреннюю комплектацию."
+    },
+    {
+      "asset": "./assets/fsr-gt/chameleon-studio.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT8S_14.jpg?v=1787308774",
+      "source_sha256": "23204d4328dbb4a91a17989e3fc4096a25777d66f6d44f3185a250b260a80234",
+      "master_filename": "exec-4b1ed2fe-b4a8-4607-b277-43e77deb6df9.png",
+      "delivered_dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 134108,
+      "processing": "Студийная AI-обработка каталожного изображения с видимой пометкой Демо. На хамелеоне маркировка версии приведена к 6S; изображение не подтверждает внутреннюю комплектацию."
+    }
+  ],
+  "cautions": [
+    "Не смешивать с комплектацией 8S: там 4985/1250KV, ESC160A и серва25кг.",
+    "Точная ревизия GT/GT2.0 и артикул экземпляров не подтверждены.",
+    "Ширина310/350мм в каталогах различается — оставлена неизвестной.",
+    "Момент сервы ручного тормоза4/6кг в источниках расходится — оставлен неизвестным.",
+    "Задние шины107/108мм в каталогах автомобиля и запасных колёс отличаются; фактические размеры не измерены.",
+    "Не переносить неоднозначную запись вязкости масел50W/10W/3W из рекламной таблицы на настройки владельца.",
+    "Студийные иллюстрации явно помеченыДемо/AI и не подтверждают характеристики. Мелкие надписи исходного кузова8S на хамелеоне приведены к6S в иллюстрации.",
+    "Масса и аккумуляторы личных экземпляров неизвестны;5.3кг — только ранняя каталожная масса."
+  ],
+  "legacy_redirect": {
+    "fsr-gt": "fsr-gt-grey"
+  }
+}
