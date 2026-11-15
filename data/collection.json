@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "source": "Сведения владельца и проверенные каталожные источники. CrossRC EMO X5: штатная комплектация подтверждена. MJX H8H: заводская справка; установленный тюнинг пока не описан.",
+  "source": "Сведения владельца и каталожные источники. CrossRC EMO X5 и единственная синяя FSR Model TT 6S: штатная комплектация подтверждена. MJX H8H: заводская справка, установленный тюнинг пока не описан.",
   "vehicles": [
     {
       "id": "crossrc-x5",
@@ -198,30 +198,191 @@
       ]
     },
     {
-      "id": "fsr-tt-grey",
+      "id": "fsr-tt-blue",
       "manufacturer": "FSR Model",
       "model": "TT",
-      "description": "Серый",
-      "scale": null,
-      "image": null,
-      "gallery": [],
-      "components": [],
-      "specifications": {},
+      "description": "Синий · 6S RTR",
+      "color": "Синий",
+      "scale": "1:7",
+      "image": "./assets/fsr-tt-blue/studio-front.webp",
+      "thumbnail": "./assets/fsr-tt-blue/thumbnail.webp",
+      "imageLabel": "Демо · AI",
+      "imageCredit": "Демо · студийная AI-обработка каталожного изображения FSR / Banz RC",
+      "imageSourceUrl": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck",
+      "stockConfirmed": true,
+      "configurationNote": "Одна синяя модель, штатная версия 6S — подтверждено владельцем. Обложка — студийная AI-обработка каталожного изображения (Демо), остальные изображения каталожные; это не фотографии личного экземпляра.",
+      "specifications": {
+        "type": "Трофи-трак",
+        "drive": "4×4",
+        "dimensions": "770 × 380 × 270 мм",
+        "wheelbase": "415 мм",
+        "groundClearance": "70 мм — каталожное значение",
+        "weight": null,
+        "motor": "Hobbywing 4274 · 2000KV, бесколлекторный, OEM для 6S",
+        "esc": "Hobbywing OEM · 150 А; на каталожном фото маркировка WP-8BL150",
+        "servo": "FSR · цифровой сервопривод, заявлено 18 кг·см. Напряжение измерения: Не указано.",
+        "battery": null,
+        "batteryCompatibility": "6S LiPo (22,2 В номинально); штатная проводка XT90. Аккумулятор и зарядное устройство приобретаются отдельно.",
+        "suspension": "Независимая рычажная; сдвоенные амортизаторы, стабилизаторы. Масло и индивидуальные настройки: Не указано.",
+        "wheels": "Штатные внедорожные шины; каталожный размер 140 × 50 мм. Точная маркировка комплекта владельца: Не указано.",
+        "transmission": "4WD; три дифференциала, металлические шестерни и корпус центрального дифференциала. Передаточные числа: Не указано.",
+        "radio": "Штатная аппаратура 2,4 ГГц. Индекс пульта/приёмника экземпляра владельца: Не указано.",
+        "lighting": "Штатное LED-освещение кузова; количество светодиодов: Не указано."
+      },
+      "components": [
+        {
+          "category": "motor",
+          "name": "4274 · 2000KV",
+          "manufacturer": "Hobbywing",
+          "model": "4274 / 2000KV (OEM)",
+          "specifications": "Штатный бесколлекторный двигатель версии 6S; 2000KV. Сенсорность и точный артикул OEM: Не указано.",
+          "notes": "Комплектация подтверждается каталогом Banz RC. Фото поставщика подписано как мотор для Model TT 6S; водяной знак оставлен.",
+          "image": "./assets/fsr-tt-blue/motor.webp",
+          "sourceUrl": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck",
+          "imageSourceUrl": "https://www.fsracingparts.com/home/1037-fs-racing-17-model-tt-rc-car-parts-brushless-motor-for-6s-version.html",
+          "imageCredit": "Каталожное фото FS Racing Parts; маркировка поставщика сохранена"
+        },
+        {
+          "category": "esc",
+          "name": "OEM · 150 А",
+          "manufacturer": "Hobbywing",
+          "model": "WP-8BL150 (по маркировке фото)",
+          "specifications": "Штатный отдельный ESC версии 6S, 150 А, активное охлаждение. Точные параметры BEC и настройки: Не указано.",
+          "notes": "На фото регулятор установлен на шасси 6S. Параметры розничных MAX8 G2/G2S и MAX6 не переносятся на этот OEM-регулятор.",
+          "image": "./assets/fsr-tt-blue/esc.webp",
+          "sourceUrl": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "category": "servo",
+          "name": "Штатная серва · 18 кг·см",
+          "manufacturer": "FSR",
+          "model": null,
+          "specifications": "Цифровая рулевая серва с металлическими шестернями. Заявленный момент 18 кг·см; напряжение измерения, скорость и точный артикул: Не указано.",
+          "notes": "18KG читается на каталожной фотографии и соответствует описанию версии 6S. Серво 25 кг относится к 8S и здесь не используется.",
+          "image": "./assets/fsr-tt-blue/servo.webp",
+          "sourceUrl": "https://www.fsracingparts.com/home/1039-fs-racing-17-model-tt-rc-car-parts-servo-assembly-for-6s-version.html",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "category": "suspension",
+          "name": "Сдвоенные амортизаторы",
+          "manufacturer": "FSR",
+          "model": null,
+          "specifications": "Независимая рычажная подвеска, сдвоенные амортизаторы и стабилизаторы. Точная модель и заводская вязкость масла: Не указано.",
+          "notes": "Фото штатного амортизатора на шасси. Индивидуальные настройки владельца не указаны.",
+          "image": "./assets/fsr-tt-blue/suspension.webp",
+          "sourceUrl": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "category": "wheels",
+          "name": "Штатные шины · 140 × 50 мм",
+          "manufacturer": "FSR",
+          "model": null,
+          "specifications": "По каталогу автомобиля: 140 × 50 мм, внедорожный протектор. Точная модель дисков и состав резины: Не указано.",
+          "notes": "На фото колесо с синим кольцом. В новом каталоге запасных колёс Banz встречается наружный диаметр 142 мм; фактический размер шин экземпляра владельца не измерялся.",
+          "image": "./assets/fsr-tt-blue/wheels.webp",
+          "sourceUrl": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "category": "transmission",
+          "name": "Шасси и трансмиссия",
+          "manufacturer": "FSR",
+          "model": null,
+          "specifications": "Полный привод, три дифференциала; металлический корпус центрального дифференциала, центральная распорка и два аккумуляторных отсека.",
+          "notes": "Каталожный вид штатного шасси 6S. Передаточные числа, настройка дифференциалов и масса экземпляра не указаны.",
+          "image": "./assets/fsr-tt-blue/chassis.webp",
+          "sourceUrl": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "./assets/fsr-tt-blue/studio-front.webp",
+          "caption": "Демо · студийный вид синего TT 6S · AI-обработка",
+          "sourceUrl": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck",
+          "credit": "Демо · студийная AI-обработка каталожного изображения FSR / Banz RC",
+          "label": "Демо · AI"
+        },
+        {
+          "src": "./assets/fsr-tt-blue/front.webp",
+          "caption": "Кузов серии Model TT — каталожный вид спереди",
+          "sourceUrl": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-tt-blue/motor.webp",
+          "caption": "Штатный мотор версии 6S · 4274 / 2000KV",
+          "sourceUrl": "https://www.fsracingparts.com/home/1037-fs-racing-17-model-tt-rc-car-parts-brushless-motor-for-6s-version.html",
+          "credit": "Каталожное фото FS Racing Parts"
+        },
+        {
+          "src": "./assets/fsr-tt-blue/esc.webp",
+          "caption": "OEM-регулятор 6S на шасси · 150 А",
+          "sourceUrl": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-tt-blue/servo.webp",
+          "caption": "Штатный рулевой сервопривод · маркировка 18KG",
+          "sourceUrl": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-tt-blue/suspension.webp",
+          "caption": "Штатная подвеска — амортизатор крупным планом",
+          "sourceUrl": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-tt-blue/wheels.webp",
+          "caption": "Штатное колесо — каталожный вид",
+          "sourceUrl": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-tt-blue/chassis.webp",
+          "caption": "Каталожное шасси версии 6S",
+          "sourceUrl": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck",
+          "credit": "Каталожное фото FSR / Banz RC"
+        }
+      ],
       "upgrades": [],
-      "service": []
-    },
-    {
-      "id": "fsr-tt-chameleon",
-      "manufacturer": "FSR Model",
-      "model": "TT",
-      "description": "Хамелеон",
-      "scale": null,
-      "image": null,
-      "gallery": [],
-      "components": [],
-      "specifications": {},
-      "upgrades": [],
-      "service": []
+      "service": [],
+      "settings": null,
+      "sources": [
+        {
+          "label": "Banz RC — Model TT, комплектация 6S и размеры",
+          "url": "https://banzrc.com/products/fsr-tt-1-7-6s-8s-brushless-desert-truck-rtr-4wd-high-speed-rc-off-road-truck"
+        },
+        {
+          "label": "FS Racing Parts — штатный мотор Model TT 6S",
+          "url": "https://www.fsracingparts.com/home/1037-fs-racing-17-model-tt-rc-car-parts-brushless-motor-for-6s-version.html"
+        },
+        {
+          "label": "FS Racing Parts — штатная серва Model TT 6S",
+          "url": "https://www.fsracingparts.com/home/1039-fs-racing-17-model-tt-rc-car-parts-servo-assembly-for-6s-version.html"
+        },
+        {
+          "label": "Banz RC — фото сервы с маркировкой 18KG",
+          "url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/20_3016b963-d2a4-434a-91aa-e1f712c0bfe5.jpg?v=1787308910"
+        },
+        {
+          "label": "Banz RC — фото OEM-регулятора 6S",
+          "url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/16_6bb58834-5bca-4871-9bd1-9d371bf3844f.jpg?v=1787308910"
+        },
+        {
+          "label": "RCOPWORLD — каталог Model TT 6S/8S и габариты",
+          "url": "https://www.rcopworld.com/products/fsr-model-tt-6s-8s-brushless-1-7-rc-desert-truck-rtr"
+        }
+      ]
     },
     {
       "id": "yikong-tb7",
@@ -521,5 +682,9 @@
       "upgrades": [],
       "service": []
     }
-  ]
+  ],
+  "redirects": {
+    "fsr-tt-grey": "fsr-tt-blue",
+    "fsr-tt-chameleon": "fsr-tt-blue"
+  }
 }
