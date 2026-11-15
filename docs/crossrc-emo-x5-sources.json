@@ -1,0 +1,180 @@
+{
+  "model": "CROSSRC EMO X5",
+  "variant_scope": "Заводская Brushless RTR, красная. Версия и установленное оборудование владельца пока не подтверждены.",
+  "spec_source": "https://www.crossrc.us/shop/emo-x5-brushless-rtr/",
+  "factory_specs": {
+    "scale": "1:8",
+    "dimensions_mm": [
+      657,
+      303,
+      323
+    ],
+    "wheelbase_mm": 424,
+    "drive": "4×4",
+    "gearbox": "2 скорости",
+    "differentials": "Блокируемые",
+    "motor": "Hobbywing FUSION 8IGHT, OEM, 4269, 1800KV",
+    "esc": "Интегрирован в двигатель; точный ток OEM не подтверждён",
+    "battery_compatibility": "2–4S LiPo; аккумулятор и зарядное не входят в комплект",
+    "battery_compartment_mm": [
+      140,
+      60,
+      40
+    ],
+    "wheel_diameter_in": 2.2,
+    "tire_dimensions_mm": [
+      136,
+      55
+    ],
+    "servo_torque_source": "25KG, 3KG",
+    "steering_servo_candidate": "CrossRC DS-R003C; модель по Lili-Modellbau, на фото читается 7.4V 25KG",
+    "aux_servo_candidate": "S011M (у Lili указано SO11M), 1 коробка + 2 блокировки",
+    "weight": null
+  },
+  "images": [
+    {
+      "name": "greens-2",
+      "url": "https://cdn.shopify.com/s/files/1/0790/0655/files/1.jpg?v=1741853246",
+      "size": [
+        3000,
+        2000
+      ],
+      "bytes": 596545,
+      "caption": "Автомобиль: спереди в три четверти",
+      "source_page": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+      "status": "Справочное изображение заводской модели, не фотография экземпляра владельца",
+      "quality": "Исходник с логотипом CROSSRC, без нашей обработки"
+    },
+    {
+      "name": "greens-3",
+      "url": "https://cdn.shopify.com/s/files/1/0790/0655/files/3.jpg?v=1741853246",
+      "size": [
+        3000,
+        2000
+      ],
+      "bytes": 558695,
+      "caption": "Автомобиль: сбоку",
+      "source_page": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+      "status": "Справочное изображение заводской модели, не фотография экземпляра владельца",
+      "quality": "Исходник с логотипом CROSSRC, без нашей обработки"
+    },
+    {
+      "name": "greens-4",
+      "url": "https://cdn.shopify.com/s/files/1/0790/0655/files/6_9248ebcf-eb03-4539-9326-f87793c28598.jpg?v=1741853246",
+      "size": [
+        3000,
+        2000
+      ],
+      "bytes": 576336,
+      "caption": "Автомобиль: сзади в три четверти",
+      "source_page": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+      "status": "Справочное изображение заводской модели, не фотография экземпляра владельца",
+      "quality": "Исходник с логотипом CROSSRC, без нашей обработки"
+    },
+    {
+      "name": "greens-7",
+      "url": "https://cdn.shopify.com/s/files/1/0790/0655/files/10.jpg?v=1741853246",
+      "size": [
+        3000,
+        2000
+      ],
+      "bytes": 356977,
+      "caption": "Штатный OEM мотор со встроенным ESC, маркировка 4269 / 1800KV / 2–4S",
+      "source_page": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+      "status": "Справочное изображение заводской модели, не фотография экземпляра владельца",
+      "quality": "Исходник с логотипом CROSSRC, без нашей обработки"
+    },
+    {
+      "name": "greens-8",
+      "url": "https://cdn.shopify.com/s/files/1/0790/0655/files/9.jpg?v=1741853246",
+      "size": [
+        3000,
+        2000
+      ],
+      "bytes": 244582,
+      "caption": "OEM мотор, проводка и кнопка включения; кнопка не является отдельным ESC",
+      "source_page": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+      "status": "Справочное изображение заводской модели, не фотография экземпляра владельца",
+      "quality": "Исходник с логотипом CROSSRC, без нашей обработки"
+    },
+    {
+      "name": "greens-9",
+      "url": "https://cdn.shopify.com/s/files/1/0790/0655/files/15.jpg?v=1741853246",
+      "size": [
+        3000,
+        2000
+      ],
+      "bytes": 788163,
+      "caption": "Мотор и трансмиссия на шасси",
+      "source_page": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+      "status": "Справочное изображение заводской модели, не фотография экземпляра владельца",
+      "quality": "Исходник с логотипом CROSSRC, без нашей обработки"
+    },
+    {
+      "name": "greens-11",
+      "url": "https://cdn.shopify.com/s/files/1/0790/0655/files/19_7097eb8f-5ce4-4bef-9d1b-349efbf87c9f.png?v=1741853246",
+      "size": [
+        3000,
+        2089
+      ],
+      "bytes": 1724112,
+      "caption": "Колёса: на фото маркировка Velociraptor 136/55 R2.2",
+      "source_page": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+      "status": "Справочное изображение заводской модели, не фотография экземпляра владельца",
+      "quality": "Исходник с логотипом CROSSRC, без нашей обработки"
+    },
+    {
+      "name": "greens-17",
+      "url": "https://cdn.shopify.com/s/files/1/0790/0655/files/11.jpg?v=1741853246",
+      "size": [
+        3000,
+        2000
+      ],
+      "bytes": 367995,
+      "caption": "Заводская схема размеров",
+      "source_page": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+      "status": "Справочное изображение заводской модели, не фотография экземпляра владельца",
+      "quality": "Исходник с логотипом CROSSRC, без нашей обработки"
+    },
+    {
+      "name": "steering-servo",
+      "url": "https://i.ebayimg.com/images/g/ecwAAeSwlQFpeMXf/s-l1600.webp",
+      "source_page": "https://www.ebay.co.uk/itm/318714751471",
+      "caption": "CROSSRC DS-R003C, маркировка 7.4V 25KG",
+      "status": "Для идентификации; продавец описывает б/у экземпляр, фон не идеален; установка у владельца не подтверждена"
+    },
+    {
+      "name": "shift-servo",
+      "url": "https://www.beez2b.com/29160-large_default/CRO97400883.jpg",
+      "source_page": "https://www.beez2b.com/en/cat/15087-cro97400883-CRO97400883-97400883",
+      "caption": "CROSSRC S011M / на корпусе S01M; серва коробки и блокировок по описанию поставщика",
+      "status": "458 × 458; годится для небольшой карточки, не для крупного фото"
+    }
+  ],
+  "cautions": [
+    "Не подменять OEM мотор фотографией розничного Fusion 8IGHT SE или 2300KV",
+    "Не переносить ток ESC и программируемость SE на OEM: Greens указывает фиксированную программу",
+    "В источниках разные названия шин: TALON MT в описании CrossRC US и Velociraptor на фото; не считать точную модель шин подтверждённой для владельца",
+    "19 lbs в Additional Information не подтверждает массу автомобиля: это блок с упаковочными размерами",
+    "Фото не прошли ретушь и генерацию; логотипы источника сохранены"
+  ],
+  "other_sources": [
+    "https://www.lili-modellbau.de/cross-rc/cross-rc-emo-x-1-8/cross-rc-emo-x5-rtr-brushless-rot.html",
+    "https://www.crossrc.us/shop/at4-shift-diff-lock-servo/"
+  ],
+  "owner_confirmation": "Владелец подтвердил заводскую Brushless RTR комплектацию и разрешил добавление выбранных фото и характеристик.",
+  "processing": "WebP, максимум 1800px по длинной стороне; миниатюра 600px. Без ретуши, генерации, обрезки или удаления логотипов.",
+  "published_assets": {
+    "front": "greens-2.jpg",
+    "side": "greens-3.jpg",
+    "rear": "greens-4.jpg",
+    "motor": "greens-7.jpg",
+    "power-system": "greens-8.jpg",
+    "drivetrain": "greens-9.jpg",
+    "wheels": "greens-11.png",
+    "gears": "greens-12.jpg",
+    "dimensions": "greens-17.jpg",
+    "steering-servo": "steering-servo.webp",
+    "shift-servo": "shift-servo.jpg"
+  }
+}

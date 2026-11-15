@@ -1,7 +1,202 @@
 {
   "version": 1,
-  "source": "Сведения владельца из задания. Данные прежнего проекта пока недоступны.",
+  "source": "Сведения владельца; штатная комплектация CrossRC EMO X5 подтверждена владельцем, заводские характеристики и каталожные фотографии снабжены источниками.",
   "vehicles": [
+    {
+      "id": "crossrc-x5",
+      "manufacturer": "CrossRC",
+      "model": "EMO X5",
+      "description": "Красный · Brushless RTR",
+      "scale": "1:8",
+      "image": "./assets/crossrc-emo-x5/front.webp",
+      "gallery": [
+        {
+          "src": "./assets/crossrc-emo-x5/front.webp",
+          "caption": "Вид спереди в три четверти",
+          "sourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+          "credit": "Каталожное фото CrossRC / Greens Models"
+        },
+        {
+          "src": "./assets/crossrc-emo-x5/side.webp",
+          "caption": "Вид сбоку",
+          "sourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+          "credit": "Каталожное фото CrossRC / Greens Models"
+        },
+        {
+          "src": "./assets/crossrc-emo-x5/rear.webp",
+          "caption": "Вид сзади в три четверти",
+          "sourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+          "credit": "Каталожное фото CrossRC / Greens Models"
+        },
+        {
+          "src": "./assets/crossrc-emo-x5/motor.webp",
+          "caption": "OEM мотор Hobbywing 4269 · 1800KV",
+          "sourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+          "credit": "Каталожное фото CrossRC / Greens Models"
+        },
+        {
+          "src": "./assets/crossrc-emo-x5/power-system.webp",
+          "caption": "Мотор со встроенным ESC и проводка",
+          "sourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+          "credit": "Каталожное фото CrossRC / Greens Models"
+        },
+        {
+          "src": "./assets/crossrc-emo-x5/drivetrain.webp",
+          "caption": "Мотор и трансмиссия на шасси",
+          "sourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+          "credit": "Каталожное фото CrossRC / Greens Models"
+        },
+        {
+          "src": "./assets/crossrc-emo-x5/wheels.webp",
+          "caption": "Штатные колёса — каталожное изображение",
+          "sourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+          "credit": "Каталожное фото CrossRC / Greens Models"
+        },
+        {
+          "src": "./assets/crossrc-emo-x5/gears.webp",
+          "caption": "Детали трансмиссии",
+          "sourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+          "credit": "Каталожное фото CrossRC / Greens Models"
+        },
+        {
+          "src": "./assets/crossrc-emo-x5/dimensions.webp",
+          "caption": "Заводская схема размеров",
+          "sourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+          "credit": "Каталожное фото CrossRC / Greens Models"
+        }
+      ],
+      "components": [
+        {
+          "category": "motor",
+          "name": "FUSION 8IGHT · 1800KV",
+          "manufacturer": "Hobbywing",
+          "model": "FUSION 8IGHT (OEM)",
+          "specifications": "Бесколлекторная система FOC; маркировка 4269 / 1800KV; питание 2–4S LiPo. ESC интегрирован в двигатель.",
+          "notes": "Заводская OEM-версия для CrossRC. Не подменяется розничными Fusion 8IGHT SE или 2300KV.",
+          "image": "./assets/crossrc-emo-x5/motor.webp",
+          "sourceUrl": "https://www.crossrc.us/shop/emo-x5-brushless-rtr/",
+          "imageSourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+          "imageCredit": "Каталожное фото CrossRC / Greens Models"
+        },
+        {
+          "category": "esc",
+          "name": "ESC встроен в мотор",
+          "manufacturer": "Hobbywing",
+          "model": "FUSION 8IGHT (OEM, 2 в 1)",
+          "specifications": "Регулятор находится в корпусе двигателя. Питание системы: 2–4S LiPo. Ток и параметры BEC OEM-версии: Не указано.",
+          "notes": "На фото тот же мотор с проводкой. Отдельная коробочка — кнопка включения. Greens Models указывает фиксированную программу без изменения настроек ESC.",
+          "image": "./assets/crossrc-emo-x5/power-system.webp",
+          "sourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+          "imageSourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+          "imageCredit": "Каталожное фото CrossRC / Greens Models"
+        },
+        {
+          "category": "servo",
+          "name": "DS-R003C · 25 кг·см",
+          "manufacturer": "CrossRC",
+          "model": "DS-R003C",
+          "specifications": "Заявленный момент: 25 кг·см при 7,4 В. Рулевой цифровой сервопривод.",
+          "notes": "Модель сервы указана в комплектации X5 у Lili-Modellbau; 7.4V / 25KG читается на фотографии. Фото из объявления о подержанной детали — для иллюстрации модели, не состояния сервы владельца.",
+          "image": "./assets/crossrc-emo-x5/steering-servo.webp",
+          "sourceUrl": "https://www.lili-modellbau.de/cross-rc/cross-rc-emo-x-1-8/cross-rc-emo-x5-rtr-brushless-rot.html",
+          "imageSourceUrl": "https://www.ebay.co.uk/itm/318714751471",
+          "imageCredit": "Фото поставщика / eBay"
+        },
+        {
+          "category": "suspension",
+          "name": "Штатная подвеска",
+          "manufacturer": "CrossRC",
+          "model": null,
+          "specifications": "Штатные амортизаторы с резьбовым корпусом CNC. Точная модель и настройки: Не указано.",
+          "notes": "На фото общий вид автомобиля с задней подвеской. Отдельный снимок амортизатора пока не добавлен.",
+          "image": "./assets/crossrc-emo-x5/rear.webp",
+          "sourceUrl": "https://www.crossrc.us/shop/emo-x5-brushless-rtr/",
+          "imageSourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+          "imageCredit": "Каталожное фото CrossRC / Greens Models"
+        },
+        {
+          "category": "wheels",
+          "name": "2,2″ beadlock · 136 × 55 мм",
+          "manufacturer": "CrossRC",
+          "model": null,
+          "specifications": "Штатные диски 2,2″ beadlock; размер шин 136 × 55 мм.",
+          "notes": "Название протектора требует уточнения: в описании CrossRC US указано TALON MT, на каталожном изображении — Velociraptor. Размер подтверждён; точное название шин экземпляра не указано.",
+          "image": "./assets/crossrc-emo-x5/wheels.webp",
+          "sourceUrl": "https://www.crossrc.us/shop/emo-x5-brushless-rtr/",
+          "imageSourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+          "imageCredit": "Каталожное фото CrossRC / Greens Models"
+        },
+        {
+          "category": "aux-servo",
+          "name": "Сервы коробки и блокировок",
+          "manufacturer": "CrossRC",
+          "model": "S011M × 3",
+          "specifications": "Одна серва коробки передач и две сервы блокировок дифференциалов. В спецификации X5 вспомогательные сервы указаны как 3 кг·см.",
+          "notes": "У поставщика X5 обозначены как SO11M; запасная часть CrossRC — S011M. Изображение поставщика 458 × 458, без увеличения исходника.",
+          "image": "./assets/crossrc-emo-x5/shift-servo.webp",
+          "sourceUrl": "https://www.lili-modellbau.de/cross-rc/cross-rc-emo-x-1-8/cross-rc-emo-x5-rtr-brushless-rot.html",
+          "imageSourceUrl": "https://www.beez2b.com/en/cat/15087-cro97400883-CRO97400883-97400883",
+          "imageCredit": "Фото поставщика / Beez2B"
+        },
+        {
+          "category": "transmission",
+          "name": "Двухступенчатая трансмиссия",
+          "manufacturer": "CrossRC",
+          "model": null,
+          "specifications": "Две скорости; блокируемые передний и задний дифференциалы; металлические детали трансмиссии.",
+          "notes": "Штатная комплектация. На фото мотор и трансмиссия в сборе на шасси. Точные передаточные числа для этой версии: Не указано.",
+          "image": "./assets/crossrc-emo-x5/drivetrain.webp",
+          "sourceUrl": "https://www.crossrc.us/shop/emo-x5-brushless-rtr/",
+          "imageSourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+          "imageCredit": "Каталожное фото CrossRC / Greens Models"
+        }
+      ],
+      "specifications": {
+        "type": "Crawler",
+        "drive": "4×4",
+        "dimensions": "657 × 303 × 323 мм",
+        "wheelbase": "424 мм",
+        "weight": null,
+        "motor": "Hobbywing FUSION 8IGHT FOC, OEM · 4269 · 1800KV",
+        "esc": "Встроен в двигатель FUSION 8IGHT. Ток OEM-версии: Не указано.",
+        "servo": "CrossRC DS-R003C · 25 кг·см при 7,4 В",
+        "battery": null,
+        "batteryCompatibility": "2–4S LiPo. Аккумулятор и зарядное устройство в заводской комплект не входят.",
+        "batteryCompartment": "140 × 60 × 40 мм",
+        "suspension": "Штатные амортизаторы с резьбовым корпусом CNC",
+        "wheels": "Диски 2,2″ beadlock; шины 136 × 55 мм",
+        "transmission": "4×4; двухступенчатая коробка; блокировки переднего и заднего дифференциалов"
+      },
+      "upgrades": [],
+      "service": [],
+      "thumbnail": "./assets/crossrc-emo-x5/thumbnail.webp",
+      "imageCredit": "Каталожное фото CrossRC / Greens Models",
+      "imageSourceUrl": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr",
+      "configurationNote": "Штатная комплектация подтверждена владельцем. Фотографии — каталожные, не снимки личного экземпляра.",
+      "stockConfirmed": true,
+      "sources": [
+        {
+          "label": "CrossRC US — спецификация Brushless RTR",
+          "url": "https://www.crossrc.us/shop/emo-x5-brushless-rtr/"
+        },
+        {
+          "label": "Greens Models — каталожные фотографии и OEM-система",
+          "url": "https://greensmodels.co.uk/products/cross-rc-emo-x5-rtr"
+        },
+        {
+          "label": "Lili-Modellbau — комплектация сервоприводами",
+          "url": "https://www.lili-modellbau.de/cross-rc/cross-rc-emo-x-1-8/cross-rc-emo-x5-rtr-brushless-rot.html"
+        },
+        {
+          "label": "eBay — фото DS-R003C с маркировкой 7.4V / 25KG",
+          "url": "https://www.ebay.co.uk/itm/318714751471"
+        },
+        {
+          "label": "Beez2B — фото вспомогательной сервы",
+          "url": "https://www.beez2b.com/en/cat/15087-cro97400883-CRO97400883-97400883"
+        }
+      ]
+    },
     {
       "id": "fsr-tt-grey",
       "manufacturer": "FSR Model",
@@ -46,19 +241,6 @@
       "manufacturer": "MJX",
       "model": "H8H",
       "description": "Чёрный · дорестайлинг",
-      "scale": null,
-      "image": null,
-      "gallery": [],
-      "components": [],
-      "specifications": {},
-      "upgrades": [],
-      "service": []
-    },
-    {
-      "id": "crossrc-x5",
-      "manufacturer": "CrossRC",
-      "model": "CEmo 5 X5",
-      "description": "Красный",
       "scale": null,
       "image": null,
       "gallery": [],
