@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "source": "Сведения владельца и каталожные источники. CrossRC EMO X5 и единственная синяя FSR Model TT 6S: штатная комплектация подтверждена. MJX H8H: заводская справка, установленный тюнинг пока не описан.",
+  "source": "Сведения владельца и каталожные источники. CrossRC EMO X5, одна синяя FSR Model TT 6S и две FSR Model GT (серый / хамелеон): штатная комплектация. GT 6S указана в исходном списке. MJX H8H: заводская справка, тюнинг пока не описан.",
   "vehicles": [
     {
       "id": "crossrc-x5",
@@ -618,17 +618,416 @@
       ]
     },
     {
-      "id": "fsr-gt",
+      "id": "fsr-gt-grey",
       "manufacturer": "FSR Model",
-      "model": "GT 6S",
-      "description": null,
-      "scale": null,
-      "image": null,
-      "gallery": [],
-      "components": [],
-      "specifications": {},
+      "model": "GT",
+      "description": "Серый · 6S RTR",
+      "color": "Серый",
+      "scale": "1:7",
+      "image": "./assets/fsr-gt/grey-studio.webp",
+      "thumbnail": "./assets/fsr-gt/grey-thumbnail.webp",
+      "imageLabel": "Демо · AI",
+      "imageCredit": "Демо · студийная AI-обработка каталожного изображения FSR / Banz RC",
+      "imageSourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+      "stockConfirmed": true,
+      "configurationNote": "Штатная комплектация подтверждена владельцем. Обложка — студийная AI-обработка каталожного изображения (Демо). Фотографии личного экземпляра пока не добавлены.",
+      "specifications": {
+        "type": "Шоссейная GT",
+        "drive": "4×4",
+        "dimensions": "Длина 710 мм; высота 200 мм — по каталогу. Ширина: Не указано (в каталогах встречается 310 / 350 мм).",
+        "wheelbase": "410 мм",
+        "groundClearance": "15 мм — раннее каталожное значение",
+        "weight": null,
+        "catalogWeight": "5,3 кг — раннее каталожное значение. Масса каждого личного экземпляра: Не указано.",
+        "motor": "Hobbywing 4274 · 2000KV, бесколлекторный OEM для 6S",
+        "esc": "Hobbywing WP-8BL150 RTR · 150 А; по маркировке фото BEC 6 В / 5 А",
+        "servo": "FSR · рулевой цифровой сервопривод, заявлено 18 кг·см. Точный артикул и напряжение измерения: Не указано.",
+        "battery": null,
+        "batteryCompatibility": "6S LiPo (22,2 В номинально), XT90. Конкретный аккумулятор и зарядное устройство владельца не указаны.",
+        "suspension": "Независимая рычажная, масляные амортизаторы, стабилизаторы. Индивидуальные настройки: Не указано.",
+        "wheels": "По каталогу: передние шины 100 × 43 мм, задние 107 × 53 мм. Размеры экземпляров не измерялись.",
+        "transmission": "Полный привод; карданная передача и дифференциалы; отдельный механический ручной тормоз с сервоприводом.",
+        "radio": "По раннему каталогу GT15N, 2,4 ГГц, 4 канала, система стабилизации FSM. Ревизия аппаратуры экземпляров: Не указано.",
+        "lighting": "Штатное LED-освещение спереди и сзади. Количество светодиодов: Не указано."
+      },
+      "components": [
+        {
+          "category": "motor",
+          "name": "4274 · 2000KV",
+          "manufacturer": "Hobbywing",
+          "model": "4274 / 2000KV (OEM)",
+          "specifications": "Штатный бесколлекторный двигатель 6S, 2000KV. На каталожной фотографии также читается 4-pole brushless motor. Точный артикул OEM: Не указано.",
+          "notes": "Размер и KV подтверждены маркировкой на фото и описанием конфигурации 6S. Это не мотор 4985/1250KV версии 8S.",
+          "image": "./assets/fsr-gt/motor.webp",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "category": "esc",
+          "name": "WP-8BL150 RTR · 150 А",
+          "manufacturer": "Hobbywing",
+          "model": "WP-8BL150 RTR (OEM)",
+          "specifications": "По маркировке каталожного регулятора: 150 А, 3–6S LiPo, BEC 6 В / 5 А. Активное охлаждение. Модель коллекции использует конфигурацию 6S.",
+          "notes": "Параметры считаны с каталожной фотографии OEM-регулятора GT. Индивидуальные настройки: Не указано. Характеристики MAX8 G2/G2S не подставлены.",
+          "image": "./assets/fsr-gt/esc.webp",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "category": "servo",
+          "name": "Рулевая серва · 18 кг·см",
+          "manufacturer": "FSR",
+          "model": null,
+          "specifications": "Цифровой рулевой сервопривод с металлическими шестернями. Заявленный момент 18 кг·см; напряжение измерения, скорость и точный артикул: Не указано.",
+          "notes": "На каталожной фотографии читается 18KG. Значения момента при конкретном напряжении не предполагаются по напряжению BEC.",
+          "image": "./assets/fsr-gt/servo.webp",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "category": "suspension",
+          "name": "Независимая подвеска",
+          "manufacturer": "FSR",
+          "model": null,
+          "specifications": "Независимая рычажная подвеска, масляные амортизаторы и стабилизаторы. Точные модели, пружины и вязкость масла: Не указано.",
+          "notes": "Каталожное фото штатного узла GT. Настройки владельца пока не записаны.",
+          "image": "./assets/fsr-gt/suspension.webp",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "category": "wheels",
+          "name": "Разноширокие колёса GT",
+          "manufacturer": "FSR",
+          "model": null,
+          "specifications": "Каталожные размеры шин: передние 100 × 43 мм, задние 107 × 53 мм (диаметр × ширина). Точная смесь резины и модель дисков: Не указано.",
+          "notes": "На фото штатное переднее колесо. В каталогах запасных задних колёс встречается 108 мм; фактические размеры экземпляров не измерялись.",
+          "image": "./assets/fsr-gt/wheels.webp",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "category": "handbrake",
+          "name": "Механический ручной тормоз",
+          "manufacturer": "FSR",
+          "model": null,
+          "specifications": "Отдельный механический тормоз с сервоприводом и тягой. Точная модель и момент сервопривода: Не указано.",
+          "notes": "В карточках поставщиков встречаются значения 4 и 6 кг·см. Пока маркировка детали не подтверждена, конкретный момент не присваивается. На фото штатный узел GT.",
+          "image": "./assets/fsr-gt/handbrake.webp",
+          "sourceUrl": "https://www.rcopworld.com/products/fsr-model-gt-4wd-brushless-1-7-rc-car-rtr",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "category": "transmission",
+          "name": "Шасси и трансмиссия",
+          "manufacturer": "FSR",
+          "model": null,
+          "specifications": "4WD, карданная трансмиссия и дифференциалы. В раннем каталоге: алюминий 6061-T6, шасси толщиной 3 мм. Передаточные числа и точные настройки дифференциалов: Не указано.",
+          "notes": "Каталожное фото шасси GT 6S. Обозначение GT 2.0 или конкретный номер FSR33718 не приписываются экземплярам без проверки.",
+          "image": "./assets/fsr-gt/chassis.webp",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "./assets/fsr-gt/grey-studio.webp",
+          "caption": "Демо · студийный вид серый GT · AI-обработка",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "credit": "Демо · студийная AI-обработка каталожного изображения FSR / Banz RC",
+          "label": "Демо · AI"
+        },
+        {
+          "src": "./assets/fsr-gt/grey-rear.webp",
+          "caption": "Кузов серый GT — каталожный вид сзади",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-gt/motor.webp",
+          "caption": "Штатный двигатель 6S · маркировка 4274 / 2000KV",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-gt/esc.webp",
+          "caption": "Штатный OEM ESC · маркировка 150 А, BEC 6 В / 5 А",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-gt/servo.webp",
+          "caption": "Рулевой сервопривод · маркировка 18KG",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-gt/suspension.webp",
+          "caption": "Штатная подвеска GT",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-gt/wheels.webp",
+          "caption": "Штатное переднее колесо GT",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-gt/handbrake.webp",
+          "caption": "Сервопривод и тяга механического ручного тормоза",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-gt/chassis.webp",
+          "caption": "Каталожное шасси GT 6S",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "credit": "Каталожное фото FSR / Banz RC"
+        }
+      ],
       "upgrades": [],
-      "service": []
+      "service": [],
+      "settings": null,
+      "sources": [
+        {
+          "label": "Banz RC — GT, комплектация 6S/8S и каталожные фотографии",
+          "url": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle"
+        },
+        {
+          "label": "RCOPWORLD — параметры ранней Model GT, цвета и механический тормоз",
+          "url": "https://www.rcopworld.com/products/fsr-model-gt-4wd-brushless-1-7-rc-car-rtr"
+        },
+        {
+          "label": "Banz RC — двигатель с маркировкой 4274 / 2000KV",
+          "url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT6S_3_92148487-11bd-4ebd-9b57-4d63a8c2fc89.jpg?v=1787308775"
+        },
+        {
+          "label": "Banz RC — ESC с маркировкой 150A, 3–6S, BEC 6V/5A",
+          "url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT6S_6_e5bd2b2d-fe99-46b9-b457-764e8a1ed6f9.jpg?v=1787308774"
+        },
+        {
+          "label": "Banz RC — рулевая серва с маркировкой 18KG",
+          "url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT6S_9_7e1f88b2-f490-4731-b5da-a64b2120f5f9.jpg?v=1787308776"
+        },
+        {
+          "label": "IMEX — GT 2.0, для сверки различий размеров; ревизия экземпляров не подтверждена",
+          "url": "https://www.imexrc.com/products/fs-racing-fsr33718-model-gt-1-7-scale-6s-brushless-4wd-rtr-rc-car"
+        }
+      ]
+    },
+    {
+      "id": "fsr-gt-chameleon",
+      "manufacturer": "FSR Model",
+      "model": "GT",
+      "description": "Хамелеон · 6S RTR",
+      "color": "Хамелеон",
+      "scale": "1:7",
+      "image": "./assets/fsr-gt/chameleon-studio.webp",
+      "thumbnail": "./assets/fsr-gt/chameleon-thumbnail.webp",
+      "imageLabel": "Демо · AI",
+      "imageCredit": "Демо · студийная AI-обработка каталожного изображения FSR / Banz RC",
+      "imageSourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+      "stockConfirmed": true,
+      "configurationNote": "Штатная комплектация подтверждена владельцем. Обложка — студийная AI-обработка каталожного изображения (Демо). Фотографии личного экземпляра пока не добавлены.",
+      "specifications": {
+        "type": "Шоссейная GT",
+        "drive": "4×4",
+        "dimensions": "Длина 710 мм; высота 200 мм — по каталогу. Ширина: Не указано (в каталогах встречается 310 / 350 мм).",
+        "wheelbase": "410 мм",
+        "groundClearance": "15 мм — раннее каталожное значение",
+        "weight": null,
+        "catalogWeight": "5,3 кг — раннее каталожное значение. Масса каждого личного экземпляра: Не указано.",
+        "motor": "Hobbywing 4274 · 2000KV, бесколлекторный OEM для 6S",
+        "esc": "Hobbywing WP-8BL150 RTR · 150 А; по маркировке фото BEC 6 В / 5 А",
+        "servo": "FSR · рулевой цифровой сервопривод, заявлено 18 кг·см. Точный артикул и напряжение измерения: Не указано.",
+        "battery": null,
+        "batteryCompatibility": "6S LiPo (22,2 В номинально), XT90. Конкретный аккумулятор и зарядное устройство владельца не указаны.",
+        "suspension": "Независимая рычажная, масляные амортизаторы, стабилизаторы. Индивидуальные настройки: Не указано.",
+        "wheels": "По каталогу: передние шины 100 × 43 мм, задние 107 × 53 мм. Размеры экземпляров не измерялись.",
+        "transmission": "Полный привод; карданная передача и дифференциалы; отдельный механический ручной тормоз с сервоприводом.",
+        "radio": "По раннему каталогу GT15N, 2,4 ГГц, 4 канала, система стабилизации FSM. Ревизия аппаратуры экземпляров: Не указано.",
+        "lighting": "Штатное LED-освещение спереди и сзади. Количество светодиодов: Не указано."
+      },
+      "components": [
+        {
+          "category": "motor",
+          "name": "4274 · 2000KV",
+          "manufacturer": "Hobbywing",
+          "model": "4274 / 2000KV (OEM)",
+          "specifications": "Штатный бесколлекторный двигатель 6S, 2000KV. На каталожной фотографии также читается 4-pole brushless motor. Точный артикул OEM: Не указано.",
+          "notes": "Размер и KV подтверждены маркировкой на фото и описанием конфигурации 6S. Это не мотор 4985/1250KV версии 8S.",
+          "image": "./assets/fsr-gt/motor.webp",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "category": "esc",
+          "name": "WP-8BL150 RTR · 150 А",
+          "manufacturer": "Hobbywing",
+          "model": "WP-8BL150 RTR (OEM)",
+          "specifications": "По маркировке каталожного регулятора: 150 А, 3–6S LiPo, BEC 6 В / 5 А. Активное охлаждение. Модель коллекции использует конфигурацию 6S.",
+          "notes": "Параметры считаны с каталожной фотографии OEM-регулятора GT. Индивидуальные настройки: Не указано. Характеристики MAX8 G2/G2S не подставлены.",
+          "image": "./assets/fsr-gt/esc.webp",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "category": "servo",
+          "name": "Рулевая серва · 18 кг·см",
+          "manufacturer": "FSR",
+          "model": null,
+          "specifications": "Цифровой рулевой сервопривод с металлическими шестернями. Заявленный момент 18 кг·см; напряжение измерения, скорость и точный артикул: Не указано.",
+          "notes": "На каталожной фотографии читается 18KG. Значения момента при конкретном напряжении не предполагаются по напряжению BEC.",
+          "image": "./assets/fsr-gt/servo.webp",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "category": "suspension",
+          "name": "Независимая подвеска",
+          "manufacturer": "FSR",
+          "model": null,
+          "specifications": "Независимая рычажная подвеска, масляные амортизаторы и стабилизаторы. Точные модели, пружины и вязкость масла: Не указано.",
+          "notes": "Каталожное фото штатного узла GT. Настройки владельца пока не записаны.",
+          "image": "./assets/fsr-gt/suspension.webp",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "category": "wheels",
+          "name": "Разноширокие колёса GT",
+          "manufacturer": "FSR",
+          "model": null,
+          "specifications": "Каталожные размеры шин: передние 100 × 43 мм, задние 107 × 53 мм (диаметр × ширина). Точная смесь резины и модель дисков: Не указано.",
+          "notes": "На фото штатное переднее колесо. В каталогах запасных задних колёс встречается 108 мм; фактические размеры экземпляров не измерялись.",
+          "image": "./assets/fsr-gt/wheels.webp",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "category": "handbrake",
+          "name": "Механический ручной тормоз",
+          "manufacturer": "FSR",
+          "model": null,
+          "specifications": "Отдельный механический тормоз с сервоприводом и тягой. Точная модель и момент сервопривода: Не указано.",
+          "notes": "В карточках поставщиков встречаются значения 4 и 6 кг·см. Пока маркировка детали не подтверждена, конкретный момент не присваивается. На фото штатный узел GT.",
+          "image": "./assets/fsr-gt/handbrake.webp",
+          "sourceUrl": "https://www.rcopworld.com/products/fsr-model-gt-4wd-brushless-1-7-rc-car-rtr",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "category": "transmission",
+          "name": "Шасси и трансмиссия",
+          "manufacturer": "FSR",
+          "model": null,
+          "specifications": "4WD, карданная трансмиссия и дифференциалы. В раннем каталоге: алюминий 6061-T6, шасси толщиной 3 мм. Передаточные числа и точные настройки дифференциалов: Не указано.",
+          "notes": "Каталожное фото шасси GT 6S. Обозначение GT 2.0 или конкретный номер FSR33718 не приписываются экземплярам без проверки.",
+          "image": "./assets/fsr-gt/chassis.webp",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageSourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "imageCredit": "Каталожное фото FSR / Banz RC"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "./assets/fsr-gt/chameleon-studio.webp",
+          "caption": "Демо · студийный вид хамелеон GT · AI-обработка",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "credit": "Демо · студийная AI-обработка каталожного изображения FSR / Banz RC",
+          "label": "Демо · AI"
+        },
+        {
+          "src": "./assets/fsr-gt/chameleon-rear.webp",
+          "caption": "Кузов серии GT — каталог, вид сзади; на исходном кузове маркировка 8S",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-gt/motor.webp",
+          "caption": "Штатный двигатель 6S · маркировка 4274 / 2000KV",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-gt/esc.webp",
+          "caption": "Штатный OEM ESC · маркировка 150 А, BEC 6 В / 5 А",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-gt/servo.webp",
+          "caption": "Рулевой сервопривод · маркировка 18KG",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-gt/suspension.webp",
+          "caption": "Штатная подвеска GT",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-gt/wheels.webp",
+          "caption": "Штатное переднее колесо GT",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-gt/handbrake.webp",
+          "caption": "Сервопривод и тяга механического ручного тормоза",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "credit": "Каталожное фото FSR / Banz RC"
+        },
+        {
+          "src": "./assets/fsr-gt/chassis.webp",
+          "caption": "Каталожное шасси GT 6S",
+          "sourceUrl": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle",
+          "credit": "Каталожное фото FSR / Banz RC"
+        }
+      ],
+      "upgrades": [],
+      "service": [],
+      "settings": null,
+      "sources": [
+        {
+          "label": "Banz RC — GT, комплектация 6S/8S и каталожные фотографии",
+          "url": "https://banzrc.com/products/fsr-gt-1-7-6s-8s-brushless-rc-truck-rtr-4wd-high-speed-off-road-vehicle"
+        },
+        {
+          "label": "RCOPWORLD — параметры ранней Model GT, цвета и механический тормоз",
+          "url": "https://www.rcopworld.com/products/fsr-model-gt-4wd-brushless-1-7-rc-car-rtr"
+        },
+        {
+          "label": "Banz RC — двигатель с маркировкой 4274 / 2000KV",
+          "url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT6S_3_92148487-11bd-4ebd-9b57-4d63a8c2fc89.jpg?v=1787308775"
+        },
+        {
+          "label": "Banz RC — ESC с маркировкой 150A, 3–6S, BEC 6V/5A",
+          "url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT6S_6_e5bd2b2d-fe99-46b9-b457-764e8a1ed6f9.jpg?v=1787308774"
+        },
+        {
+          "label": "Banz RC — рулевая серва с маркировкой 18KG",
+          "url": "https://cdn.shopify.com/s/files/1/0647/1073/8017/files/GT6S_9_7e1f88b2-f490-4731-b5da-a64b2120f5f9.jpg?v=1787308776"
+        },
+        {
+          "label": "IMEX — GT 2.0, для сверки различий размеров; ревизия экземпляров не подтверждена",
+          "url": "https://www.imexrc.com/products/fs-racing-fsr33718-model-gt-1-7-scale-6s-brushless-4wd-rtr-rc-car"
+        }
+      ]
     },
     {
       "id": "zd-racing",
@@ -685,6 +1084,7 @@
   ],
   "redirects": {
     "fsr-tt-grey": "fsr-tt-blue",
-    "fsr-tt-chameleon": "fsr-tt-blue"
+    "fsr-tt-chameleon": "fsr-tt-blue",
+    "fsr-gt": "fsr-gt-grey"
   }
 }
