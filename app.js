@@ -24,7 +24,21 @@ function safeImage(path) {
 }
 function photo(path, alt, className = '', eager = false) {
   const src = safeImage(path);
-  return `<div class="media ${className}">${src ? `<img src="${escape(src)}" alt="${escape(alt)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async">` : placeholder()}</div>`;
+  return `<div class="media ${className}">${src ? `<img src="${escape(src)}" alt="${escape(alt)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async"${eager ? ' fetchpriority="high"' : ''}>` : placeholder()}</div>`;
+}
+function sourceLink(url, label) {
+  try {
+    const target = new URL(url);
+    if (target.protocol !== 'https:') return '';
+    return `<a href="${escape(target.href)}" target="_blank" rel="noopener noreferrer">${escape(label)}</a>`;
+  } catch { return ''; }
+}
+function sourceNotes(car) {
+  if (!car.sources?.length) return '';
+  return `<details class="source-notes"><summary>Источники данных и фотографий</summary><ul>${car.sources.map(source=>`<li>${sourceLink(source.url,source.label)}</li>`).join('')}</ul></details>`;
+}
+function imageAttribution(item) {
+  return item?.imageCredit ? `<p class="image-credit">${escape(item.imageCredit)}${sourceLink(item.imageSourceUrl,'Источник фото') ? ` · ${sourceLink(item.imageSourceUrl,'Источник фото')}` : ''}</p>` : '';
 }
 function bindImageFallbacks() {
   document.querySelectorAll('img').forEach(img => {img.onerror = () => {
@@ -34,16 +48,16 @@ function bindImageFallbacks() {
 const vehicleUrl = (car, tab = 'overview') => `#/vehicle/${encodeURIComponent(car.id)}${tab === 'overview' ? '' : `/${tab}`}`;
 function renderSidebar() {
   const sidebarScroll = document.querySelector('#sidebar').scrollTop;
-  const car = currentCar || vehicles.find(v => v.id === 'yikong-tb7') || vehicles[0];
+  const car = currentCar || vehicles[0];
   const nav = [['car','Коллекция','#/',!currentCar || ['overview','specs','gallery'].includes(currentTab)],['tuning','Тюнинг',vehicleUrl(car,'tuning'),currentTab === 'tuning'],['tool','Обслуживание',vehicleUrl(car,'service'),currentTab === 'service']];
   document.querySelector('#main-nav').innerHTML = nav.map(([symbol,label,url,active]) => `<a href="${url}" class="nav-item ${active ? 'active' : ''}" ${active ? 'aria-current="page"' : ''}>${icon(symbol)}<span>${label}</span>${label === 'Коллекция' ? `<small>${vehicles.length}</small>` : ''}</a>`).join('') + '<div class="nav-item upcoming">'+icon('battery')+'<span>Аккумуляторы</span><small>Скоро</small></div><div class="nav-item upcoming">'+icon('note')+'<span>Заметки</span><small>Скоро</small></div>';
-  document.querySelector('#model-list').innerHTML = vehicles.map(car => `<a class="model-link ${currentCar?.id === car.id ? 'selected' : ''}" href="${vehicleUrl(car)}" ${currentCar?.id === car.id ? 'aria-current="page"' : ''} aria-label="${escape(title(car))}${car.description ? ` — ${escape(car.description)}` : ''}">${photo(car.image,title(car))}<div><strong>${escape(title(car))}</strong><span>${escape(car.description || 'Описание не указано')}</span></div></a>`).join('');
+  document.querySelector('#model-list').innerHTML = vehicles.map(car => `<a class="model-link ${currentCar?.id === car.id ? 'selected' : ''}" href="${vehicleUrl(car)}" ${currentCar?.id === car.id ? 'aria-current="page"' : ''} aria-label="${escape(title(car))}${car.description ? ` — ${escape(car.description)}` : ''}">${photo(car.thumbnail || car.image,title(car))}<div><strong>${escape(title(car))}</strong><span>${escape(car.description || 'Описание не указано')}</span></div></a>`).join('');
   if (!matchMedia('(min-width: 901px)').matches) document.querySelector('#sidebar').open = false;
   document.querySelector('#sidebar').scrollTop = sidebarScroll;
   bindImageFallbacks();
 }
 function card(car) {
-  return `<a class="card" href="${vehicleUrl(car)}" aria-label="${escape(title(car))}${car.description ? ` — ${escape(car.description)}` : ''}">${photo(car.image,title(car))}<div class="card-info"><div><p class="maker">${escape(car.manufacturer || 'Производитель не указан')}</p><h2>${escape(car.model || car.manufacturer)}</h2><p>${escape(car.description || 'Описание: Не указано')} <span>·</span> ${escape(car.scale || 'Масштаб не указан')}</p></div>${icon('arrow')}</div></a>`;
+  return `<a class="card" href="${vehicleUrl(car)}" aria-label="${escape(title(car))}${car.description ? ` — ${escape(car.description)}` : ''}">${photo(car.thumbnail || car.image,title(car))}<div class="card-info"><div><p class="maker">${escape(car.manufacturer || 'Производитель не указан')}</p><h2>${escape(car.model || car.manufacturer)}</h2><p>${escape(car.description || 'Описание: Не указано')} <span>·</span> ${escape(car.scale || 'Масштаб не указан')}</p></div>${icon('arrow')}</div></a>`;
 }
 function updateGrid() {
   const results = vehicles.filter(car => (filter === 'all' || (filter === 'custom' ? ['kamaz','ural'].includes(car.id) : car.id === 'trailer')) && `${title(car)} ${car.description || ''}`.toLocaleLowerCase('ru').includes(query.toLocaleLowerCase('ru')));
@@ -62,22 +76,27 @@ function home() {
 const tabNames = {overview:'Обзор',specs:'Характеристики',tuning:'Тюнинг',service:'Обслуживание',gallery:'Галерея'};
 function getSpecs(car) {
   const s = car.specifications;
-  return [['Производитель',car.manufacturer],['Модель',car.model],['Масштаб',car.scale],['Размеры',s.dimensions],['Вес',s.weight],['Двигатель',s.motor],['Регулятор ESC',s.esc],['Сервопривод',s.servo],['Аккумулятор',s.battery],['Подвеска',s.suspension],['Колёса и шины',s.wheels],['Привод и трансмиссия',s.transmission]];
+  return [['Производитель',car.manufacturer],['Модель',car.model],['Масштаб',car.scale],['Размеры',s.dimensions],['Вес',s.weight],['Двигатель',s.motor],['Регулятор ESC',s.esc],['Сервопривод',s.servo],['Аккумулятор',s.battery],['Подвеска',s.suspension],['Колёса и шины',s.wheels],['Привод и трансмиссия',s.transmission],...([['Колёсная база',s.wheelbase],['Совместимое питание',s.batteryCompatibility],['Аккумуляторный отсек',s.batteryCompartment]].filter(([,text])=>text))];
 }
 const categories = [ ['motor','Двигатель','motor'],['esc','Регулятор ESC','motor'],['servo','Сервопривод','motor'],['suspension','Подвеска','tool'],['wheels','Колёса и шины','wheel'],['tuning','Тюнинг','tuning'] ];
 function componentCards(car) {
   return `<div class="component-grid">${categories.map(([key,label,symbol]) => {
     const component = car.components.find(c => c.category === key);
-    const summary = key === 'tuning' ? (car.upgrades.length ? `${car.upgrades.length} записей` : null) : component?.model || car.specifications[key];
-    return `<button class="component-card" data-component="${key}" aria-label="${label}: подробнее">${photo(component?.image,component?.model || label)}<span class="component-info">${icon(symbol)}<span><span class="component-label">${label}</span><strong>${value(summary)}</strong><span class="component-caption">${escape(component?.manufacturer || (key === 'tuning' ? 'Установленные улучшения' : 'Сведения о компоненте'))}</span></span>${icon('arrow')}</span></button>`;
+    const summary = key === 'tuning' ? (car.upgrades.length ? `${car.upgrades.length} записей` : car.stockConfirmed ? 'Без изменений' : null) : component?.name || component?.model || car.specifications[key];
+    const media = key === 'tuning' && car.stockConfirmed ? `<div class="media stock-media"><div class="placeholder">${icon('check')}<span>Штатная комплектация</span></div></div>` : photo(component?.image,component?.name || component?.model || label);
+    return `<button class="component-card" data-component="${key}" aria-label="${label}: подробнее">${media}<span class="component-info">${icon(symbol)}<span><span class="component-label">${label}</span><strong>${value(summary)}</strong><span class="component-caption">${escape(component?.summary || component?.manufacturer || (key === 'tuning' ? 'Установленные улучшения' : 'Сведения о компоненте'))}</span></span>${icon('arrow')}</span></button>`;
   }).join('')}</div>`;
 }
+const galleryItem = item => typeof item === 'string' ? {src:item} : item;
 function gallery(car, preview = false) {
   const photos = preview ? car.gallery.slice(0,3) : car.gallery;
-  return `<div class="gallery-grid">${photos.length ? photos.map((src,i) => `<button class="gallery-photo" data-photo="${i}" aria-label="Открыть фото ${i+1}">${photo(src,`${title(car)} — ракурс ${i+1}`)}</button>`).join('') : [1,2,3].map(() => photo(null,'Фотография модели')).join('')}</div>`;
+  return `<div class="gallery-grid">${photos.length ? photos.map((item,i) => {
+    const image = galleryItem(item);
+    return `<figure><button class="gallery-photo" data-photo="${i}" aria-label="Открыть фото: ${escape(image.caption || String(i+1))}">${photo(image.src, image.caption || `${title(car)} — ракурс ${i+1}`)}</button>${image.caption ? `<figcaption>${escape(image.caption)}</figcaption>` : ''}</figure>`;
+  }).join('') : [1,2,3].map(() => photo(null,'Фотография модели')).join('')}</div>`;
 }
 function tuning(car) {
-  return `<div class="section-heading"><h2>Тюнинг и настройки</h2><p>Установленные улучшения и индивидуальные настройки.</p></div>${car.upgrades.length ? `<ul class="record-list">${car.upgrades.map(item=>`<li>${escape(item)}</li>`).join('')}</ul>` : '<div class="empty-panel"><h3>Улучшения пока не записаны</h3><p>Установленные улучшения: Не указано.</p></div>'}<div class="note-panel">Настройки: ${value(car.settings)}</div>`;
+  return `<div class="section-heading"><h2>Тюнинг и настройки</h2><p>Установленные улучшения и индивидуальные настройки.</p></div>${car.upgrades.length ? `<ul class="record-list">${car.upgrades.map(item=>`<li>${escape(item)}</li>`).join('')}</ul>` : car.stockConfirmed ? '<div class="empty-panel"><h3>Заводская комплектация</h3><p>Модель без замен штатных компонентов — подтверждено владельцем.</p></div>' : '<div class="empty-panel"><h3>Улучшения пока не записаны</h3><p>Установленные улучшения: Не указано.</p></div>'}<div class="note-panel">Настройки: ${value(car.settings)}</div>`;
 }
 function service(car) {
   return `<div class="section-heading"><h2>История обслуживания</h2><p>Работы, замены деталей и забота о модели.</p></div>${car.service.length ? `<ul class="record-list">${car.service.map(item=>`<li>${escape(item)}</li>`).join('')}</ul>` : '<div class="empty-panel"><h3>История ещё не заполнена</h3><p>Сведения об обслуживании и замене деталей: Не указано.</p></div>'}`;
@@ -88,7 +107,7 @@ function renderPanel(car, tab) {
   else if (tab === 'tuning') content = tuning(car);
   else if (tab === 'service') content = service(car);
   else if (tab === 'gallery') content = `<div class="section-heading"><h2>Галерея</h2><p>Разные ракурсы и детали крупным планом.</p></div>${gallery(car)}`;
-  else content = `${componentCards(car)}${car.components.some(c => !categories.some(([key]) => key === c.category)) ? `<h2 class="extra-title">Другие компоненты</h2><div class="extra-components">${car.components.map((c,i) => !categories.some(([key]) => key === c.category) ? `<button class="component-card" data-extra="${i}">${photo(c.image,c.model)}<span class="component-info"><span><span class="component-label">${value(c.manufacturer)}</span><strong>${value(c.model)}</strong></span>${icon('arrow')}</span></button>` : '').join('')}</div>` : ''}<div class="gallery-heading"><h2>В деталях</h2><a href="${vehicleUrl(car,'gallery')}">Все фотографии ${icon('arrow')}</a></div>${gallery(car,true)}`;
+  else content = `${componentCards(car)}${car.components.some(c => !categories.some(([key]) => key === c.category)) ? `<h2 class="extra-title">Другие компоненты</h2><div class="extra-components">${car.components.map((c,i) => !categories.some(([key]) => key === c.category) ? `<button class="component-card" data-extra="${i}" aria-label="${escape(c.name || c.model || 'Компонент')}: подробнее">${photo(c.image,c.name || c.model)}<span class="component-info"><span><span class="component-label">${value(c.manufacturer)}</span><strong>${value(c.name || c.model)}</strong></span>${icon('arrow')}</span></button>` : '').join('')}</div>` : ''}<div class="gallery-heading"><h2>В деталях</h2><a href="${vehicleUrl(car,'gallery')}">Все фотографии ${icon('arrow')}</a></div>${gallery(car,true)}`;
   return `<section class="tab-panel" id="panel-${tab}" role="tabpanel" aria-labelledby="tab-${tab}" tabindex="0">${content}</section>`;
 }
 function openDialog(content) {
@@ -96,12 +115,16 @@ function openDialog(content) {
   document.querySelector('#component-dialog').showModal(); bindImageFallbacks();
 }
 function componentDetail(component, label, summary) {
-  openDialog(`<p class="eyebrow">${escape(label)}</p>${photo(component?.image,component?.model || label)}<h2>${value(component?.model || summary)}</h2><dl class="specs"><div><dt>Производитель</dt><dd>${value(component?.manufacturer)}</dd></div><div><dt>Точная модель</dt><dd>${value(component?.model)}</dd></div><div><dt>Характеристики</dt><dd>${value(component?.specifications)}</dd></div><div><dt>Примечания</dt><dd>${value(component?.notes)}</dd></div></dl>`);
+  openDialog(`<p class="eyebrow">${escape(label)}</p>${photo(component?.image,component?.name || component?.model || label)}${imageAttribution(component)}<h2>${value(component?.name || component?.model || summary)}</h2><dl class="specs"><div><dt>Производитель</dt><dd>${value(component?.manufacturer)}</dd></div><div><dt>Точная модель</dt><dd>${value(component?.model)}</dd></div><div><dt>Характеристики</dt><dd>${value(component?.specifications)}</dd></div><div><dt>Примечания</dt><dd>${value(component?.notes)}</dd></div></dl>${component?.sourceUrl ? `<p class="image-credit">${sourceLink(component.sourceUrl,'Источник характеристик')}</p>` : ''}`);
+}
+function openGalleryPhoto(car, index) {
+  const item = galleryItem(car.gallery[index]);
+  openDialog(`${photo(item.src,item.caption || title(car),'lightbox',true)}<p class="gallery-dialog-caption">${escape(item.caption || title(car))}</p>${item.credit ? `<p class="image-credit">${escape(item.credit)} · ${sourceLink(item.sourceUrl,'Источник фото')}</p>` : ''}`);
 }
 function detail(car, tab) {
   document.title = `${title(car)} — ${tabNames[tab]} — RC Garage`;
   const color = /Красный/i.test(car.description || '') ? 'Красный' : /Серый/i.test(car.description || '') ? 'Серый' : /Хамелеон/i.test(car.description || '') ? 'Хамелеон' : /Чёрный/i.test(car.description || '') ? 'Чёрный' : /хаки/i.test(car.description || '') ? 'Хаки' : null;
-  app.innerHTML = `<article class="vehicle-page view"><header class="vehicle-hero">${photo(car.image,title(car),'hero-media',true)}<div class="hero-title"><a href="#/" class="eyebrow back">КОЛЛЕКЦИЯ / ${String(vehicles.indexOf(car)+1).padStart(2,'0')}</a><h1>${escape(title(car))}</h1><p>${escape(car.description || 'Описание: Не указано')}</p></div><span class="collection-badge">${icon('check')} В коллекции</span></header><div class="vehicle-body"><dl class="quick-specs">${[['Масштаб',car.scale],['Тип',car.specifications.type],['Привод',car.specifications.drive],['Кузов',color]].map(([label,text])=>`<div><dt>${label}</dt><dd>${value(text)}</dd></div>`).join('')}</dl><div class="tabs" role="tablist" aria-label="Разделы модели">${Object.entries(tabNames).map(([key,label])=>`<button id="tab-${key}" role="tab" aria-selected="${tab === key}" ${tab === key ? `aria-controls="panel-${key}"` : ''} tabindex="${tab === key ? 0 : -1}" data-tab="${key}" class="${tab === key ? 'active' : ''}">${label}</button>`).join('')}</div>${renderPanel(car,tab)}<p class="page-footnote">${car.image ? 'Фотографии коллекции владельца.' : 'Фотографии владельца пока не добавлены. Чужие изображения не используются.'}</p></div></article>`;
+  app.innerHTML = `<article class="vehicle-page view"><header class="vehicle-hero ${car.image ? 'has-photo' : ''}">${photo(car.image,title(car),'hero-media',true)}<div class="hero-title"><a href="#/" class="eyebrow back">КОЛЛЕКЦИЯ / ${String(vehicles.indexOf(car)+1).padStart(2,'0')}</a><h1>${escape(title(car))}</h1><p>${escape(car.description || 'Описание: Не указано')}</p></div><span class="collection-badge">${icon('check')} В коллекции</span></header><div class="vehicle-body"><dl class="quick-specs">${[['Масштаб',car.scale],['Тип',car.specifications.type],['Привод',car.specifications.drive],['Кузов',color]].map(([label,text])=>`<div><dt>${label}</dt><dd>${value(text)}</dd></div>`).join('')}</dl><div class="tabs" role="tablist" aria-label="Разделы модели">${Object.entries(tabNames).map(([key,label])=>`<button id="tab-${key}" role="tab" aria-selected="${tab === key}" ${tab === key ? `aria-controls="panel-${key}"` : ''} tabindex="${tab === key ? 0 : -1}" data-tab="${key}" class="${tab === key ? 'active' : ''}">${label}</button>`).join('')}</div>${renderPanel(car,tab)}<p class="page-footnote">${car.configurationNote ? escape(car.configurationNote) : car.image ? 'Фотографии коллекции владельца.' : 'Фотографии владельца пока не добавлены. Чужие изображения не используются.'}</p>${imageAttribution(car)}${sourceNotes(car)}</div></article>`;
   app.querySelectorAll('[data-tab]').forEach(button => {
     button.addEventListener('click', () => {location.hash = vehicleUrl(car,button.dataset.tab);});
     button.addEventListener('keydown',event => {
@@ -116,7 +139,7 @@ function detail(car, tab) {
     componentDetail(car.components.find(c=>c.category === key),categories.find(([k])=>k === key)[1],car.specifications[key]);
   }));
   app.querySelectorAll('[data-extra]').forEach(button=>button.addEventListener('click',()=>componentDetail(car.components[Number(button.dataset.extra)],'Компонент')));
-  app.querySelectorAll('[data-photo]').forEach(button=>button.addEventListener('click',()=>openDialog(photo(car.gallery[Number(button.dataset.photo)],title(car),'lightbox',true))));
+  app.querySelectorAll('[data-photo]').forEach(button=>button.addEventListener('click',()=>openGalleryPhoto(car,Number(button.dataset.photo))));
   bindImageFallbacks();
 }
 function route() {
