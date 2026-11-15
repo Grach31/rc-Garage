@@ -119,7 +119,7 @@ function componentDetail(component, label, summary) {
 }
 function openGalleryPhoto(car, index) {
   const item = galleryItem(car.gallery[index]);
-  openDialog(`${photo(item.src,item.caption || title(car),'lightbox',true)}<p class="gallery-dialog-caption">${escape(item.caption || title(car))}</p>${item.credit ? `<p class="image-credit">${escape(item.credit)} · ${sourceLink(item.sourceUrl,'Источник фото')}</p>` : ''}`);
+  openDialog(`${photo(item.src,item.caption || title(car),'lightbox',true)}<p class="gallery-dialog-caption">${escape(item.caption || title(car))}</p>${imageAttribution({imageCredit:item.credit,imageSourceUrl:item.sourceUrl})}`);
 }
 function detail(car, tab) {
   document.title = `${title(car)} — ${tabNames[tab]} — RC Garage`;
