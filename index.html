@@ -11,7 +11,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 </head>
 <body>
-<header class="app-header"><a class="garage-brand" href="#/" aria-label="RC Garage — главная страница">RC GARAGE</a><nav class="garage-nav" aria-label="Основная навигация" id="main-nav"></nav></header>
+<div id="pull-refresh" class="pull-refresh" role="status" aria-live="polite" hidden><span class="refresh-symbol" aria-hidden="true">↻</span><span id="refresh-message">Потяните вниз, чтобы обновить</span></div>
+<header class="app-header"><div class="app-header-row"><a class="garage-brand" href="#/" aria-label="RC Garage — главная страница">RC GARAGE</a><button class="refresh-button" id="refresh-button" type="button" aria-label="Обновить приложение"><span class="refresh-symbol" aria-hidden="true">↻</span><span>Обновить</span></button></div><nav class="garage-nav" aria-label="Основная навигация" id="main-nav"></nav></header>
 <main id="app"><p class="loading" role="status">Открываем гараж…</p></main><dialog id="component-dialog"><form method="dialog"><button class="dialog-close" aria-label="Закрыть">×</button></form><div id="dialog-content"></div></dialog>
 <noscript><p>Для просмотра коллекции включите JavaScript.</p></noscript>
 </body></html>
