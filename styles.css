@@ -44,3 +44,6 @@ main{margin-left:0}
  .battery-grid{grid-template-columns:1fr}
 }
 @media(max-width:360px){.garage-nav{gap:2px}.garage-nav .nav-item{padding:10px 6px;font-size:10px;gap:4px}}
+
+.garage-nav .collection-count{cursor:default}
+.garage-nav .collection-count:hover{background:transparent}

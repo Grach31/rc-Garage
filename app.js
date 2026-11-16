@@ -49,8 +49,8 @@ const vehicleUrl = (car, tab = 'overview') => `#/vehicle/${encodeURIComponent(ca
 function renderNavigation() {
   const hash = location.hash || '#/';
   const section = currentCar ? null : (hash === '#' ? '#/' : hash);
-  const nav = [['car','Коллекция','#/'],['battery','Аккумуляторы','#/batteries'],['note','Заметки','#/notes']];
-  document.querySelector('#main-nav').innerHTML = nav.map(([symbol,label,url]) => `<a href="${url}" class="nav-item ${section === url ? 'active' : ''}" ${section === url ? 'aria-current="page"' : ''}>${icon(symbol)}<span>${label}</span>${url === '#/' ? `<small>${vehicles.length}</small>` : ''}</a>`).join('');
+  const nav = [['battery','Аккумуляторы','#/batteries'],['note','Заметки','#/notes']];
+  document.querySelector('#main-nav').innerHTML = `<span class="nav-item collection-count">${icon('car')}<span>Коллекция</span><small>${vehicles.length}</small></span>` + nav.map(([symbol,label,url]) => `<a href="${url}" class="nav-item ${section === url ? 'active' : ''}" ${section === url ? 'aria-current="page"' : ''}>${icon(symbol)}<span>${label}</span></a>`).join('');
 }
 function batteries() {
   document.title = 'Аккумуляторы — RC Garage';
