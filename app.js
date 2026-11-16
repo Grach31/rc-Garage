@@ -29,7 +29,7 @@ function photo(path, alt, className = '', eager = false, label = '') {
 function sourceLink(url, label) {
   try {
     const target = new URL(url);
-    if (target.protocol !== 'https:') return '';
+    if (!['http:', 'https:'].includes(target.protocol)) return '';
     return `<a href="${escape(target.href)}" target="_blank" rel="noopener noreferrer">${escape(label)}</a>`;
   } catch { return ''; }
 }
@@ -103,7 +103,7 @@ function service(car) {
 }
 function renderPanel(car, tab) {
   let content;
-  if (tab === 'specs') content = `<div class="section-heading"><h2>Характеристики</h2><p>${car.referenceConfiguration ? 'Заводские сведения для справки. Текущие компоненты и изменения уточняются.' : 'Только подтверждённые сведения о модели.'}</p></div><dl class="specs">${getSpecs(car).map(([label,text])=>`<div><dt>${label}</dt><dd>${value(text)}</dd></div>`).join('')}</dl>`;
+  if (tab === 'specs') content = `<div class="section-heading"><h2>Характеристики</h2><p>${escape(car.specificationsNote || (car.referenceConfiguration ? 'Заводские сведения для справки. Текущие компоненты и изменения уточняются.' : 'Только подтверждённые сведения о модели.'))}</p></div><dl class="specs">${getSpecs(car).map(([label,text])=>`<div><dt>${label}</dt><dd>${value(text)}</dd></div>`).join('')}</dl>`;
   else if (tab === 'tuning') content = tuning(car);
   else if (tab === 'service') content = service(car);
   else if (tab === 'gallery') content = `<div class="section-heading"><h2>Галерея</h2><p>Разные ракурсы и детали крупным планом.</p></div>${gallery(car)}`;
@@ -124,7 +124,7 @@ function openGalleryPhoto(car, index) {
 function detail(car, tab) {
   document.title = `${title(car)} — ${tabNames[tab]} — RC Garage`;
   const color = car.color || (/Красный/i.test(car.description || '') ? 'Красный' : /Серый/i.test(car.description || '') ? 'Серый' : /Хамелеон/i.test(car.description || '') ? 'Хамелеон' : /Чёрный/i.test(car.description || '') ? 'Чёрный' : /хаки/i.test(car.description || '') ? 'Хаки' : null);
-  app.innerHTML = `<article class="vehicle-page view"><header class="vehicle-hero ${car.image ? 'has-photo' : ''}">${photo(car.image,title(car),'hero-media',true,car.imageLabel)}<div class="hero-title"><a href="#/" class="eyebrow back">КОЛЛЕКЦИЯ / ${String(vehicles.indexOf(car)+1).padStart(2,'0')}</a><h1>${escape(title(car))}</h1><p>${escape(car.description || 'Описание: Не указано')}</p></div><span class="collection-badge">${icon('check')} В коллекции</span></header><div class="vehicle-body"><dl class="quick-specs">${[['Масштаб',car.scale],['Тип',car.specifications.type],['Привод',car.specifications.drive],['Кузов',color]].map(([label,text])=>`<div><dt>${label}</dt><dd>${value(text)}</dd></div>`).join('')}</dl>${car.referenceConfiguration ? `<aside class="configuration-note"><strong>Заводская справка</strong><p>${escape(car.configurationNote)}</p></aside>` : ''}<div class="tabs" role="tablist" aria-label="Разделы модели">${Object.entries(tabNames).map(([key,label])=>`<button id="tab-${key}" role="tab" aria-selected="${tab === key}" ${tab === key ? `aria-controls="panel-${key}"` : ''} tabindex="${tab === key ? 0 : -1}" data-tab="${key}" class="${tab === key ? 'active' : ''}">${label}</button>`).join('')}</div>${renderPanel(car,tab)}<p class="page-footnote">${car.configurationNote ? escape(car.configurationNote) : car.image ? 'Фотографии коллекции владельца.' : 'Фотографии владельца пока не добавлены. Чужие изображения не используются.'}</p>${imageAttribution(car)}${sourceNotes(car)}</div></article>`;
+  app.innerHTML = `<article class="vehicle-page view"><header class="vehicle-hero ${car.image ? 'has-photo' : ''}">${photo(car.image,title(car),'hero-media',true,car.imageLabel)}<div class="hero-title"><a href="#/" class="eyebrow back">КОЛЛЕКЦИЯ / ${String(vehicles.indexOf(car)+1).padStart(2,'0')}</a><h1>${escape(title(car))}</h1><p>${escape(car.description || 'Описание: Не указано')}</p></div><span class="collection-badge">${icon('check')} В коллекции</span></header><div class="vehicle-body"><dl class="quick-specs">${[['Масштаб',car.scale],['Тип',car.specifications.type],['Привод',car.specifications.drive],['Кузов',color]].map(([label,text])=>`<div><dt>${label}</dt><dd>${value(text)}</dd></div>`).join('')}</dl>${car.referenceConfiguration ? `<aside class="configuration-note"><strong>${escape(car.configurationLabel || 'Заводская справка')}</strong><p>${escape(car.configurationNote)}</p></aside>` : ''}<div class="tabs" role="tablist" aria-label="Разделы модели">${Object.entries(tabNames).map(([key,label])=>`<button id="tab-${key}" role="tab" aria-selected="${tab === key}" ${tab === key ? `aria-controls="panel-${key}"` : ''} tabindex="${tab === key ? 0 : -1}" data-tab="${key}" class="${tab === key ? 'active' : ''}">${label}</button>`).join('')}</div>${renderPanel(car,tab)}<p class="page-footnote">${car.configurationNote ? escape(car.configurationNote) : car.image ? 'Фотографии коллекции владельца.' : 'Фотографии владельца пока не добавлены. Чужие изображения не используются.'}</p>${imageAttribution(car)}${sourceNotes(car)}</div></article>`;
   app.querySelectorAll('[data-tab]').forEach(button => {
     button.addEventListener('click', () => {location.hash = vehicleUrl(car,button.dataset.tab);});
     button.addEventListener('keydown',event => {

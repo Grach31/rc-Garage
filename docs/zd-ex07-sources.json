@@ -1,0 +1,270 @@
+{
+  "model": "ZD Racing EX07 · голубой / синий / розовый",
+  "owner_statement": "EX07 в голубой/синей/розовой расцветке; мотор и ESC от Yikong TB7 (V1 ранее подтверждена); пульт Dumbo DDF-350; новая бесколлекторная серва на 40 кг, фото будет предоставлено отдельно.",
+  "scope": "Одна запись EX07 в существующем id zd-racing. Установленные изменённые узлы отделены от каталожных сведений шасси; чужая серва не подставляется.",
+  "sources": [
+    {
+      "label": "ZD Hobby · заводской каталог EX07",
+      "url": "http://www.zdhobby.com/e_productshow/?22-ZD-Racing-EX-07-17-SCALE-4WD-ELECTRIC-HYPERCAR-22.html"
+    },
+    {
+      "label": "Toucan Hobby · расцветка, ракурсы и каталожные параметры EX07",
+      "url": "https://www.toucanhobby.eu/products/zd-ex-07-bl-rtr-bupk-spf1"
+    },
+    {
+      "label": "Yikong TB7 V1 · каталог силовой системы-донора",
+      "url": "https://www.yikongrc.net/products/yikong-yk4073-tb7-1-7-4wd-desert-rc-truck"
+    },
+    {
+      "label": "Hobbywing · инструкция MAX8 V3, справка по семейству; OEM-ревизия не установлена",
+      "url": "https://www.hobbywing.com/en/uploads/file/20221024/6dc669fd70fb79ce38cd22073012b853.pdf"
+    },
+    {
+      "label": "DUMBORC · DDF-350, производитель",
+      "url": "https://www.dumborc.com/en/2024/01/07/ddf-350-transmitter/"
+    },
+    {
+      "label": "DUMBORC · фирменное руководство DDF-350",
+      "url": "https://www.dumborc.com/sms/docs/遥控器/DDF350/遥控器简介/功能特点/"
+    },
+    {
+      "label": "EX07 · каталог деталей ходовой части",
+      "url": "https://www.yikongrc.net/collections/zd-racing-ex07-parts-and-upgrades"
+    }
+  ],
+  "images": [
+    {
+      "asset": "./assets/zd-ex07/studio.webp",
+      "source_url": "https://www.toucanhobby.eu/products/zd-ex-07-bl-rtr-bupk-spf1",
+      "source_filename": "exec-a0c4b44f-6d76-41e4-bf81-0c25adcc243b.png",
+      "source_sha256": "92acf36979178a60a7eeaeec157e34f2e369cd49ca94432a0a607105a0b88b1e",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "delivered_dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 163796,
+      "processing": "Студийная AI-обработка каталожного кузова; не источник характеристик"
+    },
+    {
+      "asset": "./assets/zd-ex07/side-left.webp",
+      "source_url": "https://cdn.shopify.com/s/files/1/0552/5317/2392/files/DSC_4020-1.jpg?v=1754473986",
+      "source_filename": "body-6.jpg",
+      "source_sha256": "a2c4b01f3533991187eb4c7b716cd97a19638d031904c7d33e664c43b56997b4",
+      "source_dimensions": [
+        1500,
+        1500
+      ],
+      "delivered_dimensions": [
+        1500,
+        1500
+      ],
+      "bytes": 69566,
+      "processing": "Только WebP и уменьшение без увеличения разрешения; исходная композиция, надписи и водяные знаки сохранены"
+    },
+    {
+      "asset": "./assets/zd-ex07/side-right.webp",
+      "source_url": "https://cdn.shopify.com/s/files/1/0552/5317/2392/files/DSC_4011-1.jpg?v=1754473986",
+      "source_filename": "body-5.jpg",
+      "source_sha256": "d692a289a5d5169d7d877e4dfa7a750a865272a955e9a58647ecf2a864ad38ea",
+      "source_dimensions": [
+        1500,
+        1500
+      ],
+      "delivered_dimensions": [
+        1500,
+        1500
+      ],
+      "bytes": 67812,
+      "processing": "Только WebP и уменьшение без увеличения разрешения; исходная композиция, надписи и водяные знаки сохранены"
+    },
+    {
+      "asset": "./assets/zd-ex07/top.webp",
+      "source_url": "https://cdn.shopify.com/s/files/1/0552/5317/2392/files/DSC_4026-1.jpg?v=1754473986",
+      "source_filename": "body-9.jpg",
+      "source_sha256": "67f8353ac4e255941db61e14f42e59ac1f1b2c1f35d29d3222870346f654d967",
+      "source_dimensions": [
+        1500,
+        1500
+      ],
+      "delivered_dimensions": [
+        1500,
+        1500
+      ],
+      "bytes": 87832,
+      "processing": "Только WebP и уменьшение без увеличения разрешения; исходная композиция, надписи и водяные знаки сохранены"
+    },
+    {
+      "asset": "./assets/zd-ex07/front-detail.webp",
+      "source_url": "https://cdn.shopify.com/s/files/1/0552/5317/2392/files/DSC_4021-1.jpg?v=1754473986",
+      "source_filename": "body-7.jpg",
+      "source_sha256": "b50a245e935c294f3a005851815318ab32405851a3c66fcad3fd4ee0cad53d69",
+      "source_dimensions": [
+        1500,
+        1500
+      ],
+      "delivered_dimensions": [
+        1500,
+        1500
+      ],
+      "bytes": 136940,
+      "processing": "Только WebP и уменьшение без увеличения разрешения; исходная композиция, надписи и водяные знаки сохранены"
+    },
+    {
+      "asset": "./assets/zd-ex07/motor-tb7.webp",
+      "source_url": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/YIKONG_YK4073_RC_Truck_Parts_brushless_4274_motor_71099.jpg?v=1737363397",
+      "source_filename": "motor.jpg",
+      "source_sha256": "1a25ea0e276f191b7883e3605549e2eca5e2136d97b73cf4088a5f75a94a882c",
+      "source_dimensions": [
+        800,
+        800
+      ],
+      "delivered_dimensions": [
+        800,
+        800
+      ],
+      "bytes": 17378,
+      "processing": "Только WebP и уменьшение без увеличения разрешения; исходная композиция, надписи и водяные знаки сохранены"
+    },
+    {
+      "asset": "./assets/zd-ex07/esc-tb7.webp",
+      "source_url": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/YIKONG_YK4073_RC_Truck_Parts_brushless_150A_ESC_71100.jpg?v=1737363581",
+      "source_filename": "esc.jpg",
+      "source_sha256": "b0b044df7cb515d453b7251d25fa7dc1c7368e3a40668baeb9ec9cb271514380",
+      "source_dimensions": [
+        800,
+        800
+      ],
+      "delivered_dimensions": [
+        800,
+        800
+      ],
+      "bytes": 27244,
+      "processing": "Только WebP и уменьшение без увеличения разрешения; исходная композиция, надписи и водяные знаки сохранены"
+    },
+    {
+      "asset": "./assets/zd-ex07/radio.webp",
+      "source_url": "https://www.dumborc.com/en/wp-content/uploads/2024/01/zt-1.jpg",
+      "source_filename": "ddf-3.jpg",
+      "source_sha256": "0ce8d34dfc989b882c4798c046de9549581ffb177cbde901d23675ff28fae16b",
+      "source_dimensions": [
+        1000,
+        1000
+      ],
+      "delivered_dimensions": [
+        1000,
+        1000
+      ],
+      "bytes": 70004,
+      "processing": "Только WebP и уменьшение без увеличения разрешения; исходная композиция, надписи и водяные знаки сохранены"
+    },
+    {
+      "asset": "./assets/zd-ex07/suspension.webp",
+      "source_url": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/ZD_Racing_EX-07_Parts_Shock_Absorbers_8501.jpg?v=1752477483",
+      "source_filename": "suspension.jpg",
+      "source_sha256": "dcb7087fc102686e1e8de7f452b428645ee8e29d10eca584e32022736d8d066c",
+      "source_dimensions": [
+        800,
+        800
+      ],
+      "delivered_dimensions": [
+        800,
+        800
+      ],
+      "bytes": 26958,
+      "processing": "Только WebP и уменьшение без увеличения разрешения; исходная композиция, надписи и водяные знаки сохранены"
+    },
+    {
+      "asset": "./assets/zd-ex07/wheels.webp",
+      "source_url": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/ZD_RACING_EX-07_RC_Car_Parts_Wheel_Tire_Set_8585.jpg?v=1752558931",
+      "source_filename": "wheels.jpg",
+      "source_sha256": "de99aed9d5e332e73783ad9c3321911ab5be7304b65b1521948dfb4c6562040f",
+      "source_dimensions": [
+        800,
+        800
+      ],
+      "delivered_dimensions": [
+        800,
+        800
+      ],
+      "bytes": 35518,
+      "processing": "Только WebP и уменьшение без увеличения разрешения; исходная композиция, надписи и водяные знаки сохранены"
+    },
+    {
+      "asset": "./assets/zd-ex07/transmission.webp",
+      "source_url": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/ZD_Racing_EX-07_Parts_Differential_CNC_8504.jpg?v=1752478058",
+      "source_filename": "transmission.jpg",
+      "source_sha256": "ea4acee082721ab5919d6db5fe32b45c55b6b047e5a7685611ae399164bd5d50",
+      "source_dimensions": [
+        800,
+        800
+      ],
+      "delivered_dimensions": [
+        800,
+        800
+      ],
+      "bytes": 26584,
+      "processing": "Только WebP и уменьшение без увеличения разрешения; исходная композиция, надписи и водяные знаки сохранены"
+    },
+    {
+      "asset": "./assets/zd-ex07/brakes.webp",
+      "source_url": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/ZD_Racing_EX07_RC_Truck_Parts_Brake_Disc_and_Pad_Set_8548_front.jpg?v=1752542640",
+      "source_filename": "brake-discs.jpg",
+      "source_sha256": "b692a647c9190cf073067d0a7acfc059b06245337183bcf84f34a65210b35cd5",
+      "source_dimensions": [
+        800,
+        800
+      ],
+      "delivered_dimensions": [
+        800,
+        800
+      ],
+      "bytes": 27290,
+      "processing": "Только WebP и уменьшение без увеличения разрешения; исходная композиция, надписи и водяные знаки сохранены"
+    }
+  ],
+  "studio_edit": {
+    "master_filename": "exec-a0c4b44f-6d76-41e4-bf81-0c25adcc243b.png",
+    "reference_filenames": [
+      "body-0.jpg",
+      "body-6.jpg",
+      "body-7.jpg"
+    ],
+    "reference_sha256": [
+      "8aaa995856d69dae7893a16c9b638edec8e84f5acf809546067a9f18f6d968d0",
+      "a2c4b01f3533991187eb4c7b716cd97a19638d031904c7d33e664c43b56997b4",
+      "b50a245e935c294f3a005851815318ab32405851a3c66fcad3fd4ee0cad53d69"
+    ],
+    "processing": "Один студийный кадр; кузов сохранён в подтверждённой расцветке, удалены аксессуары из каталожного коллажа. Пометка Демо · AI в интерфейсе. Не доказательство установленной электроники."
+  },
+  "donor_power_system": {
+    "motor": "Каталог TB7 V1: 71099, 4274 1600KV; изготовитель OEM не подтверждён, не назван Hobbywing без основания.",
+    "esc": "Каталог TB7 V1: 71100, Hobbywing MAX8 150A/950A, 3–6S LiPo. Фактические BEC, ревизия, прошивка и разъёмы не назначены по розничной инструкции MAX8 V3.",
+    "donor_record": "Карточка TB7 остаётся без мотора и ESC; их изображения добавлены только к ZD по новому сообщению владельца."
+  },
+  "conflicts": {
+    "wheelbase": "В торговых каталогах 324 и 413 мм; в доступном описании производителя нет подтверждения. Оставлено Не указано.",
+    "weight": "Источники указывают около 5,7 кг и 7,5 кг с неясной комплектацией. Вес изменённого экземпляра не указан.",
+    "ground_clearance": "В таблицах встречается 70 мм без подтверждения заводской схемой; не назначено.",
+    "stock_motor": "В разных каталогах 4082 или 4282 2000KV. Ни один не подставлен, поскольку владелец подтвердил двигатель TB7.",
+    "radio_revision": "Старые и новые материалы производителя DDF-350 расходятся по питанию/размерам. Эти поля экземпляру не назначены; модель приёмника неизвестна.",
+    "brake_servo": "Каталожная тормозная серва 9 кг не смешана с подтверждённой рулевой 40 кг; её наличие неизвестно."
+  },
+  "pending": [
+    "Фото, производитель и точная модель бесколлекторной рулевой сервы на 40 кг",
+    "Приёмник и настройки DDF-350",
+    "Аккумулятор, разъёмы, пиньон и спур",
+    "Фактические масса, подвеска, обслуживание и настройки"
+  ],
+  "exclusions": [
+    "Никакой случайной сервы вместо снимка владельца",
+    "Заводские мотор/ESC/пульт/15кг-серва EX07 не представлены как установленные",
+    "Скорость 130 км/ч, заводское время работы и комплектные аккумуляторы не применены к изменённой системе",
+    "Не добавлены чёрные кузова или фото открытого шасси с заводской электроникой",
+    "Не подставлен неподтверждённый X10F/X10FG: фото DDF-350 без приёмника"
+  ],
+  "primary_source_access": "Заводской каталог zdhobby.com доступен по HTTP, HTTPS вернул 503. Внешняя ссылка на HTTP сохранена как ссылка, все изображения приложения локальные."
+}
