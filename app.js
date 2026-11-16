@@ -15,7 +15,7 @@ const paths = {
 const icon = name => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.motor}</svg>`;
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const value = text => text ? escape(text) : '<span class="unknown">Не указано</span>';
-let vehicles = [], vehicleAliases = {}, filter = 'all', query = '', currentCar = null, currentTab = 'overview';
+let batteryItems = [], vehicles = [], vehicleAliases = {}, filter = 'all', query = '', currentCar = null, currentTab = 'overview';
 const title = car => car.manufacturer && car.model ? `${car.manufacturer} ${car.model}` : car.model || car.manufacturer;
 const placeholder = (caption = 'Фото не добавлено') => `<div class="placeholder">${icon('camera')}<span>${caption}</span></div>`;
 function safeImage(path) {
@@ -54,11 +54,58 @@ function renderNavigation() {
 }
 function batteries() {
   document.title = 'Аккумуляторы — RC Garage';
-  app.innerHTML = `<section class="collection-page view"><header class="collection-heading"><h1>Аккумуляторы</h1><p class="intro-copy">Сведения о питании моделей коллекции.</p></header><div class="battery-grid">${vehicles.map(car => `<article class="empty-panel"><h2><a href="${vehicleUrl(car)}">${escape(title(car))}</a></h2><dl class="specs"><div><dt>Установленный аккумулятор</dt><dd>${value(car.specifications.battery)}</dd></div>${car.specifications.batteryCompatibility ? `<div><dt>Совместимое питание</dt><dd>${value(car.specifications.batteryCompatibility)}</dd></div>` : ''}</dl><a class="model-details-link" href="${vehicleUrl(car,'specs')}">Характеристики модели →</a></article>`).join('')}</div></section>`;
+  app.innerHTML = `<section class="collection-page view"><header class="collection-heading"><h1>Аккумуляторы</h1></header>${batteryItems.length ? `<div class="battery-list">${batteryItems.map(item => `<article class="battery-item">${photo(item.image,item.name)}<div><h2>${escape(item.name)}</h2><dl class="specs">${[['Банки',item.cells],['Ёмкость',item.capacity],['Напряжение',item.voltage],['Разъём',item.connector],['Токоотдача',item.dischargeRate]].map(([label,text])=>`<div><dt>${label}</dt><dd>${value(text)}</dd></div>`).join('')}</dl></div></article>`).join('')}</div>` : '<div class="empty-panel"><h2>Аккумуляторов пока нет</h2><p>Здесь будет список аккумуляторов с фотографиями, количеством банок, ёмкостью и разъёмом.</p></div>'}</section>`;
+  bindImageFallbacks();
+}
+const notesStorageKey = 'rc-garage:vehicle-notes:v1';
+function readNotes() {
+  const raw = localStorage.getItem(notesStorageKey);
+  if (raw === null) return [];
+  const items = JSON.parse(raw);
+  if (!Array.isArray(items) || items.some(item => !item || typeof item.id !== 'string' || typeof item.carId !== 'string' || typeof item.carTitle !== 'string' || typeof item.text !== 'string')) throw new Error('Invalid notes');
+  return items;
 }
 function notes() {
   document.title = 'Заметки — RC Garage';
-  app.innerHTML = '<section class="collection-page view"><header class="collection-heading"><h1>Заметки</h1></header><div class="empty-panel"><h2>Заметок пока нет</h2><p>Тюнинг и история обслуживания находятся в карточке каждой машины.</p></div></section>';
+  let items;
+  try {items = readNotes();} catch {
+    app.innerHTML = '<section class="collection-page view"><h1>Заметки</h1><p role="alert">Не удалось прочитать заметки. Проверьте доступ к хранилищу браузера и перезагрузите страницу. Сохранённые данные не изменены.</p></section>';
+    return;
+  }
+  app.innerHTML = `<section class="collection-page notes-page view"><header class="notes-heading"><h1>Заметки</h1><button type="button" class="primary-button" id="new-note">+ Новая заметка</button></header><p class="storage-caption">Заметки сохраняются в этом браузере на этом устройстве.</p><form class="note-editor" id="note-editor" hidden><h2 id="note-editor-title">Новая заметка</h2><label for="note-car">Машина</label><select id="note-car" required><option value="">Выберите машину</option>${vehicles.map(car=>`<option value="${escape(car.id)}">${escape(title(car))}${car.description ? ` — ${escape(car.description)}` : ''}</option>`).join('')}</select><label for="note-text">Заметка</label><textarea id="note-text" rows="6" required placeholder="Напишите заметку"></textarea><p id="note-error" role="alert" hidden></p><div class="note-actions"><button class="primary-button" type="submit">Сохранить</button><button class="secondary-button" id="cancel-note" type="button">Отмена</button></div></form><p id="notes-status" role="status" aria-live="polite"></p><div id="notes-list"></div></section>`;
+  const form = app.querySelector('#note-editor'), carSelect = app.querySelector('#note-car'), textInput = app.querySelector('#note-text'), error = app.querySelector('#note-error');
+  let editingId = null;
+  const renderList = () => {
+    app.querySelector('#notes-list').innerHTML = items.length ? items.map(item=>`<article class="saved-note"><header><h2>${escape(vehicles.find(car=>car.id === item.carId) ? title(vehicles.find(car=>car.id === item.carId)) : item.carTitle)}</h2><button type="button" class="secondary-button" data-edit-note="${escape(item.id)}">Изменить</button></header><p class="note-text">${escape(item.text)}</p></article>`).join('') : '<div class="empty-panel"><h2>Заметок пока нет</h2><p>Нажмите «+ Новая заметка», выберите машину и напишите текст.</p></div>';
+    app.querySelectorAll('[data-edit-note]').forEach(button=>button.addEventListener('click',()=>openEditor(items.find(item=>item.id === button.dataset.editNote))));
+  };
+  const openEditor = (item = null) => {
+    form.reset();editingId = item?.id || null;error.hidden = true;
+    app.querySelector('#note-editor-title').textContent = item ? 'Изменить заметку' : 'Новая заметка';
+    if (item) {carSelect.value = item.carId;textInput.value = item.text;}
+    form.hidden = false;app.querySelector('#new-note').hidden = true;carSelect.focus();
+  };
+  const closeEditor = () => {form.hidden = true;form.reset();editingId = null;app.querySelector('#new-note').hidden = false;app.querySelector('#new-note').focus();};
+  app.querySelector('#new-note').addEventListener('click',()=>openEditor());
+  app.querySelector('#cancel-note').addEventListener('click',closeEditor);
+  textInput.addEventListener('input',()=>textInput.setCustomValidity(''));
+  form.addEventListener('submit',event=>{
+    event.preventDefault();
+    const car = vehicles.find(item=>item.id === carSelect.value), text = textInput.value.trim();
+    if (!car) {carSelect.focus();return;}
+    if (!text) {textInput.setCustomValidity('Напишите текст заметки');textInput.reportValidity();return;}
+    const item = {id:editingId || crypto.randomUUID(),carId:car.id,carTitle:title(car),text};
+    try {
+      const latest = readNotes();
+      const next = editingId ? latest.map(saved=>saved.id === editingId ? item : saved) : [item,...latest];
+      if (editingId && !latest.some(saved=>saved.id === editingId)) throw new Error('Note missing');
+      localStorage.setItem(notesStorageKey,JSON.stringify(next));items = next;
+    } catch {
+      error.textContent = 'Не удалось сохранить заметку. Текст оставлен в форме — попробуйте ещё раз.';error.hidden = false;return;
+    }
+    closeEditor();renderList();app.querySelector('#notes-status').textContent = 'Заметка сохранена';
+  });
+  renderList();
 }
 
 function card(car) {
@@ -173,7 +220,7 @@ function route() {
 async function init() {
   try {
     const response = await fetch('./data/collection.json');if (!response.ok) throw new Error('Catalog unavailable');
-    const data = await response.json();vehicles = data.vehicles;vehicleAliases = data.redirects || {};
+    const data = await response.json();vehicles = data.vehicles;batteryItems = data.batteries || [];vehicleAliases = data.redirects || {};
     route();window.addEventListener('hashchange',route);
   } catch {
     app.innerHTML = '<div class="error"><h1>Гараж пока недоступен</h1><p>Не удалось загрузить каталог. Попробуйте ещё раз.</p><button type="button">Повторить</button></div>';
