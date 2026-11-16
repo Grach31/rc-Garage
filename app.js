@@ -15,7 +15,7 @@ const paths = {
 const icon = name => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.motor}</svg>`;
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const value = text => text ? escape(text) : '<span class="unknown">Не указано</span>';
-let vehicles = [], vehicleAliases = {}, filter = 'all', query = '', currentCar = null, currentTab = 'overview';
+let batteryItems = [], vehicles = [], vehicleAliases = {}, filter = 'all', query = '', currentCar = null, currentTab = 'overview';
 const title = car => car.manufacturer && car.model ? `${car.manufacturer} ${car.model}` : car.model || car.manufacturer;
 const placeholder = (caption = 'Фото не добавлено') => `<div class="placeholder">${icon('camera')}<span>${caption}</span></div>`;
 function safeImage(path) {
@@ -46,18 +46,70 @@ function bindImageFallbacks() {
   };});
 }
 const vehicleUrl = (car, tab = 'overview') => `#/vehicle/${encodeURIComponent(car.id)}${tab === 'overview' ? '' : `/${tab}`}`;
-function renderSidebar() {
-  const sidebarScroll = document.querySelector('#sidebar').scrollTop;
-  const car = currentCar || vehicles[0];
-  const nav = [['car','Коллекция','#/',!currentCar || ['overview','specs','gallery'].includes(currentTab)],['tuning','Тюнинг',vehicleUrl(car,'tuning'),currentTab === 'tuning'],['tool','Обслуживание',vehicleUrl(car,'service'),currentTab === 'service']];
-  document.querySelector('#main-nav').innerHTML = nav.map(([symbol,label,url,active]) => `<a href="${url}" class="nav-item ${active ? 'active' : ''}" ${active ? 'aria-current="page"' : ''}>${icon(symbol)}<span>${label}</span>${label === 'Коллекция' ? `<small>${vehicles.length}</small>` : ''}</a>`).join('') + '<div class="nav-item upcoming">'+icon('battery')+'<span>Аккумуляторы</span><small>Скоро</small></div><div class="nav-item upcoming">'+icon('note')+'<span>Заметки</span><small>Скоро</small></div>';
-  document.querySelector('#model-list').innerHTML = vehicles.map(car => `<a class="model-link ${currentCar?.id === car.id ? 'selected' : ''}" href="${vehicleUrl(car)}" ${currentCar?.id === car.id ? 'aria-current="page"' : ''} aria-label="${escape(title(car))}${car.description ? ` — ${escape(car.description)}` : ''}">${photo(car.thumbnail || car.image,title(car),'',false,car.imageLabel)}<div><strong>${escape(title(car))}</strong><span>${escape(car.description || 'Описание не указано')}</span></div></a>`).join('');
-  if (!matchMedia('(min-width: 901px)').matches) document.querySelector('#sidebar').open = false;
-  document.querySelector('#sidebar').scrollTop = sidebarScroll;
+function renderNavigation() {
+  const hash = location.hash || '#/';
+  const section = currentCar ? null : (hash === '#' ? '#/' : hash);
+  const nav = [['battery','Аккумуляторы','#/batteries'],['note','Заметки','#/notes']];
+  document.querySelector('#main-nav').innerHTML = `<span class="nav-item collection-count">${icon('car')}<span>Коллекция</span><small>${vehicles.length}</small></span>` + nav.map(([symbol,label,url]) => `<a href="${url}" class="nav-item ${section === url ? 'active' : ''}" ${section === url ? 'aria-current="page"' : ''}>${icon(symbol)}<span>${label}</span></a>`).join('');
+}
+function batteries() {
+  document.title = 'Аккумуляторы — RC Garage';
+  app.innerHTML = `<section class="collection-page view"><header class="collection-heading"><h1>Аккумуляторы</h1></header>${batteryItems.length ? `<div class="battery-list">${batteryItems.map(item => `<article class="battery-item">${photo(item.image,item.name)}<div><h2>${escape(item.name)}</h2><dl class="specs">${[['Банки',item.cells],['Ёмкость',item.capacity],['Напряжение',item.voltage],['Разъём',item.connector],['Токоотдача',item.dischargeRate]].map(([label,text])=>`<div><dt>${label}</dt><dd>${value(text)}</dd></div>`).join('')}</dl></div></article>`).join('')}</div>` : '<div class="empty-panel"><h2>Аккумуляторов пока нет</h2><p>Здесь будет список аккумуляторов с фотографиями, количеством банок, ёмкостью и разъёмом.</p></div>'}</section>`;
   bindImageFallbacks();
 }
+const notesStorageKey = 'rc-garage:vehicle-notes:v1';
+function readNotes() {
+  const raw = localStorage.getItem(notesStorageKey);
+  if (raw === null) return [];
+  const items = JSON.parse(raw);
+  if (!Array.isArray(items) || items.some(item => !item || typeof item.id !== 'string' || typeof item.carId !== 'string' || typeof item.carTitle !== 'string' || typeof item.text !== 'string')) throw new Error('Invalid notes');
+  return items;
+}
+function notes() {
+  document.title = 'Заметки — RC Garage';
+  let items;
+  try {items = readNotes();} catch {
+    app.innerHTML = '<section class="collection-page view"><h1>Заметки</h1><p role="alert">Не удалось прочитать заметки. Проверьте доступ к хранилищу браузера и перезагрузите страницу. Сохранённые данные не изменены.</p></section>';
+    return;
+  }
+  app.innerHTML = `<section class="collection-page notes-page view"><header class="notes-heading"><h1>Заметки</h1><button type="button" class="primary-button" id="new-note">+ Новая заметка</button></header><p class="storage-caption">Заметки сохраняются в этом браузере на этом устройстве.</p><form class="note-editor" id="note-editor" hidden><h2 id="note-editor-title">Новая заметка</h2><label for="note-car">Машина</label><select id="note-car" required><option value="">Выберите машину</option>${vehicles.map(car=>`<option value="${escape(car.id)}">${escape(title(car))}${car.description ? ` — ${escape(car.description)}` : ''}</option>`).join('')}</select><label for="note-text">Заметка</label><textarea id="note-text" rows="6" required placeholder="Напишите заметку"></textarea><p id="note-error" role="alert" hidden></p><div class="note-actions"><button class="primary-button" type="submit">Сохранить</button><button class="secondary-button" id="cancel-note" type="button">Отмена</button></div></form><p id="notes-status" role="status" aria-live="polite"></p><div id="notes-list"></div></section>`;
+  const form = app.querySelector('#note-editor'), carSelect = app.querySelector('#note-car'), textInput = app.querySelector('#note-text'), error = app.querySelector('#note-error');
+  let editingId = null;
+  const renderList = () => {
+    app.querySelector('#notes-list').innerHTML = items.length ? items.map(item=>`<article class="saved-note"><header><h2>${escape(vehicles.find(car=>car.id === item.carId) ? title(vehicles.find(car=>car.id === item.carId)) : item.carTitle)}</h2><button type="button" class="secondary-button" data-edit-note="${escape(item.id)}">Изменить</button></header><p class="note-text">${escape(item.text)}</p></article>`).join('') : '<div class="empty-panel"><h2>Заметок пока нет</h2><p>Нажмите «+ Новая заметка», выберите машину и напишите текст.</p></div>';
+    app.querySelectorAll('[data-edit-note]').forEach(button=>button.addEventListener('click',()=>openEditor(items.find(item=>item.id === button.dataset.editNote))));
+  };
+  const openEditor = (item = null) => {
+    form.reset();editingId = item?.id || null;error.hidden = true;
+    app.querySelector('#note-editor-title').textContent = item ? 'Изменить заметку' : 'Новая заметка';
+    if (item) {carSelect.value = item.carId;textInput.value = item.text;}
+    form.hidden = false;app.querySelector('#new-note').hidden = true;carSelect.focus();
+  };
+  const closeEditor = () => {form.hidden = true;form.reset();editingId = null;app.querySelector('#new-note').hidden = false;app.querySelector('#new-note').focus();};
+  app.querySelector('#new-note').addEventListener('click',()=>openEditor());
+  app.querySelector('#cancel-note').addEventListener('click',closeEditor);
+  textInput.addEventListener('input',()=>textInput.setCustomValidity(''));
+  form.addEventListener('submit',event=>{
+    event.preventDefault();
+    const car = vehicles.find(item=>item.id === carSelect.value), text = textInput.value.trim();
+    if (!car) {carSelect.focus();return;}
+    if (!text) {textInput.setCustomValidity('Напишите текст заметки');textInput.reportValidity();return;}
+    const item = {id:editingId || crypto.randomUUID(),carId:car.id,carTitle:title(car),text};
+    try {
+      const latest = readNotes();
+      const next = editingId ? latest.map(saved=>saved.id === editingId ? item : saved) : [item,...latest];
+      if (editingId && !latest.some(saved=>saved.id === editingId)) throw new Error('Note missing');
+      localStorage.setItem(notesStorageKey,JSON.stringify(next));items = next;
+    } catch {
+      error.textContent = 'Не удалось сохранить заметку. Текст оставлен в форме — попробуйте ещё раз.';error.hidden = false;return;
+    }
+    closeEditor();renderList();app.querySelector('#notes-status').textContent = 'Заметка сохранена';
+  });
+  renderList();
+}
+
 function card(car) {
-  return `<a class="card" href="${vehicleUrl(car)}" aria-label="${escape(title(car))}${car.description ? ` — ${escape(car.description)}` : ''}">${photo(car.thumbnail || car.image,title(car),'',false,car.imageLabel)}<div class="card-info"><div><p class="maker">${escape(car.manufacturer || 'Производитель не указан')}</p><h2>${escape(car.model || car.manufacturer)}</h2><p>${escape(car.description || 'Описание: Не указано')} <span>·</span> ${escape(car.scale || 'Масштаб не указан')}</p></div>${icon('arrow')}</div></a>`;
+  return `<a class="card" href="${vehicleUrl(car)}" aria-label="${escape(title(car))}${car.description ? ` — ${escape(car.description)}` : ''}">${photo(car.thumbnail || car.image,title(car),'',false,car.imageLabel)}<div class="card-info"><div><p class="maker">${escape(car.manufacturer || 'Производитель не указан')}</p><h2>${escape(title(car))}</h2><p>${escape(car.description || 'Описание: Не указано')} <span>·</span> ${escape(car.scale || 'Масштаб не указан')}</p></div>${icon('arrow')}</div></a>`;
 }
 function updateGrid() {
   const results = vehicles.filter(car => (filter === 'all' || (filter === 'custom' ? ['kamaz','ural'].includes(car.id) : car.id === 'trailer')) && `${title(car)} ${car.description || ''}`.toLocaleLowerCase('ru').includes(query.toLocaleLowerCase('ru')));
@@ -124,7 +176,7 @@ function openGalleryPhoto(car, index) {
 function detail(car, tab) {
   document.title = `${title(car)} — ${tabNames[tab]} — RC Garage`;
   const color = car.color || (/Красный/i.test(car.description || '') ? 'Красный' : /Серый/i.test(car.description || '') ? 'Серый' : /Хамелеон/i.test(car.description || '') ? 'Хамелеон' : /Чёрный/i.test(car.description || '') ? 'Чёрный' : /хаки/i.test(car.description || '') ? 'Хаки' : null);
-  app.innerHTML = `<article class="vehicle-page view"><header class="vehicle-hero ${car.image ? 'has-photo' : ''}">${photo(car.image,title(car),'hero-media',true,car.imageLabel)}<div class="hero-title"><a href="#/" class="eyebrow back">КОЛЛЕКЦИЯ / ${String(vehicles.indexOf(car)+1).padStart(2,'0')}</a><h1>${escape(title(car))}</h1><p>${escape(car.description || 'Описание: Не указано')}</p></div><span class="collection-badge">${icon('check')} В коллекции</span></header><div class="vehicle-body"><dl class="quick-specs">${[['Масштаб',car.scale],['Тип',car.specifications.type],['Привод',car.specifications.drive],['Кузов',color]].map(([label,text])=>`<div><dt>${label}</dt><dd>${value(text)}</dd></div>`).join('')}</dl>${car.referenceConfiguration ? `<aside class="configuration-note"><strong>${escape(car.configurationLabel || 'Заводская справка')}</strong><p>${escape(car.configurationNote)}</p></aside>` : ''}<div class="tabs" role="tablist" aria-label="Разделы модели">${Object.entries(tabNames).map(([key,label])=>`<button id="tab-${key}" role="tab" aria-selected="${tab === key}" ${tab === key ? `aria-controls="panel-${key}"` : ''} tabindex="${tab === key ? 0 : -1}" data-tab="${key}" class="${tab === key ? 'active' : ''}">${label}</button>`).join('')}</div>${renderPanel(car,tab)}<p class="page-footnote">${car.configurationNote ? escape(car.configurationNote) : car.image ? 'Фотографии коллекции владельца.' : 'Фотографии владельца пока не добавлены. Чужие изображения не используются.'}</p>${imageAttribution(car)}${sourceNotes(car)}</div></article>`;
+  app.innerHTML = `<article class="vehicle-page view"><header class="vehicle-hero ${car.image ? 'has-photo' : ''}">${photo(car.image,title(car),'hero-media',true,car.imageLabel)}<div class="hero-title"><a href="#/" class="eyebrow back">← В КОЛЛЕКЦИЮ / ${String(vehicles.indexOf(car)+1).padStart(2,'0')}</a><h1>${escape(title(car))}</h1><p>${escape(car.description || 'Описание: Не указано')}</p></div><span class="collection-badge">${icon('check')} В коллекции</span></header><div class="vehicle-body"><dl class="quick-specs">${[['Масштаб',car.scale],['Тип',car.specifications.type],['Привод',car.specifications.drive],['Кузов',color]].map(([label,text])=>`<div><dt>${label}</dt><dd>${value(text)}</dd></div>`).join('')}</dl>${car.referenceConfiguration ? `<aside class="configuration-note"><strong>${escape(car.configurationLabel || 'Заводская справка')}</strong><p>${escape(car.configurationNote)}</p></aside>` : ''}<div class="tabs" role="tablist" aria-label="Разделы модели">${Object.entries(tabNames).map(([key,label])=>`<button id="tab-${key}" role="tab" aria-selected="${tab === key}" ${tab === key ? `aria-controls="panel-${key}"` : ''} tabindex="${tab === key ? 0 : -1}" data-tab="${key}" class="${tab === key ? 'active' : ''}">${label}</button>`).join('')}</div>${renderPanel(car,tab)}<p class="page-footnote">${car.configurationNote ? escape(car.configurationNote) : car.image ? 'Фотографии коллекции владельца.' : 'Фотографии владельца пока не добавлены. Чужие изображения не используются.'}</p>${imageAttribution(car)}${sourceNotes(car)}</div></article>`;
   app.querySelectorAll('[data-tab]').forEach(button => {
     button.addEventListener('click', () => {location.hash = vehicleUrl(car,button.dataset.tab);});
     button.addEventListener('keydown',event => {
@@ -148,6 +200,8 @@ function route() {
   const previous = currentCar?.id, previousTab = currentTab;
   currentCar = null;currentTab = 'overview';
   if (hash === '#/' || hash === '#') home();
+  else if (hash === '#/batteries') batteries();
+  else if (hash === '#/notes') notes();
   else {
     const match = /^#\/vehicle\/([^/]+)(?:\/([^/]+))?$/.exec(hash);
     const requestedId = match && (Object.hasOwn(vehicleAliases,match[1]) ? encodeURIComponent(vehicleAliases[match[1]]) : match[1]);
@@ -157,23 +211,16 @@ function route() {
       currentCar = car;currentTab = match[2] || 'overview';detail(car,currentTab);}
     else {document.title = 'Модель не найдена — RC Garage';app.innerHTML = '<div class="error"><h1>Страница не найдена</h1><p>Возможно, ссылка устарела.</p><a href="#/">В мою коллекцию →</a></div>';}
   }
-  renderSidebar();
+  renderNavigation();
   const tabs = app.querySelector('.tabs'), activeTab = app.querySelector('[aria-selected=true]');
   if (tabs && activeTab) tabs.scrollLeft = activeTab.offsetLeft - tabs.offsetLeft - (tabs.clientWidth-activeTab.offsetWidth)/2;
   if (currentCar?.id === previous && previousTab !== currentTab) {app.querySelector(`[data-tab="${currentTab}"]`)?.focus({preventScroll:true});}
   else window.scrollTo(0,0);
 }
-for (const nav of ['#main-nav','#model-list']) document.querySelector(nav).addEventListener('click',event=>{
-  if(event.target.closest('a') && !matchMedia('(min-width: 901px)').matches) document.querySelector('#sidebar').open = false;
-});
-const breakpoint = matchMedia('(min-width: 901px)');
-breakpoint.addEventListener('change',()=>{document.querySelector('#sidebar').open = breakpoint.matches;});
-document.querySelector('#sidebar').open = breakpoint.matches;
-document.querySelector('#sidebar summary').addEventListener('click',event=>{if(breakpoint.matches) event.preventDefault();});
 async function init() {
   try {
     const response = await fetch('./data/collection.json');if (!response.ok) throw new Error('Catalog unavailable');
-    const data = await response.json();vehicles = data.vehicles;vehicleAliases = data.redirects || {};
+    const data = await response.json();vehicles = data.vehicles;batteryItems = data.batteries || [];vehicleAliases = data.redirects || {};
     route();window.addEventListener('hashchange',route);
   } catch {
     app.innerHTML = '<div class="error"><h1>Гараж пока недоступен</h1><p>Не удалось загрузить каталог. Попробуйте ещё раз.</p><button type="button">Повторить</button></div>';
