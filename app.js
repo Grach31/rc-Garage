@@ -1,3 +1,5 @@
+import './refresh.js';
+
 // iOS may ignore viewport zoom limits; cancel pinch gestures without blocking single-finger scrolling.
 for (const eventName of ['gesturestart','gesturechange']) {
   document.addEventListener(eventName,event=>event.preventDefault(),{passive:false});
@@ -91,6 +93,7 @@ function notes() {
     form.reset();editingId = item?.id || null;error.hidden = true;
     app.querySelector('#note-editor-title').textContent = item ? 'Изменить заметку' : 'Новая заметка';
     if (item) {carSelect.value = item.carId;textInput.value = item.text;}
+    form.dataset.savedSnapshot = JSON.stringify([carSelect.value,textInput.value]);
     form.hidden = false;app.querySelector('#new-note').hidden = true;carSelect.focus();
   };
   const closeEditor = () => {form.hidden = true;form.reset();editingId = null;app.querySelector('#new-note').hidden = false;app.querySelector('#new-note').focus();};
