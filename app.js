@@ -46,18 +46,23 @@ function bindImageFallbacks() {
   };});
 }
 const vehicleUrl = (car, tab = 'overview') => `#/vehicle/${encodeURIComponent(car.id)}${tab === 'overview' ? '' : `/${tab}`}`;
-function renderSidebar() {
-  const sidebarScroll = document.querySelector('#sidebar').scrollTop;
-  const car = currentCar || vehicles[0];
-  const nav = [['car','Коллекция','#/',!currentCar || ['overview','specs','gallery'].includes(currentTab)],['tuning','Тюнинг',vehicleUrl(car,'tuning'),currentTab === 'tuning'],['tool','Обслуживание',vehicleUrl(car,'service'),currentTab === 'service']];
-  document.querySelector('#main-nav').innerHTML = nav.map(([symbol,label,url,active]) => `<a href="${url}" class="nav-item ${active ? 'active' : ''}" ${active ? 'aria-current="page"' : ''}>${icon(symbol)}<span>${label}</span>${label === 'Коллекция' ? `<small>${vehicles.length}</small>` : ''}</a>`).join('') + '<div class="nav-item upcoming">'+icon('battery')+'<span>Аккумуляторы</span><small>Скоро</small></div><div class="nav-item upcoming">'+icon('note')+'<span>Заметки</span><small>Скоро</small></div>';
-  document.querySelector('#model-list').innerHTML = vehicles.map(car => `<a class="model-link ${currentCar?.id === car.id ? 'selected' : ''}" href="${vehicleUrl(car)}" ${currentCar?.id === car.id ? 'aria-current="page"' : ''} aria-label="${escape(title(car))}${car.description ? ` — ${escape(car.description)}` : ''}">${photo(car.thumbnail || car.image,title(car),'',false,car.imageLabel)}<div><strong>${escape(title(car))}</strong><span>${escape(car.description || 'Описание не указано')}</span></div></a>`).join('');
-  if (!matchMedia('(min-width: 901px)').matches) document.querySelector('#sidebar').open = false;
-  document.querySelector('#sidebar').scrollTop = sidebarScroll;
-  bindImageFallbacks();
+function renderNavigation() {
+  const hash = location.hash || '#/';
+  const section = currentCar ? null : (hash === '#' ? '#/' : hash);
+  const nav = [['car','Коллекция','#/'],['battery','Аккумуляторы','#/batteries'],['note','Заметки','#/notes']];
+  document.querySelector('#main-nav').innerHTML = nav.map(([symbol,label,url]) => `<a href="${url}" class="nav-item ${section === url ? 'active' : ''}" ${section === url ? 'aria-current="page"' : ''}>${icon(symbol)}<span>${label}</span>${url === '#/' ? `<small>${vehicles.length}</small>` : ''}</a>`).join('');
 }
+function batteries() {
+  document.title = 'Аккумуляторы — RC Garage';
+  app.innerHTML = `<section class="collection-page view"><header class="collection-heading"><h1>Аккумуляторы</h1><p class="intro-copy">Сведения о питании моделей коллекции.</p></header><div class="battery-grid">${vehicles.map(car => `<article class="empty-panel"><h2><a href="${vehicleUrl(car)}">${escape(title(car))}</a></h2><dl class="specs"><div><dt>Установленный аккумулятор</dt><dd>${value(car.specifications.battery)}</dd></div>${car.specifications.batteryCompatibility ? `<div><dt>Совместимое питание</dt><dd>${value(car.specifications.batteryCompatibility)}</dd></div>` : ''}</dl><a class="model-details-link" href="${vehicleUrl(car,'specs')}">Характеристики модели →</a></article>`).join('')}</div></section>`;
+}
+function notes() {
+  document.title = 'Заметки — RC Garage';
+  app.innerHTML = '<section class="collection-page view"><header class="collection-heading"><h1>Заметки</h1></header><div class="empty-panel"><h2>Заметок пока нет</h2><p>Тюнинг и история обслуживания находятся в карточке каждой машины.</p></div></section>';
+}
+
 function card(car) {
-  return `<a class="card" href="${vehicleUrl(car)}" aria-label="${escape(title(car))}${car.description ? ` — ${escape(car.description)}` : ''}">${photo(car.thumbnail || car.image,title(car),'',false,car.imageLabel)}<div class="card-info"><div><p class="maker">${escape(car.manufacturer || 'Производитель не указан')}</p><h2>${escape(car.model || car.manufacturer)}</h2><p>${escape(car.description || 'Описание: Не указано')} <span>·</span> ${escape(car.scale || 'Масштаб не указан')}</p></div>${icon('arrow')}</div></a>`;
+  return `<a class="card" href="${vehicleUrl(car)}" aria-label="${escape(title(car))}${car.description ? ` — ${escape(car.description)}` : ''}">${photo(car.thumbnail || car.image,title(car),'',false,car.imageLabel)}<div class="card-info"><div><p class="maker">${escape(car.manufacturer || 'Производитель не указан')}</p><h2>${escape(title(car))}</h2><p>${escape(car.description || 'Описание: Не указано')} <span>·</span> ${escape(car.scale || 'Масштаб не указан')}</p></div>${icon('arrow')}</div></a>`;
 }
 function updateGrid() {
   const results = vehicles.filter(car => (filter === 'all' || (filter === 'custom' ? ['kamaz','ural'].includes(car.id) : car.id === 'trailer')) && `${title(car)} ${car.description || ''}`.toLocaleLowerCase('ru').includes(query.toLocaleLowerCase('ru')));
@@ -124,7 +129,7 @@ function openGalleryPhoto(car, index) {
 function detail(car, tab) {
   document.title = `${title(car)} — ${tabNames[tab]} — RC Garage`;
   const color = car.color || (/Красный/i.test(car.description || '') ? 'Красный' : /Серый/i.test(car.description || '') ? 'Серый' : /Хамелеон/i.test(car.description || '') ? 'Хамелеон' : /Чёрный/i.test(car.description || '') ? 'Чёрный' : /хаки/i.test(car.description || '') ? 'Хаки' : null);
-  app.innerHTML = `<article class="vehicle-page view"><header class="vehicle-hero ${car.image ? 'has-photo' : ''}">${photo(car.image,title(car),'hero-media',true,car.imageLabel)}<div class="hero-title"><a href="#/" class="eyebrow back">КОЛЛЕКЦИЯ / ${String(vehicles.indexOf(car)+1).padStart(2,'0')}</a><h1>${escape(title(car))}</h1><p>${escape(car.description || 'Описание: Не указано')}</p></div><span class="collection-badge">${icon('check')} В коллекции</span></header><div class="vehicle-body"><dl class="quick-specs">${[['Масштаб',car.scale],['Тип',car.specifications.type],['Привод',car.specifications.drive],['Кузов',color]].map(([label,text])=>`<div><dt>${label}</dt><dd>${value(text)}</dd></div>`).join('')}</dl>${car.referenceConfiguration ? `<aside class="configuration-note"><strong>Заводская справка</strong><p>${escape(car.configurationNote)}</p></aside>` : ''}<div class="tabs" role="tablist" aria-label="Разделы модели">${Object.entries(tabNames).map(([key,label])=>`<button id="tab-${key}" role="tab" aria-selected="${tab === key}" ${tab === key ? `aria-controls="panel-${key}"` : ''} tabindex="${tab === key ? 0 : -1}" data-tab="${key}" class="${tab === key ? 'active' : ''}">${label}</button>`).join('')}</div>${renderPanel(car,tab)}<p class="page-footnote">${car.configurationNote ? escape(car.configurationNote) : car.image ? 'Фотографии коллекции владельца.' : 'Фотографии владельца пока не добавлены. Чужие изображения не используются.'}</p>${imageAttribution(car)}${sourceNotes(car)}</div></article>`;
+  app.innerHTML = `<article class="vehicle-page view"><header class="vehicle-hero ${car.image ? 'has-photo' : ''}">${photo(car.image,title(car),'hero-media',true,car.imageLabel)}<div class="hero-title"><a href="#/" class="eyebrow back">← В КОЛЛЕКЦИЮ / ${String(vehicles.indexOf(car)+1).padStart(2,'0')}</a><h1>${escape(title(car))}</h1><p>${escape(car.description || 'Описание: Не указано')}</p></div><span class="collection-badge">${icon('check')} В коллекции</span></header><div class="vehicle-body"><dl class="quick-specs">${[['Масштаб',car.scale],['Тип',car.specifications.type],['Привод',car.specifications.drive],['Кузов',color]].map(([label,text])=>`<div><dt>${label}</dt><dd>${value(text)}</dd></div>`).join('')}</dl>${car.referenceConfiguration ? `<aside class="configuration-note"><strong>Заводская справка</strong><p>${escape(car.configurationNote)}</p></aside>` : ''}<div class="tabs" role="tablist" aria-label="Разделы модели">${Object.entries(tabNames).map(([key,label])=>`<button id="tab-${key}" role="tab" aria-selected="${tab === key}" ${tab === key ? `aria-controls="panel-${key}"` : ''} tabindex="${tab === key ? 0 : -1}" data-tab="${key}" class="${tab === key ? 'active' : ''}">${label}</button>`).join('')}</div>${renderPanel(car,tab)}<p class="page-footnote">${car.configurationNote ? escape(car.configurationNote) : car.image ? 'Фотографии коллекции владельца.' : 'Фотографии владельца пока не добавлены. Чужие изображения не используются.'}</p>${imageAttribution(car)}${sourceNotes(car)}</div></article>`;
   app.querySelectorAll('[data-tab]').forEach(button => {
     button.addEventListener('click', () => {location.hash = vehicleUrl(car,button.dataset.tab);});
     button.addEventListener('keydown',event => {
@@ -148,6 +153,8 @@ function route() {
   const previous = currentCar?.id, previousTab = currentTab;
   currentCar = null;currentTab = 'overview';
   if (hash === '#/' || hash === '#') home();
+  else if (hash === '#/batteries') batteries();
+  else if (hash === '#/notes') notes();
   else {
     const match = /^#\/vehicle\/([^/]+)(?:\/([^/]+))?$/.exec(hash);
     const requestedId = match && (Object.hasOwn(vehicleAliases,match[1]) ? encodeURIComponent(vehicleAliases[match[1]]) : match[1]);
@@ -157,19 +164,12 @@ function route() {
       currentCar = car;currentTab = match[2] || 'overview';detail(car,currentTab);}
     else {document.title = 'Модель не найдена — RC Garage';app.innerHTML = '<div class="error"><h1>Страница не найдена</h1><p>Возможно, ссылка устарела.</p><a href="#/">В мою коллекцию →</a></div>';}
   }
-  renderSidebar();
+  renderNavigation();
   const tabs = app.querySelector('.tabs'), activeTab = app.querySelector('[aria-selected=true]');
   if (tabs && activeTab) tabs.scrollLeft = activeTab.offsetLeft - tabs.offsetLeft - (tabs.clientWidth-activeTab.offsetWidth)/2;
   if (currentCar?.id === previous && previousTab !== currentTab) {app.querySelector(`[data-tab="${currentTab}"]`)?.focus({preventScroll:true});}
   else window.scrollTo(0,0);
 }
-for (const nav of ['#main-nav','#model-list']) document.querySelector(nav).addEventListener('click',event=>{
-  if(event.target.closest('a') && !matchMedia('(min-width: 901px)').matches) document.querySelector('#sidebar').open = false;
-});
-const breakpoint = matchMedia('(min-width: 901px)');
-breakpoint.addEventListener('change',()=>{document.querySelector('#sidebar').open = breakpoint.matches;});
-document.querySelector('#sidebar').open = breakpoint.matches;
-document.querySelector('#sidebar summary').addEventListener('click',event=>{if(breakpoint.matches) event.preventDefault();});
 async function init() {
   try {
     const response = await fetch('./data/collection.json');if (!response.ok) throw new Error('Catalog unavailable');
