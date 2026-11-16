@@ -47,3 +47,29 @@ main{margin-left:0}
 
 .garage-nav .collection-count{cursor:default}
 .garage-nav .collection-count:hover{background:transparent}
+
+/* Independent battery collection and saved vehicle notes. */
+button,select,textarea{-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+.primary-button,.secondary-button{border-radius:24px;padding:12px 18px;min-height:44px;font-size:13px}
+.primary-button{background:var(--ink);color:white;border:1px solid var(--ink)}
+.secondary-button{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.notes-heading,.saved-note header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.notes-heading h1{margin-bottom:0}
+.storage-caption{font-size:12px;line-height:1.6;color:var(--muted);margin:18px 0 24px}
+.note-editor{padding:24px;border:1px solid var(--line);border-radius:16px;margin-bottom:24px;background:var(--panel)}
+.note-editor label{display:block;font-size:13px;margin:18px 0 8px}
+.note-editor select,.note-editor textarea{display:block;width:100%;min-width:0;border:1px solid #aaa69d;background:var(--bg);color:var(--ink);border-radius:10px;padding:12px;font:inherit;font-size:16px}
+.note-editor textarea{resize:vertical;min-height:140px}
+.note-editor select:focus-visible,.note-editor textarea:focus-visible{outline:2px solid #686d58;outline-offset:3px}
+.note-actions{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+#note-error{color:#982f21;font-size:13px;line-height:1.6}
+#notes-status{font-size:13px;color:#4d6040}
+.saved-note{padding:24px;border:1px solid var(--line);border-radius:16px;margin-bottom:16px;background:#e7e3dc}
+.saved-note h2{margin:0;overflow-wrap:anywhere}
+.note-text{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.7;font-size:15px;margin:18px 0 0}
+.battery-list{display:grid;gap:20px}
+.battery-item{display:grid;grid-template-columns:minmax(160px,30%) 1fr;gap:24px;padding:20px;border:1px solid var(--line);border-radius:16px}
+.battery-item>.media{border-radius:12px;align-self:start}
+.battery-item .specs{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:600px){.notes-heading h1{font-size:32px}.note-editor,.saved-note{padding:18px}.battery-item{grid-template-columns:1fr;gap:16px}.battery-item .specs{grid-template-columns:1fr 1fr}.saved-note h2{font-size:20px}}
