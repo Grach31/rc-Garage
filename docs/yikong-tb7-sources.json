@@ -1,0 +1,249 @@
+{
+  "model": "Yikong TB7 YK4073 V1 · красный",
+  "owner_statement": "Красный TB7; двигатель и ESC отсутствуют. Фото этих двух узлов не добавлять. Дополнение владельца: «У меня v1». Остальные изменения и состояние узлов не уточнены.",
+  "scope": "Владелец подтвердил V1. Карточка использует каталог первой версии, без параметров V2; каталожные сведения отделены от фактического состояния экземпляра.",
+  "sources": [
+    {
+      "label": "Yikong YK4073 TB7 · каталог первой версии (yikongrc.net)",
+      "url": "https://www.yikongrc.net/products/yikong-yk4073-tb7-1-7-4wd-desert-rc-truck"
+    },
+    {
+      "label": "Красный TB7 · каталожные ракурсы RCOPWORLD",
+      "url": "https://www.rcopworld.com/products/yikong-1-7-yk4073-tb7-rc-car-rtr"
+    },
+    {
+      "label": "Yikong 71102 · каталожная рулевая серва первой версии",
+      "url": "https://www.yikongrc.net/products/yikong-yk4073-rc-truck-parts-30kg-servo-71102"
+    },
+    {
+      "label": "Yikong 71175 · колёса",
+      "url": "https://kopterfly.ru/wheel-and-tire-mounted-red-4073-tb7-2sht-"
+    },
+    {
+      "label": "Yikong 71103 · аппаратура раннего TB7",
+      "url": "https://kopterfly.ru/transmitter---receiver-2-4ghz-gyro-4072-df7---4073-tb7"
+    }
+  ],
+  "images": [
+    {
+      "asset": "./assets/yikong-tb7/studio.webp",
+      "source_url": "https://www.yikongrc.net/products/yikong-yk4073-tb7-1-7-4wd-desert-rc-truck",
+      "source_sha256": "b4365a1ffe2f1af0d2bf48b4c90dca98c10e8b3256bc5733fba06dd1c9ecfcb8",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "delivered_dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 158096,
+      "credit": "Демо · студийная AI-обработка каталожного изображения Yikong",
+      "processing": "AI-обработка студийной обложки"
+    },
+    {
+      "asset": "./assets/yikong-tb7/front.webp",
+      "source_url": "https://cdn.shopify.com/s/files/1/0601/9291/5550/files/O1CN01W8j4b21la1RQMrBN9__21474834.webp?v=1762483933",
+      "source_sha256": "6a58955bb6d0d5b737a62efceab1834488a6c3eb38951f2cee0c3dbefd87b5f3",
+      "source_dimensions": [
+        2016,
+        1344
+      ],
+      "delivered_dimensions": [
+        1600,
+        1067
+      ],
+      "bytes": 85536,
+      "credit": "Каталожное изображение Yikong / RCOPWORLD",
+      "processing": "Только уменьшение и WebP; исходная композиция и водяные знаки сохранены"
+    },
+    {
+      "asset": "./assets/yikong-tb7/rear.webp",
+      "source_url": "https://cdn.shopify.com/s/files/1/0601/9291/5550/files/O1CN01WHX2fC1la1RVLGcoD__21474834.webp?v=1762483933",
+      "source_sha256": "26b2837103abde352c196b27bb86bdd7d9580faf9a72d0c8b55d0ca952ca0250",
+      "source_dimensions": [
+        2016,
+        1344
+      ],
+      "delivered_dimensions": [
+        1600,
+        1067
+      ],
+      "bytes": 85758,
+      "credit": "Каталожное изображение Yikong / RCOPWORLD",
+      "processing": "Только уменьшение и WebP; исходная композиция и водяные знаки сохранены"
+    },
+    {
+      "asset": "./assets/yikong-tb7/side.webp",
+      "source_url": "https://cdn.shopify.com/s/files/1/0601/9291/5550/files/O1CN019gw1ba1la1RXALTN4__21474834.webp?v=1762483933",
+      "source_sha256": "6f9d0d95d620c8ca42c2711d5a682833e4e094b2ff66c6818210189d2acc8f0b",
+      "source_dimensions": [
+        2016,
+        1344
+      ],
+      "delivered_dimensions": [
+        1600,
+        1067
+      ],
+      "bytes": 86462,
+      "credit": "Каталожное изображение Yikong / RCOPWORLD",
+      "processing": "Только уменьшение и WebP; исходная композиция и водяные знаки сохранены"
+    },
+    {
+      "asset": "./assets/yikong-tb7/servo.webp",
+      "source_url": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/YIKONG_YK4073_RC_Truck_Parts_30kg_servo_71102.jpg?v=1737363914",
+      "source_sha256": "4fc054f5dd2762334ddaa182dac6d897f846a898d2cbc2bc021bf405737f9d6a",
+      "source_dimensions": [
+        800,
+        800
+      ],
+      "delivered_dimensions": [
+        800,
+        800
+      ],
+      "bytes": 14716,
+      "credit": "Каталожное фото Yikong / yikongrc.net",
+      "processing": "Только уменьшение и WebP; исходная композиция и водяные знаки сохранены"
+    },
+    {
+      "asset": "./assets/yikong-tb7/lighting.webp",
+      "source_url": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/YIKONG_YK4073_RC_Truck_Parts_LED_strip_white_light_71074.jpg?v=1737363016",
+      "source_sha256": "b183e69028e06e25f233f8fa4d74da60d99f3777bace920f5687a38a12d1caf2",
+      "source_dimensions": [
+        800,
+        800
+      ],
+      "delivered_dimensions": [
+        800,
+        800
+      ],
+      "bytes": 12214,
+      "credit": "Каталожное фото Yikong / yikongrc.net",
+      "processing": "Только уменьшение и WebP; исходная композиция и водяные знаки сохранены"
+    },
+    {
+      "asset": "./assets/yikong-tb7/wheels.webp",
+      "source_url": "https://kopterfly.ru/image/cache/catalog/supplier5/ck_18a_6mlqr2feqmfq7g24jjstz27ak9w6y4bl-800x800.jpg",
+      "source_sha256": "eaa6864008755ca9e590cbd144c52c005f0ad2de8a8f870117108b3f7b753ad2",
+      "source_dimensions": [
+        800,
+        800
+      ],
+      "delivered_dimensions": [
+        800,
+        800
+      ],
+      "bytes": 22366,
+      "credit": "Каталожное фото Yikong / Kopterfly",
+      "processing": "Только уменьшение и WebP; исходная композиция и водяные знаки сохранены"
+    },
+    {
+      "asset": "./assets/yikong-tb7/radio.webp",
+      "source_url": "https://kopterfly.ru/image/cache/catalog/supplier5/ck_1d0_1hsmw7nb89jdxodbzynm0t28i9tal1is-800x800.jpg",
+      "source_sha256": "c8442a143bdb8573677de9957bc9f5d939acec5eac77d72fd72d5b683bc71a18",
+      "source_dimensions": [
+        800,
+        800
+      ],
+      "delivered_dimensions": [
+        800,
+        800
+      ],
+      "bytes": 31302,
+      "credit": "Каталожное фото Yikong / Kopterfly",
+      "processing": "Только уменьшение и WebP; исходная композиция и водяные знаки сохранены"
+    },
+    {
+      "asset": "./assets/yikong-tb7/suspension.webp",
+      "source_url": "https://kopterfly.ru/image/cache/catalog/137746/shock_set_complete_front_rear_yikong_4073_tb7_305-800x800.png",
+      "source_sha256": "c100cc8b9b1a64025c8cef83d2068321362e831d4a582faa2389f20f99710cba",
+      "source_dimensions": [
+        800,
+        800
+      ],
+      "delivered_dimensions": [
+        800,
+        800
+      ],
+      "bytes": 11158,
+      "credit": "Каталожное фото Yikong / Kopterfly",
+      "processing": "Только уменьшение и WebP; исходная композиция и водяные знаки сохранены"
+    },
+    {
+      "asset": "./assets/yikong-tb7/transmission.webp",
+      "source_url": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/YIKONG_YK4073_RC_Car_Parts_center_gear_diff_71021.jpg?v=1737358793",
+      "source_sha256": "b5fa302ec707754eee1889b4900ead236d2da1793498a43de565dd9d6e035b4f",
+      "source_dimensions": [
+        800,
+        800
+      ],
+      "delivered_dimensions": [
+        800,
+        800
+      ],
+      "bytes": 19732,
+      "credit": "Каталожное фото Yikong / yikongrc.net",
+      "processing": "Только уменьшение и WebP; исходная композиция и водяные знаки сохранены"
+    }
+  ],
+  "studio_edit": {
+    "master": "exec-dd5d9f11-0e74-40c2-8494-3297c0dc7e91.png",
+    "reference_url": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/YIKONG_YK4073_TB7_1_7_4WD_Desert_RC_Truck_red.jpg?v=1737601788",
+    "reference_sha256": "7dc138ca2ce573f7e78b5a54c779ff589d0bfad009e537b96c0eb5b988dd29f3",
+    "label": "Демо · AI",
+    "scope": "Внешний вид красного кузова подтверждённой V1; AI-иллюстрация, не фото владельца и не источник технических данных."
+  },
+  "conflicts": {
+    "servo": "Первая версия 30 кг / 71102, V2 25 кг / 71101. Установленная серва неизвестна.",
+    "height": "265 мм у yikongrc.net, 275 мм у Yufung и V2 Robitronic; высота экземпляра не назначена.",
+    "gear_ratio": "Первая версия 1:14,6; V2 1:13,9 / 12,88 / 11,95 по пиньонам. Не назначено экземпляру.",
+    "battery_tray": "Первая версия 181 × 47,5 мм; V2 161 × 49,5 мм. Не назначено экземпляру.",
+    "radio": "Ранний каталог запчастей 71103, V2 инструкция 71196. Установленный комплект неизвестен."
+  },
+  "exclusions": [
+    "Никаких изображений мотора или ESC, включая фото открытого шасси с этими узлами",
+    "Каталожные синие/зелёные кузова не добавлены как красный экземпляр",
+    "Масса комплектного RTR не выдана за массу машины без мотора и ESC",
+    "Не заданы аккумулятор, питание системы, состояние тюнинга, обслуживание или готовность к езде",
+    "Фото продавцов не выданы за личный экземпляр; исходные водяные знаки сохранены"
+  ],
+  "primary_document": "Скан инструкции Yikong YK4073V2 через ManualsLib. Доступ к сайту производителя yikong.racing завершился 503; прямая PDF-ссылка Robitronic вернула 403. Каталоги продавцов обозначены именно как каталоги, не как сайт производителя.",
+  "research_sources": [
+    {
+      "label": "Yikong YK4073 TB7 · каталог первой версии (yikongrc.net)",
+      "url": "https://www.yikongrc.net/products/yikong-yk4073-tb7-1-7-4wd-desert-rc-truck"
+    },
+    {
+      "label": "Инструкция Yikong YK4073 V2 · для сравнения версий (скан ManualsLib)",
+      "url": "https://www.manualslib.com/manual/4670980/Yikong-Yk4073v2.html"
+    },
+    {
+      "label": "Robitronic · параметры V2, отличаются от первой версии",
+      "url": "https://shop.robitronic.com/en/tb7-v2-trail-breaker-1-7-desert-buggy-neon-red-yk4073a"
+    },
+    {
+      "label": "Красный TB7 · каталожные ракурсы RCOPWORLD",
+      "url": "https://www.rcopworld.com/products/yikong-1-7-yk4073-tb7-rc-car-rtr"
+    },
+    {
+      "label": "Yikong 71102 · каталожная рулевая серва первой версии",
+      "url": "https://www.yikongrc.net/products/yikong-yk4073-rc-truck-parts-30kg-servo-71102"
+    },
+    {
+      "label": "Yikong 71175 · колёса",
+      "url": "https://kopterfly.ru/wheel-and-tire-mounted-red-4073-tb7-2sht-"
+    },
+    {
+      "label": "Yikong 71103 · аппаратура раннего TB7",
+      "url": "https://kopterfly.ru/transmitter---receiver-2-4ghz-gyro-4072-df7---4073-tb7"
+    }
+  ],
+  "resolution": {
+    "version": "V1 подтверждена владельцем 2026-11-16. V2 удалена из интерфейса; сравнительные источники сохранены только в истории исследования.",
+    "servo": "Каталог V1: 71102, 30 кг, металлические шестерни. Напряжение и изменения на экземпляре неизвестны.",
+    "gear_ratio": "Каталог V1 1:14,6; пиньон и изменения экземпляра неизвестны.",
+    "battery_tray": "Каталог V1 181 × 47,5 мм; высота неизвестна.",
+    "radio": "Каталог V1 и карточка совместимой аппаратуры 71103. 4 канала управления, пятый для гироскопа; поставщик описывает приёмник с 6 разъёмами. Установка конкретного комплекта пока не подтверждена.",
+    "height": "Противоречие 265/275 мм остаётся и внутри источников V1; точная высота не назначена."
+  }
+}
