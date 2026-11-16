@@ -1306,15 +1306,277 @@
     {
       "id": "zd-racing",
       "manufacturer": "ZD Racing",
-      "model": null,
-      "description": null,
-      "scale": null,
-      "image": null,
-      "gallery": [],
-      "components": [],
-      "specifications": {},
-      "upgrades": [],
-      "service": []
+      "model": "EX07",
+      "description": "Голубой · синий · розовый · система TB7 V1",
+      "scale": "1:7",
+      "image": "./assets/zd-ex07/studio.webp",
+      "gallery": [
+        {
+          "src": "./assets/zd-ex07/studio.webp",
+          "caption": "EX07 · голубой, синий и розовый кузов · Демо / AI",
+          "credit": "Демо · студийная AI-обработка каталожных изображений EX07",
+          "sourceUrl": "https://www.toucanhobby.eu/products/zd-ex-07-bl-rtr-bupk-spf1",
+          "label": "Демо · AI"
+        },
+        {
+          "src": "./assets/zd-ex07/side-left.webp",
+          "caption": "EX07 · каталожный вид слева",
+          "credit": "Каталожное фото ZD Racing / Toucan Hobby",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0552/5317/2392/files/DSC_4020-1.jpg?v=1754473986"
+        },
+        {
+          "src": "./assets/zd-ex07/side-right.webp",
+          "caption": "EX07 · каталожный вид справа",
+          "credit": "Каталожное фото ZD Racing / Toucan Hobby",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0552/5317/2392/files/DSC_4011-1.jpg?v=1754473986"
+        },
+        {
+          "src": "./assets/zd-ex07/top.webp",
+          "caption": "EX07 · расцветка кузова сверху",
+          "credit": "Каталожное фото ZD Racing / Toucan Hobby",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0552/5317/2392/files/DSC_4026-1.jpg?v=1754473986"
+        },
+        {
+          "src": "./assets/zd-ex07/front-detail.webp",
+          "caption": "EX07 · передняя часть кузова и фары",
+          "credit": "Каталожное фото ZD Racing / Toucan Hobby",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0552/5317/2392/files/DSC_4021-1.jpg?v=1754473986"
+        },
+        {
+          "src": "./assets/zd-ex07/motor-tb7.webp",
+          "caption": "Мотор от Yikong TB7 V1 · 4274 1600KV, деталь 71099",
+          "credit": "Каталожное фото Yikong / yikongrc.net",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/YIKONG_YK4073_RC_Truck_Parts_brushless_4274_motor_71099.jpg?v=1737363397"
+        },
+        {
+          "src": "./assets/zd-ex07/esc-tb7.webp",
+          "caption": "Регулятор от Yikong TB7 V1 · 150 А, деталь 71100",
+          "credit": "Каталожное фото Yikong / yikongrc.net",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/YIKONG_YK4073_RC_Truck_Parts_brushless_150A_ESC_71100.jpg?v=1737363581"
+        },
+        {
+          "src": "./assets/zd-ex07/radio.webp",
+          "caption": "DUMBORC DDF-350 · передатчик; приёмник не показан",
+          "credit": "Фото производителя DUMBORC",
+          "sourceUrl": "https://www.dumborc.com/en/wp-content/uploads/2024/01/zt-1.jpg"
+        },
+        {
+          "src": "./assets/zd-ex07/suspension.webp",
+          "caption": "EX07 · амортизаторы 8501",
+          "credit": "Каталожное фото ZD Racing / yikongrc.net",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/ZD_Racing_EX-07_Parts_Shock_Absorbers_8501.jpg?v=1752477483"
+        },
+        {
+          "src": "./assets/zd-ex07/wheels.webp",
+          "caption": "EX07 · колёса 8585",
+          "credit": "Каталожное фото ZD Racing / yikongrc.net",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/ZD_RACING_EX-07_RC_Car_Parts_Wheel_Tire_Set_8585.jpg?v=1752558931"
+        },
+        {
+          "src": "./assets/zd-ex07/transmission.webp",
+          "caption": "EX07 · дифференциал 8504",
+          "credit": "Каталожное фото ZD Racing / yikongrc.net",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/ZD_Racing_EX-07_Parts_Differential_CNC_8504.jpg?v=1752478058"
+        },
+        {
+          "src": "./assets/zd-ex07/brakes.webp",
+          "caption": "EX07 · тормозные диски и колодки 8548",
+          "credit": "Каталожное фото ZD Racing / yikongrc.net",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/ZD_Racing_EX07_RC_Truck_Parts_Brake_Disc_and_Pad_Set_8548_front.jpg?v=1752542640"
+        },
+        {
+          "src": "./assets/zd-ex07/servo-9imod-studio.webp",
+          "caption": "9imod DSC55MG · 55 кг · Coreless · комплектные детали · Демо / AI",
+          "credit": "Демо · студийная AI-обработка по референсу владельца",
+          "label": "Демо · AI"
+        }
+      ],
+      "components": [
+        {
+          "category": "motor",
+          "name": "Мотор TB7 V1 · 1600KV",
+          "manufacturer": "Yikong",
+          "model": "4274 · 1600KV · 71099",
+          "specifications": "Бесколлекторный двигатель 4274, 1600KV; штатная деталь Yikong TB7 V1 №71099. Установка на EX07 подтверждена владельцем.",
+          "notes": "Каталожное фото узла-донора, не фото личного установленного мотора. Изготовитель OEM-мотора, точные размеры, диаметр вала и разъёмы экземпляра: Не указано. Штатный мотор EX07 2000KV не подставлен.",
+          "image": "./assets/zd-ex07/motor-tb7.webp",
+          "imageCredit": "Каталожное фото Yikong / yikongrc.net",
+          "imageSourceUrl": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/YIKONG_YK4073_RC_Truck_Parts_brushless_4274_motor_71099.jpg?v=1737363397",
+          "sourceUrl": "https://www.yikongrc.net/products/yikong-yk4073-tb7-1-7-4wd-desert-rc-truck",
+          "summary": "Установлен · от TB7 V1"
+        },
+        {
+          "category": "esc",
+          "name": "MAX8 · 150 А",
+          "manufacturer": "Hobbywing",
+          "model": "MAX8 · деталь TB7 71100",
+          "specifications": "Система от TB7 V1: по каталогу Hobbywing MAX8, 150 А длительно / 950 А пиково, 3–6S LiPo. Установка на EX07 подтверждена владельцем.",
+          "notes": "На фото каталожная деталь Yikong 71100. Точная OEM-ревизия, прошивка, BEC и фактические силовые разъёмы: Не указано. Параметры розничного MAX8 V3 не перенесены целиком на OEM-узел; инструкция Hobbywing приведена для справки. Установленный аккумулятор не указан.",
+          "image": "./assets/zd-ex07/esc-tb7.webp",
+          "imageCredit": "Каталожное фото Yikong / yikongrc.net",
+          "imageSourceUrl": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/YIKONG_YK4073_RC_Truck_Parts_brushless_150A_ESC_71100.jpg?v=1737363581",
+          "sourceUrl": "https://www.yikongrc.net/products/yikong-yk4073-tb7-1-7-4wd-desert-rc-truck",
+          "summary": "Установлен · от TB7 V1"
+        },
+        {
+          "category": "servo",
+          "name": "9imod DSC55MG · 55 кг",
+          "manufacturer": "9imod",
+          "model": "DSC55MG · 270° · HV",
+          "specifications": "Цифровой рулевой сервопривод 9imod DSC55MG с коллекторным Coreless-мотором. Заявленный момент — 55 кг·см (маркировка 55KG); версия 270°, маркировка HV. Установка и исправленные данные подтверждены владельцем. Рабочее напряжение, напряжение измерения момента, скорость и размеры: Не указано.",
+          "notes": "На студийной иллюстрации показаны одна серва и комплектные детали по предоставленному скриншоту: качалка, круглая насадка, втулки и крепёж. Это не фотография установленного узла; количество и размеры мелких деталей после AI-обработки не служат спецификацией комплекта. Фактический ход рулевого механизма, напряжение BEC и настройки: Не указано. Coreless означает коллекторный мотор без железного сердечника ротора.",
+          "image": "./assets/zd-ex07/servo-9imod-studio.webp",
+          "imageCredit": "Демо · студийная AI-обработка по референсу владельца",
+          "imageSourceUrl": null,
+          "sourceUrl": null,
+          "summary": "Установлена · коллекторная Coreless",
+          "imageLabel": "Демо · AI"
+        },
+        {
+          "category": "suspension",
+          "name": "Масляные амортизаторы",
+          "manufacturer": "ZD Racing",
+          "model": "8501 · каталожная деталь",
+          "specifications": "Заводская платформа EX07: регулируемые металлические масляные амортизаторы, независимая подвеска.",
+          "notes": "На фото каталожная деталь 8501. Фактически установленные амортизаторы, масло, пружины, преднатяг и дорожный просвет: Не указано.",
+          "image": "./assets/zd-ex07/suspension.webp",
+          "imageCredit": "Каталожное фото ZD Racing / yikongrc.net",
+          "imageSourceUrl": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/ZD_Racing_EX-07_Parts_Shock_Absorbers_8501.jpg?v=1752477483",
+          "sourceUrl": "https://www.yikongrc.net/products/zd-racing-ex-07-parts-shock-absorbers-8501",
+          "summary": "Заводская справка"
+        },
+        {
+          "category": "wheels",
+          "name": "Дорожные колёса · 109 × 51 мм",
+          "manufacturer": "ZD Racing",
+          "model": "8585 · каталожный комплект",
+          "specifications": "Каталог EX07: наружный диаметр шин 109 мм, ширина 51 мм, шестигранник 17 мм. Дорожный рисунок, золотистые диски.",
+          "notes": "На фото каталожный комплект EX07 8585. Каталог описывает армирование шин тканью; состояние, состав, вставки и замены на личном экземпляре: Не указано.",
+          "image": "./assets/zd-ex07/wheels.webp",
+          "imageCredit": "Каталожное фото ZD Racing / yikongrc.net",
+          "imageSourceUrl": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/ZD_RACING_EX-07_RC_Car_Parts_Wheel_Tire_Set_8585.jpg?v=1752558931",
+          "sourceUrl": "https://www.yikongrc.net/products/zd-racing-ex-07-rc-car-parts-wheel-tire-set-8585",
+          "summary": "Заводская справка"
+        },
+        {
+          "category": "radio",
+          "name": "Пульт DDF-350",
+          "manufacturer": "DUMBORC",
+          "model": "DDF-350",
+          "specifications": "10 каналов, 2,4 ГГц; цветной экран; память на 10 моделей; настройка направлений и хода каналов, кривых газа и тормоза, микширование. Установленный передатчик подтверждён владельцем.",
+          "notes": "Фирменное фото показывает только передатчик. Модель установленного приёмника, наличие гироскопа, способ питания пульта и настройки: Не указано. Телеметрия зависит от совместимого приёмника; X10F/X10FG не назначены автоматически.",
+          "image": "./assets/zd-ex07/radio.webp",
+          "imageCredit": "Фото производителя DUMBORC",
+          "imageSourceUrl": "https://www.dumborc.com/en/wp-content/uploads/2024/01/zt-1.jpg",
+          "sourceUrl": "https://www.dumborc.com/en/2024/01/07/ddf-350-transmitter/",
+          "summary": "Установлен · по данным владельца"
+        },
+        {
+          "category": "transmission",
+          "name": "Полный привод · дифференциалы",
+          "manufacturer": "ZD Racing",
+          "model": null,
+          "specifications": "Платформа EX07: полный привод 4×4, центральный дифференциал, металлические шестерни и приводные валы.",
+          "notes": "На фото каталожный дифференциал 8504. После установки двигателя TB7 V1 пиньон, спур и итоговое передаточное число: Не указано. Заводские рекламные скорость и время работы не применены к изменённой машине.",
+          "image": "./assets/zd-ex07/transmission.webp",
+          "imageCredit": "Каталожное фото ZD Racing / yikongrc.net",
+          "imageSourceUrl": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/ZD_Racing_EX-07_Parts_Differential_CNC_8504.jpg?v=1752478058",
+          "sourceUrl": "http://www.zdhobby.com/e_productshow/?22-ZD-Racing-EX-07-17-SCALE-4WD-ELECTRIC-HYPERCAR-22.html",
+          "summary": "Заводская справка"
+        },
+        {
+          "category": "brakes",
+          "name": "Механические дисковые тормоза",
+          "manufacturer": "ZD Racing",
+          "model": "8548 · диски и колодки",
+          "specifications": "Каталожная конструкция EX07: двухдисковый механический тормоз у центрального дифференциала.",
+          "notes": "Показаны каталожные тормозные диски и колодки 8548. В заводском описании есть отдельная тормозная серва на 9 кг; её наличие, модель и настройка на экземпляре владельца: Не указано. Установленная рулевая 9imod DSC55MG на 55 кг учитывается отдельно.",
+          "image": "./assets/zd-ex07/brakes.webp",
+          "imageCredit": "Каталожное фото ZD Racing / yikongrc.net",
+          "imageSourceUrl": "https://cdn.shopify.com/s/files/1/0739/2224/8947/files/ZD_Racing_EX07_RC_Truck_Parts_Brake_Disc_and_Pad_Set_8548_front.jpg?v=1752542640",
+          "sourceUrl": "https://www.yikongrc.net/products/zd-racing-ex07-rc-truck-parts-brake-disc-and-pad-set-8548",
+          "summary": "Заводская справка"
+        },
+        {
+          "category": "lighting",
+          "name": "Освещение кузова",
+          "manufacturer": "ZD Racing",
+          "model": null,
+          "specifications": "Заводской EX07 имеет фары и световую систему.",
+          "notes": "На фото передняя часть кузова из каталога. Состояние световой системы, контроллер, подключение и доступные режимы личного экземпляра: Не указано.",
+          "image": "./assets/zd-ex07/front-detail.webp",
+          "imageCredit": "Каталожное фото ZD Racing / Toucan Hobby",
+          "imageSourceUrl": "https://cdn.shopify.com/s/files/1/0552/5317/2392/files/DSC_4021-1.jpg?v=1754473986",
+          "sourceUrl": "https://www.toucanhobby.eu/products/zd-ex-07-bl-rtr-bupk-spf1",
+          "summary": "Заводская справка"
+        }
+      ],
+      "specifications": {
+        "type": "Шоссейная",
+        "drive": "4×4",
+        "dimensions": "740 × 345 × 196 мм — каталог EX07",
+        "weight": null,
+        "wheelbase": null,
+        "track": null,
+        "groundClearance": null,
+        "motor": "Установлен от TB7 V1: Yikong 4274 · 1600KV · деталь 71099.",
+        "esc": "Установлен от TB7 V1: Hobbywing MAX8 · 150 А (пик 950 А по каталогу донора) · деталь 71100.",
+        "servo": "9imod DSC55MG · 55 кг·см по маркировке · коллекторная Coreless · версия 270° / HV. Рабочее напряжение и скорость: Не указано.",
+        "battery": null,
+        "batteryCompatibility": "Каталог силовой системы TB7 V1: 3–6S LiPo. Фактический аккумулятор, схема соединения и разъёмы EX07: Не указано.",
+        "suspension": "Заводская справка: независимая подвеска, регулируемые металлические масляные амортизаторы. Текущие настройки: Не указано.",
+        "wheels": "Каталожные: шины 109 × 51 мм, hex 17 мм. Установленный состав шин и замены: Не указано.",
+        "transmission": "4×4, центральный дифференциал. Пиньон, спур и передаточное число после замены мотора: Не указано.",
+        "radio": "DUMBORC DDF-350 · 10 каналов · 2,4 ГГц. Установленный приёмник: Не указано.",
+        "lighting": "Каталожная световая система. Контроллер и состояние экземпляра: Не указано."
+      },
+      "upgrades": [
+        "Мотор Yikong 4274 1600KV и регулятор Hobbywing MAX8 150 А перенесены с TB7 V1 — подтверждено владельцем.",
+        "Установлен передатчик DUMBORC DDF-350 — подтверждено владельцем.",
+        "Установлен коллекторный Coreless-сервопривод 9imod DSC55MG на 55 кг, версия 270° / HV — уточнено владельцем по фото."
+      ],
+      "service": [],
+      "color": "Голубой / синий / розовый",
+      "thumbnail": "./assets/zd-ex07/thumbnail.webp",
+      "imageLabel": "Демо · AI",
+      "imageCredit": "Демо · студийная AI-обработка каталожных изображений EX07",
+      "imageSourceUrl": "https://www.toucanhobby.eu/products/zd-ex-07-bl-rtr-bupk-spf1",
+      "stockConfirmed": false,
+      "referenceConfiguration": true,
+      "configurationLabel": "Комплектация владельца",
+      "specificationsNote": "Установленные узлы подтверждены владельцем; размеры и ходовая часть приведены по каталогу EX07. Неизвестные значения отмечены отдельно.",
+      "configurationNote": "Мотор 4274 1600KV и ESC MAX8 150 А перенесены с Yikong TB7 V1. Пульт — DUMBORC DDF-350. Установлена коллекторная Coreless-серва 9imod DSC55MG на 55 кг, версия 270° / HV — уточнено владельцем по фото. Остальная ходовая часть показана по каталогу. Обложка и кадр сервы — студийные AI-иллюстрации.",
+      "settings": null,
+      "sources": [
+        {
+          "label": "ZD Hobby · заводской каталог EX07",
+          "url": "http://www.zdhobby.com/e_productshow/?22-ZD-Racing-EX-07-17-SCALE-4WD-ELECTRIC-HYPERCAR-22.html"
+        },
+        {
+          "label": "Toucan Hobby · расцветка, ракурсы и каталожные параметры EX07",
+          "url": "https://www.toucanhobby.eu/products/zd-ex-07-bl-rtr-bupk-spf1"
+        },
+        {
+          "label": "Yikong TB7 V1 · каталог силовой системы-донора",
+          "url": "https://www.yikongrc.net/products/yikong-yk4073-tb7-1-7-4wd-desert-rc-truck"
+        },
+        {
+          "label": "Hobbywing · инструкция MAX8 V3, справка по семейству; OEM-ревизия не установлена",
+          "url": "https://www.hobbywing.com/en/uploads/file/20221024/6dc669fd70fb79ce38cd22073012b853.pdf"
+        },
+        {
+          "label": "DUMBORC · DDF-350, производитель",
+          "url": "https://www.dumborc.com/en/2024/01/07/ddf-350-transmitter/"
+        },
+        {
+          "label": "DUMBORC · фирменное руководство DDF-350",
+          "url": "https://www.dumborc.com/sms/docs/遥控器/DDF350/遥控器简介/功能特点/"
+        },
+        {
+          "label": "EX07 · каталог деталей ходовой части",
+          "url": "https://www.yikongrc.net/collections/zd-racing-ex07-parts-and-upgrades"
+        }
+      ]
     },
     {
       "id": "kamaz",
