@@ -73,3 +73,7 @@ button,select,textarea{-webkit-tap-highlight-color:transparent}
 .battery-item>.media{border-radius:12px;align-self:start}
 .battery-item .specs{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media(max-width:600px){.notes-heading h1{font-size:32px}.note-editor,.saved-note{padding:18px}.battery-item{grid-template-columns:1fr;gap:16px}.battery-item .specs{grid-template-columns:1fr 1fr}.saved-note h2{font-size:20px}}
+
+/* Keep touch navigation at app scale while allowing page and tab scrolling. */
+html{touch-action:pan-x pan-y}
+@media(max-width:900px){.search input,input,select,textarea{font-size:16px}}

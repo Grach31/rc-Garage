@@ -1,3 +1,11 @@
+// iOS may ignore viewport zoom limits; cancel pinch gestures without blocking single-finger scrolling.
+for (const eventName of ['gesturestart','gesturechange']) {
+  document.addEventListener(eventName,event=>event.preventDefault(),{passive:false});
+}
+document.addEventListener('touchmove',event=>{
+  if (event.touches.length > 1) event.preventDefault();
+},{passive:false});
+
 const app = document.querySelector('#app');
 const paths = {
  camera:'<path d="M3 7h5l2-3h4l2 3h5v14H3z"/><circle cx="12" cy="13" r="4"/>',
